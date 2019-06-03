@@ -5,6 +5,9 @@ class CartsController < ApplicationController
     end
 
     def create
+        cart = Carts.new(cart_params)
+        cart.save
+        redirect_to root_path
     end
 
     def show
