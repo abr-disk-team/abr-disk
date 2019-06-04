@@ -1,0 +1,9 @@
+EDIT GENRE
+
+
+<%= form_for(@genre) do |f| %>
+    <%= f.text_field :genre %>
+    <%= f.submit %>
+
+    <%= link_to "Destroy",@genre, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger destroy_genre_#{@genre.id}" %>
+<% end %>

@@ -1,0 +1,11 @@
+NEW ITEMS
+
+<%= form_for(@item) do |f| %>
+    cd_name
+    <%= f.text_field :cd_name %>
+    price
+    <%= f.text_field :price %>
+    stock
+    <%= f.text_field :stock %>
+    <%= f.submit %>
+<% end %>
