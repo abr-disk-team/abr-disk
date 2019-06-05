@@ -7,5 +7,15 @@ NEW ITEMS
     <%= f.text_field :price %>
     stock
     <%= f.text_field :stock %>
+    genre
+    <%= f.collection_select  :genre_id,  Genre.all, :id, :genre %>
+    <%= f.collection_select  :artist_id,  Artist.all, :id, :artist %>
+    <%= f.collection_select  :label_id,  Label.all, :id, :label %>
+    <%= f.attachment_field :jacket_image %>
+
+ 
+    
     <%= f.submit %>
+    <%= render "form" ,f: f %>
+    
 <% end %>
