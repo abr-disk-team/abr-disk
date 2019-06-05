@@ -2,19 +2,21 @@ class ItemsController < ApplicationController
 
     def new
         @item = Item.new
+        @item.discs.build
     end
 
     def create
         item = Item.new(params_item)
+        item.save
         redirect_to items_path
     end
         
     def index
-        items = Item.all
+        @items = Item.all
     end
 
     def show
-        item = Item.find(params[:id])
+        @item = Item.find(params[:id])
 
     end
 
@@ -35,6 +37,6 @@ class ItemsController < ApplicationController
     private
 
     def params_item
-        params.require(:item).permit(:cd_name, :price, :stock)
+        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number])
     end
 end
