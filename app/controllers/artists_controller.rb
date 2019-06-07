@@ -7,6 +7,7 @@ class ArtistsController < ApplicationController
     def create
         @artist = Artist.new(params_artist)
         @artist.save
+        redirect_to new_artist_path
     end
 
     def edit
