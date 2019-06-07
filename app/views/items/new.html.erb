@@ -17,7 +17,7 @@ NEW ITEMS
     <%= f.attachment_field :jacket_image %>
 
  ディスクを追加する。。。
- <div class="discs">
+ <div style="background-color:#EDF700;"class="discs">
     <%= f.fields_for :discs do |disc| %>
         <%= render 'disc_fields', f:disc %>
     <% end %>
