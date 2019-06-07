@@ -23,11 +23,13 @@ class ItemsController < ApplicationController
     end
 
     def edit
-        item = Item.find(params[:id])
+        @item = Item.find(params[:id])
     end
 
     def update
-        item.udate
+        item = Item.find(params[:id])
+        item.update(params_item)
+        redirect_to items_path
     end
 
     def destroy
