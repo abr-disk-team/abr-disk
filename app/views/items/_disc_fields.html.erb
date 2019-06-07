@@ -1,8 +1,12 @@
 
 
 <p>ディスク</p>
-  <%= f.text_field :number %>
+  <%= f.number_field :number %>
   <%= link_to_remove_association "削除", f %>
+
+  <%= f.fields_for :songs do |song| %>
+    <%= render 'song_fields', f:song %>
+<% end %>
 
     songを追加する。。。
   <div style="background-color:#EDF7FF;" class="songs" >
