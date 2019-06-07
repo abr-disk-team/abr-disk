@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
     def new
         @item = Item.new
         @item.discs.build
+        @disc = Disc.new
     end
 
     def create
@@ -13,6 +14,7 @@ class ItemsController < ApplicationController
         
     def index
         @items = Item.all
+        
     end
 
     def show
@@ -37,6 +39,6 @@ class ItemsController < ApplicationController
     private
 
     def params_item
-        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number])
+        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy])
     end
 end

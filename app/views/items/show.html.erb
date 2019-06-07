@@ -6,7 +6,7 @@ ITEM SHOW
             <th width="100px">cdname</th>
             <th width="100px">stock</th>
             <th width="100px">price</th>
-            <th width="100px">genrer</th>
+            <th width="100px">genre</th>
             <th width="100px">artist</th>
             <th width="100px">label</th>
         </tr>
@@ -15,7 +15,7 @@ ITEM SHOW
 
         <tr>
         <td>
-            <%= @item.attachment_field :jacket_image %> 
+        <%=attachment_image_tag(@item, :jacket_image, :fill, 50, 50)%> 
 
         <td>
             <%= @item.cd_name %>
@@ -35,5 +35,9 @@ ITEM SHOW
         <td>
             <%= @item.label.label %>
         </td>
+        <td>
+            <% @item.discs.each do |dis| %>
+                <%= dis.number %>
+            <% end %>
     </tbody>
 </table>
