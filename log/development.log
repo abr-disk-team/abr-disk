@@ -36861,3 +36861,863 @@ Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `blo
 Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Refile::App: [2019-06-08 18:26:39 +0000] GET "/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" 500 494.2ms
 
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-06-08 18:29:34 +0000
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aBY9NcGMV3ZOGluw1r2fQPYMpLcq6eUYuj4OPSg9mSf1bHYIng8PZMc6MhTj8aitZrYoCWspR2D3mo901S18ag=="}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-08 18:29:34 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4033ms (Views: 3982.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:29:42 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 651ms (Views: 647.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-06-08 18:29:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 874ms (Views: 872.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:29:52 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 930ms (Views: 926.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:36:14 +0000
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (233.6ms)
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:36:17 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 4338ms (Views: 4245.2ms | ActiveRecord: 11.7ms)
+
+
+Completed 200 OK in 1244ms (Views: 1242.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:38:26 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 930ms (Views: 928.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:38:55 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 1232ms (Views: 1228.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:39:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (120.6ms)
+Completed 200 OK in 1084ms (Views: 1083.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:40:06 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 843ms (Views: 840.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:40:54 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (116.4ms)
+Completed 200 OK in 955ms (Views: 953.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-06-08 18:41:38 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KZk/SmNmmWTlW0Pyfi8KH085t8pCRU5JoYqQUM/jtvFPAbzsF9XvYYaeBKoq169c2eRoNlR5xNovMOzsSGAig==", "user"=>{"email"=>"yu.job96@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yu.job96@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/items
+Completed 302 Found in 365ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-08 18:41:38 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (5.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:16
+  [1m[36mGenre Load (4.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (4.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (4.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (2.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (1.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  Rendered items/index.html.erb within layouts/application (459.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1484ms (Views: 1346.5ms | ActiveRecord: 73.0ms)
+
+
+Started GET "/attachments/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" for 10.0.2.2 at 2019-06-08 18:41:40 +0000
+Started GET "/attachments/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" for 10.0.2.2 at 2019-06-08 18:41:40 +0000
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-08 18:41:40 +0000] GET "/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" 500 238.2ms
+
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-08 18:41:40 +0000] GET "/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" 500 433.4ms
+
+Started GET "/items" for 10.0.2.2 at 2019-06-08 18:50:46 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:16
+  [1m[36mGenre Load (7.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (7.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (5.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (3.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (1.6ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  Rendered items/index.html.erb within layouts/application (315.5ms)
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1412ms (Views: 1322.7ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/attachments/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" for 10.0.2.2 at 2019-06-08 18:50:47 +0000
+Started GET "/attachments/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" for 10.0.2.2 at 2019-06-08 18:50:47 +0000
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-08 18:50:47 +0000] GET "/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" 500 156.0ms
+
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-08 18:50:47 +0000] GET "/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" 500 317.0ms
+
+Started GET "/users" for 10.0.2.2 at 2019-06-08 18:50:52 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 997ms (Views: 954.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-08 18:51:16 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 750ms (Views: 705.8ms | ActiveRecord: 4.6ms)
+
+
