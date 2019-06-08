@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :labels
   resources :artists
   resources :genres
+  resources :carts
+  resources :orders
+
 end
