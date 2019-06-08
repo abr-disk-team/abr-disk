@@ -10,6 +10,23 @@
   </head>
 
   <body>
+<!-- ログアウトボタン(仮) -->
+
+    <% if user_signed_in? %>
+     <%= link_to " logout", destroy_user_session_path, method: :delete %>
+     <% end %>
+
+<!-- フラッシュメッセージの表示 -->
+    <div class="container">
+      <div class="row">
+        <% if flash[:notice] %>
+          <div id="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
