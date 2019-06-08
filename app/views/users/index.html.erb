@@ -1,0 +1,25 @@
+<table  class="table">
+	<caption>ユーザー一覧</caption>
+	<thead>
+		<tr>
+			<th>ユーザー名</th>
+			<th>都道府県</th>
+			<th>電話番号</th>
+			<th>アドレス</th>
+			<th>最近の購入</th>
+			<th>詳細</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.first_name %><%= user.last_name %></td>
+			<td><%= user.prefecture %></td>
+			<td><%= user.phone_number %></td>
+			<td><%= user.email %></td>
+			<td>最近の購入</td>
+			<td><%= link_to "詳細", user_path(user.id) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
