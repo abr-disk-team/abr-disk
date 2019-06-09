@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :genres
   resources :carts
   resources :orders
+  resources :contacts
 
 end

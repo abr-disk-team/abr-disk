@@ -32992,3 +32992,179 @@ Processing by CartsController#new as HTML
 Completed 200 OK in 4715ms (Views: 4671.8ms | ActiveRecord: 5.4ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-06-08 06:52:45 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 24ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/index" for 10.0.2.2 at 2019-06-08 06:52:51 +0000
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21
+Completed 404 Not Found in 79ms (ActiveRecord: 14.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=index):
+  
+app/controllers/items_controller.rb:21:in `show'
+Started GET "/items/show" for 10.0.2.2 at 2019-06-08 06:53:05 +0000
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21
+Completed 404 Not Found in 6ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=show):
+  
+app/controllers/items_controller.rb:21:in `show'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateContacts (20190609063233)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190609063233_create_contacts.rb:3
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "contact_content" text, "category" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190609063233_create_contacts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190609063233"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 10.0.2.2 at 2019-06-09 07:42:36 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:42:43 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (29.8ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 10.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>お問い合わせフォーム</h1>
+    2: <%= form_for(@contact) do |f| %>
+    3:     <br>
+    4:     <%= f.text_field :category %>
+    5:     <br>
+  
+app/views/contacts/new.html.erb:2:in `_app_views_contacts_new_html_erb__1338202375648747885_47185263928240'
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:43:19 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 17472ms (Views: 17407.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:47:23 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/contacts/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ea :contact_content placeholder: 'お問い合わせ内容' ...
+...                    ^~~~~~~~~~~):
+  
+app/views/contacts/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:47:47 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 533ms (Views: 499.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:48:07 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 603ms (Views: 565.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 07:50:25 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 520ms (Views: 486.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:01:13 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 561ms (Views: 492.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:01:52 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (35.9ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    2: <%= form_for(@contact) do |f| %>
+    3:     <br>
+    4:     <%= f.text_field :category, placeholder: 'カテゴリーを選択' %>
+    5:     <%= f.text_field :category,[["a","a"],["b","b"]], placeholder: 'カテゴリーを選択' %>
+    6:     <br>
+    7:     <br>
+    8:     <%= f.text_area :contact_content, placeholder: 'お問い合わせ内容' %>
+  
+app/views/contacts/new.html.erb:5:in `block in _app_views_contacts_new_html_erb__4080008064075762116_70004781069660'
+app/views/contacts/new.html.erb:2:in `_app_views_contacts_new_html_erb__4080008064075762116_70004781069660'
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:02:04 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 572ms (Views: 530.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:07:04 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 570ms (Views: 492.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:07:29 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 554ms (Views: 462.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-09 08:11:21 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 591ms (Views: 514.9ms | ActiveRecord: 0.0ms)
+
+
