@@ -1,3 +1,5 @@
+
+
 <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
           <nav class="nav navbar-nav navbar-left">
@@ -14,6 +16,9 @@
                 </li>
                 <li class="slidemenu-link">
                   <%= link_to " CD", items_path, class: "glyphicon glyphicon-record" %>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " カートを見る", "#", class: "glyphicon glyphicon-shopping-cart" %>
                 </li>
                 <li class="slidemenu-link">
                   <%= link_to " logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out logout" %>
