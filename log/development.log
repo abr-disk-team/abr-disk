@@ -39235,3 +39235,1720 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 1041ms (Views: 993.4ms | ActiveRecord: 5.9ms)
 
 
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:29:06 +0000
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:29:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1325ms (Views: 1252.7ms | ActiveRecord: 9.3ms)
+
+
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 4812ms (Views: 4680.4ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:29:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1194ms (Views: 1143.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:30:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1064ms (Views: 1000.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:32:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 9402ms (Views: 9360.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 05:32:45 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1074ms (Views: 1013.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:32:56 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 775ms (Views: 733.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:39:44 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (95.6ms)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: 	<div class="row">
+    3: 		<%= form_for(@user) do |f| %>
+    4: 		<label>名前</label>
+    5: 		<div class="field">
+    6: 			<%= f.label :first_name %>
+  
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___2392875567952368397_69981886851860'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:40:41 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (52.3ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: 	<div class="row">
+    3: 		<%= form_for(@user) do |f| %>
+    4: 		<label>名前</label>
+    5: 		<div class="field">
+    6: 			<%= f.label :first_name %>
+  
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___2392875567952368397_69981875248500'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:40:52 +0000
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (229.9ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 9892ms (Views: 9768.4ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:43:47 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 1.5ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:7: syntax error, unexpected ')'
+...name, autofocus: true, class: );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:10: syntax error, unexpected ')'
+...name, autofocus: true, class: );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:13: syntax error, unexpected ')'
+...kana, autofocus: true, class: );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:16: syntax error, unexpected ')'
+...kana, autofocus: true, class: );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+...one_number, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+... :postcode, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+...field :city, autofocus: true, );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+...eld :block, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+... :building, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	 ^~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/edit.html.erb:7: syntax error, unexpected ')'
+app/views/users/edit.html.erb:10: syntax error, unexpected ')'
+app/views/users/edit.html.erb:13: syntax error, unexpected ')'
+app/views/users/edit.html.erb:16: syntax error, unexpected ')'
+app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:44:19 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+...one_number, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+... :postcode, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+...field :city, autofocus: true, );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+...eld :block, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+... :building, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	 ^~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:44:22 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+...one_number, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+... :postcode, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+...field :city, autofocus: true, );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+...eld :block, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+... :building, autofocus: true,  );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	 ^~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/abr-disk/app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/edit.html.erb:20: syntax error, unexpected ')'
+app/views/users/edit.html.erb:24: syntax error, unexpected ')'
+app/views/users/edit.html.erb:28: syntax error, unexpected ')'
+app/views/users/edit.html.erb:32: syntax error, unexpected ')'
+app/views/users/edit.html.erb:36: syntax error, unexpected ')'
+app/views/users/edit.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/edit.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/edit.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:44:51 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1230ms (Views: 1157.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:46:34 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1242ms (Views: 1190.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:46:59 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1280ms (Views: 1154.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:47:03 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1164ms (Views: 1105.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:47:10 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1044ms (Views: 985.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:47:38 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1094ms (Views: 1036.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:48:40 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1271ms (Views: 1195.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:49:23 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1081ms (Views: 1042.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 05:50:50 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1213ms (Views: 1147.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 06:05:45 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1576ms (Views: 1520.6ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 06:07:52 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 938ms (Views: 908.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 06:08:18 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1246ms (Views: 1140.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 06:08:49 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1133ms (Views: 1057.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 07:38:01 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1227ms (Views: 1162.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 07:39:38 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:39: syntax error, unexpected '<', expecting ')'
+		    <% end );@output_buffer.safe_a...
+		    ^
+/vagrant/abr-disk/app/views/users/edit.html.erb:47: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/users/edit.html.erb:39: syntax error, unexpected '<', expecting ')'
+app/views/users/edit.html.erb:47: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 07:39:59 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 6213ms (Views: 6155.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 07:41:20 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 6.0ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:38: syntax error, unexpected tLABEL, expecting ')'
+...る", user_path(@user.id) class: "button-left btn btn-default...
+...                          ^~~~~~):
+  
+app/views/users/edit.html.erb:38: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 08:17:56 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 3.0ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/users/edit.html.erb:38: syntax error, unexpected tLABEL, expecting ')'
+...る", user_path(@user.id) class: "button-left btn btn-default...
+...                          ^~~~~~):
+  
+app/views/users/edit.html.erb:38: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 08:18:16 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1359ms (Views: 1296.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 08:19:10 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 5303ms (Views: 5224.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 08:20:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 889ms (Views: 849.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 08:20:27 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1253ms (Views: 1189.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 08:20:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1396ms (Views: 1308.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 08:20:32 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1134ms (Views: 1070.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 10:02:45 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1165ms (Views: 1111.2ms | ActiveRecord: 8.0ms)
+
+
+Started PATCH "/users/3" for 10.0.2.2 at 2019-06-09 10:22:07 +0000
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/users/3" for 10.0.2.2 at 2019-06-09 10:26:28 +0000
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KxCaUWCjdDIWsco68O/TqwsWo+LqFUMQbqwTSaGuBT1LMxcmqUlZCFr5cgb4lrPGXik0NzQnNcq8SzHcjcjpOQ==", "user"=>{"first_name"=>"石橋", "last_name"=>"勇二", "first_name_kana"=>"いしばし", "last_name_kana"=>"ゆうじ", "phone_number"=>"08020562763", "postcode"=>"2420021", "prefecture"=>"神奈川県", "city"=>"大和市中央", "block"=>"6-8-29", "building"=>""}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Update (9.0ms)[0m  [1m[33mUPDATE "users" SET "postcode" = ?, "prefecture" = ?, "city" = ?, "block" = ?, "building" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["postcode", "2420021"], ["prefecture", 0], ["city", "大和市中央"], ["block", "6-8-29"], ["building", ""], ["updated_at", "2019-06-09 10:26:28.926831"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 205ms (ActiveRecord: 43.1ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:26:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 10713ms (Views: 10619.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 10:26:49 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (35.3ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 979ms (Views: 937.6ms | ActiveRecord: 5.5ms)
+
+
+Started PATCH "/users/3" for 10.0.2.2 at 2019-06-09 10:26:59 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TlKbBwfF9oFyf07lEIAN9Dxa1wgibegvhBxREm5zV+cLWv4iNTO/7lftvTiAm8fV6d0NnU00aLJmWJx/VMTkzw==", "user"=>{"first_name"=>"石橋", "last_name"=>"勇二", "first_name_kana"=>"いしばし", "last_name_kana"=>"ゆうじ", "phone_number"=>"08020562763", "postcode"=>"2420021", "prefecture"=>"神奈川県", "city"=>"大和市中央", "block"=>"6-8-29", "building"=>""}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Update (16.2ms)[0m  [1m[33mUPDATE "users" SET "prefecture" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["prefecture", 0], ["updated_at", "2019-06-09 10:26:59.090099"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 61ms (ActiveRecord: 32.9ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:26:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1133ms (Views: 1049.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 10:30:05 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  Rendered users/another_address.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1327ms (Views: 1275.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 10:30:15 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 730ms (Views: 688.7ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/users/3" for 10.0.2.2 at 2019-06-09 10:30:21 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0TzjBOlnMWPdkMOfFlvCvLfv8He3TTCF/QkY6bT0uWCUNIYh25F4DPgCMEKGQAidYmgq4tgUsBgfTdWEjkMKSA==", "user"=>{"first_name"=>"石橋", "last_name"=>"勇二", "first_name_kana"=>"いしばし", "last_name_kana"=>"ゆうじ", "phone_number"=>"08020562763", "postcode"=>"2420021", "prefecture"=>"", "city"=>"大和市中央", "block"=>"6-8-29", "building"=>""}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Update (5.3ms)[0m  [1m[33mUPDATE "users" SET "prefecture" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["prefecture", nil], ["updated_at", "2019-06-09 10:30:21.300070"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 39ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:30:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1044ms (Views: 989.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:33:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1191ms (Views: 1133.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:33:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:33:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 1054ms (Views: 1017.8ms | ActiveRecord: 3.6ms)
+
+
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 868ms (Views: 805.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:34:19 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 974ms (Views: 928.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:35:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 990ms (Views: 941.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:35:53 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 803ms (Views: 744.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 10:36:39 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:15
+Completed 200 OK in 928ms (Views: 886.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:32:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (7.3ms)
+  Rendered users/show.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 906ms (Views: 858.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:33:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (9.5ms)
+  Rendered users/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 6422ms (Views: 6363.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:36:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (16.9ms)
+  Rendered users/show.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 4841ms (Views: 4788.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:39:25 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (9.6ms)
+  Rendered users/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 5677ms (Views: 5589.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:41:09 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.4ms)
+  Rendered users/show.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 5510ms (Views: 5466.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:41:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.1ms)
+  Rendered users/show.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 1081ms (Views: 1023.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:41:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (12.7ms)
+  Rendered users/show.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 1186ms (Views: 1135.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:42:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (16.7ms)
+  Rendered users/show.html.erb within layouts/application (173.7ms)
+Completed 200 OK in 5355ms (Views: 5265.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:42:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.4ms)
+  Rendered users/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 665ms (Views: 635.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:42:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.7ms)
+  Rendered users/show.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 843ms (Views: 797.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:42:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (10.4ms)
+  Rendered users/show.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 1157ms (Views: 1098.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:42:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.2ms)
+  Rendered users/show.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 880ms (Views: 833.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:43:20 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (9.8ms)
+  Rendered users/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 1044ms (Views: 986.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:43:27 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 888ms (Views: 836.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:43:34 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 948ms (Views: 906.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:44:16 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 838ms (Views: 802.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:44:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.5ms)
+  Rendered users/show.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 911ms (Views: 873.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:44:31 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 864ms (Views: 826.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:45:04 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 1139ms (Views: 1097.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:45:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.6ms)
+  Rendered users/show.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 688ms (Views: 658.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 15:45:19 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 961ms (Views: 909.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3/edit" for 10.0.2.2 at 2019-06-09 15:45:47 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (11.7ms)
+  Rendered users/edit.html.erb within layouts/application (117.2ms)
+Completed 200 OK in 1643ms (Views: 1551.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:46:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.5ms)
+  Rendered users/show.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 907ms (Views: 872.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 15:46:05 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.4ms)
+  Rendered users/show.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 983ms (Views: 946.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 15:46:07 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (11.4ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 1184ms (Views: 1125.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-09 15:46:10 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:16
+  [1m[36mGenre Load (4.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (3.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (4.8ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (2.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:31
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mLabel Load (1.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:37
+  Rendered items/index.html.erb within layouts/application (395.5ms)
+Completed 200 OK in 1389ms (Views: 1256.0ms | ActiveRecord: 61.7ms)
+
+
+Started GET "/attachments/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" for 10.0.2.2 at 2019-06-09 15:46:12 +0000
+Started GET "/attachments/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" for 10.0.2.2 at 2019-06-09 15:46:12 +0000
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-09 15:46:12 +0000] GET "/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" 500 199.6ms
+
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-09 15:46:12 +0000] GET "/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" 500 417.4ms
+
+Started GET "/attachments/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" for 10.0.2.2 at 2019-06-09 15:46:23 +0000
+Started GET "/attachments/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" for 10.0.2.2 at 2019-06-09 15:46:23 +0000
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-09 15:46:23 +0000] GET "/008f13ab0283402f05ba67e20730a43013485601/store/fill/100/100/8b6e291db838f8c9b2a28c25ea1b432debefab6f5598e1533689b9d52114/jacket_image" 500 168.8ms
+
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/configuration.rb:140:in `cli'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:133:in `executable'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:108:in `command'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:90:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/mini_magick-4.9.3/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:77:in `fill'
+Refile::App: /var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:135:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/app.rb:62:in `block in <class:App>'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+Refile::App: /home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/null_logger.rb:9:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:48:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `each'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/etag.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/conditional_get.rb:25:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:232:in `context'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/session/abstract/id.rb:226:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/migration.rb:559:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: /var/lib/gems/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+Refile::App: /var/lib/gems/2.5.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2019-06-09 15:46:23 +0000] GET "/1efb9cd034aa383e112f7aa422f91009c20e2b13/store/fill/100/100/4efe5640a13f9930157ee6b63ac29997a7d5174481892acc8ccd66d544ec/jacket_image" 500 354.1ms
+

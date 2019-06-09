@@ -1,9 +1,10 @@
 
+<%= render 'users/header' %>
 <div class="container">
 	<div class="row">
 		<div class="col-xs-7">
 			<table class="table">
-				<h3>ユーザー詳細</h3>
+				<h3>マイページ</h3>
 				<thead>
 					<tr>
 						<th><label>ユーザー名</label></th>
@@ -28,40 +29,43 @@
 
 				</thead>
 			</table>
-			<%= link_to "新しい住所を登録する", another_address_path(@user.id), class: "btn btn-default" %>
-			<%= link_to "編集する", edit_user_path(@user.id), class: "btn btn-default" %>
+			<%= link_to "新しい住所を登録する", another_address_path(@user.id), class: "button-right btn btn-default" %>
+			<%= link_to "編集する", edit_user_path(@user.id), class: "button-right btn btn-default" %>
 		</div>
 		<div class="col-xs-5">
-			<table class="table">
-				<h3>購入履歴</h3>
-				<thead>
-					<tr>
-						<th><label>購入日時</label></th>
-						<th>購入日時</th>
-					</tr>
-					<tr>
-						<th><label>購入商品</label></th>
-						<th>購入商品</th>
-					</tr>
+			<div class="clearfix">
+				<table class="table">
+					<h3>購入履歴</h3>
+					<thead>
+						<tr>
+							<th><label>購入日時</label></th>
+							<th>購入日時</th>
+						</tr>
+						<tr>
+							<th><label>購入商品</label></th>
+							<th>購入商品</th>
+						</tr>
+					</thead>
+				</table>
+				<%= link_to "もっと見る", "#", class: "button-right btn btn-default" %>
+			</div>
+			<div class="clearfix">
+				<table class="table">
+					<h3>いいね一覧</h3>
+					<thead>
+						<tr>
+							<th><label>商品名</label></th>
+							<th>商品名</th>
+						</tr>
+						<tr>
+							<th><label>アーティスト名</label></th>
+							<th>アーティスト名</th>
+						</tr>
 
-
-				</thead>
-			</table>
-			<table class="table">
-				<h3>いいね一覧</h3>
-				<thead>
-					<tr>
-						<th><label>商品名</label></th>
-						<th>購入日時</th>
-					</tr>
-					<tr>
-						<th><label>アーティスト名</label></th>
-						<th>購入商品</th>
-					</tr>
-
-
-				</thead>
-			</table>
+					</thead>
+				</table>
+				<%= link_to "もっと見る", "#", class: "button-right btn btn-default" %>
+			</div>
 
 		</div>
 	</div>
