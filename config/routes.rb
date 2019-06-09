@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'home#top'
 
   devise_for :users
@@ -6,7 +7,9 @@ Rails.application.routes.draw do
   get 'users/:id/another_address' => 'users#another_address', as: "another_address"
   post 'users/:id/another_address' => 'users#another_address_create'
   get 'users/:id/address' => 'users#address_edit', as: "edit_address"
-  resources :users
+  resources :users do
+    resources :another_addresses, only: [:create, :edit, :update, :destroy]
+  end
   resources :items
   resources :labels
   resources :artists

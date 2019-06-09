@@ -1,0 +1,2 @@
+module AnotherAddressesHelper
+end
