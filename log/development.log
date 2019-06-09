@@ -41283,3 +41283,171 @@ Completed 200 OK in 3726ms (Views: 3666.4ms | ActiveRecord: 10.2ms)
   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   [1m[36mAnotherAddress Load (1.9ms)[0m  [1m[34mSELECT  "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
   [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 3]]
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 17:05:24 +0000
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (7.5ms)
+  Rendered users/show.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 5016ms (Views: 4839.2ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 17:05:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (10.5ms)
+  Rendered users/show.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 1116ms (Views: 1060.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 17:07:09 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.8ms)
+  Rendered users/show.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 849ms (Views: 793.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 17:07:11 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.2ms)
+  Rendered users/show.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 842ms (Views: 798.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:07:13 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (7.0ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 883ms (Views: 834.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 17:07:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.2ms)
+  Rendered users/show.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 894ms (Views: 827.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:07:20 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 737ms (Views: 693.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:14:49 +0000
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (80.7ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (119.2ms)
+Completed 200 OK in 4821ms (Views: 4738.9ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:15:11 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (9.4ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 917ms (Views: 878.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:18:24 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.6ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 1224ms (Views: 1169.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:20:10 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:19
+  Rendered users/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 1164ms (Views: 1122.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/users/1" for 10.0.2.2 at 2019-06-09 17:20:17 +0000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4vCj8t7u6zWzDauIudz4VXc+2DRy7CHuglV2zgDl3cWC0y6FFwTGD/9FE7SxpZg4IgFP4azeVzRQslRbLIMxwQ==", "id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mUser Destroy (15.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:26
+Redirected to http://localhost:3000/users
+Completed 302 Found in 36ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2019-06-09 17:20:17 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (8.0ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:19
+  Rendered users/index.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 1054ms (Views: 965.2ms | ActiveRecord: 5.0ms)
+
+
