@@ -41191,3 +41191,95 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 873ms (Views: 816.5ms | ActiveRecord: 7.7ms)
 
 
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:51:02 +0000
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/abr-disk/app/controllers/users_controller.rb:27: syntax error, unexpected '(', expecting keyword_end
+    @another_address(another_address_params)
+                    ^):
+  
+app/controllers/users_controller.rb:27: syntax error, unexpected '(', expecting keyword_end
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:53:36 +0000
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (10.6ms)
+  Rendered users/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 4529ms (Views: 4365.3ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:53:54 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (7.2ms)
+  Rendered users/another_address.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 847ms (Views: 780.0ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:54:46 +0000
+Processing by UsersController#another_address_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bepZRr3gUj/VxcA+Bla57j5vQFBDjHrTiBy9TDrvpXmJdR8HgT6S15B3KHbBzNkmYaX1imEa33L1MpcVXGQB9w==", "another_address"=>{"another_last_name"=>"石橋", "another_first_name"=>"和明", "another_last_name_kana"=>"いしばし", "another_first_name_kana"=>"かずあき", "another_postcode"=>"2420021", "another_prefecture"=>"", "another_city"=>"大和市中央", "another_block"=>"6-8-29", "another_building"=>""}, "commit"=>"登録", "id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mAnotherAddress Create (11.6ms)[0m  [1m[32mINSERT INTO "another_addresses" ("user_id", "another_last_name", "another_first_name", "another_last_name_kana", "another_first_name_kana", "another_postcode", "another_prefecture", "another_city", "another_block", "another_building", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["another_last_name", "石橋"], ["another_first_name", "和明"], ["another_last_name_kana", "いしばし"], ["another_first_name_kana", "かずあき"], ["another_postcode", "2420021"], ["another_prefecture", ""], ["another_city", "大和市中央"], ["another_block", "6-8-29"], ["another_building", ""], ["created_at", "2019-06-09 16:54:46.555210"], ["updated_at", "2019-06-09 16:54:46.555210"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 21.2ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:30:in `another_address_create'
+Started POST "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:55:19 +0000
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#another_address_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bepZRr3gUj/VxcA+Bla57j5vQFBDjHrTiBy9TDrvpXmJdR8HgT6S15B3KHbBzNkmYaX1imEa33L1MpcVXGQB9w==", "another_address"=>{"another_last_name"=>"石橋", "another_first_name"=>"和明", "another_last_name_kana"=>"いしばし", "another_first_name_kana"=>"かずあき", "another_postcode"=>"2420021", "another_prefecture"=>"", "another_city"=>"大和市中央", "another_block"=>"6-8-29", "another_building"=>""}, "commit"=>"登録", "id"=>"3"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mAnotherAddress Create (8.3ms)[0m  [1m[32mINSERT INTO "another_addresses" ("user_id", "another_last_name", "another_first_name", "another_last_name_kana", "another_first_name_kana", "another_postcode", "another_prefecture", "another_city", "another_block", "another_building", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["another_last_name", "石橋"], ["another_first_name", "和明"], ["another_last_name_kana", "いしばし"], ["another_first_name_kana", "かずあき"], ["another_postcode", "2420021"], ["another_prefecture", ""], ["another_city", "大和市中央"], ["another_block", "6-8-29"], ["another_building", ""], ["created_at", "2019-06-09 16:55:19.783266"], ["updated_at", "2019-06-09 16:55:19.783266"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 183ms (ActiveRecord: 43.9ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:55:19 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (21.1ms)
+  Rendered users/show.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 3726ms (Views: 3666.4ms | ActiveRecord: 10.2ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAnotherAddress Load (1.5ms)[0m  [1m[34mSELECT  "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAnotherAddress Load (1.9ms)[0m  [1m[34mSELECT  "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 3]]
