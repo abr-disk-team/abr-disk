@@ -1,0 +1,42 @@
+<!-- ヘッダー -->
+<%= render 'template/header' %>
+
+<div class="container">
+	<div class="row">
+		<h1>住所の編集</h1>
+		<div class="col-xs-6 col-xs-offset-3">
+
+			<%= form_for(@user) do |f| %>
+
+			<label>郵便番号</label>
+			<div class="field">
+				<%= f.text_field :postcode, autofocus: true, class: "max-width-input" %>
+			</div>
+
+			<label>都道府県</label>
+			<div class="field">
+	         	<%= f.text_field :prefecture, autofocus: true, class: "max-width-input" %>
+			</div>
+
+			<label>市区町村</label>
+			<div class="field">
+	         	<%= f.text_field :city, autofocus: true, class: "max-width-input" %>
+			</div>
+
+			<label>番地</label>
+			<div class="field">
+	         	<%= f.text_field :block, autofocus: true, class: "max-width-input" %>
+			</div>
+
+			<label>建物名</label>
+			<div class="field">
+	         	<%= f.text_field :building, autofocus: true, class: "max-width-input" %>
+			</div>
+
+			<%= f.submit "住所を更新する", class: "button-right btn btn-default" %>
+			<%= link_to "マイページに戻る", user_path(current_user.id), class: "button-left btn btn-default" %>
+		    <% end %>
+
+		</div>
+	</div>
+</div>

@@ -7,15 +7,21 @@
 			<h1>お届け先を追加する</h1>
 
 			<%= form_for @another_address, :url => {:action => 'another_address_create'} do |f| %>
-			<label>名前</label>
+
+			<label>お届け先名</label>
 			<div class="field">
-	         	<%= f.text_field :another_last_name, autofocus: true, class: "name-input" %>
+	         	<%= f.text_field :address_name, autofocus: true, class: "max-width-input", placeholder: '（例）職場・別荘'  %>
+			</div>
 
-	         	<%= f.text_field :another_first_name, autofocus: true, class: "name-input" %>
+			<label>お届け先氏名</label>
+			<div class="field">
+	         	<%= f.text_field :another_last_name, autofocus: true, placeholder: '性', class: "name-input" %>
 
-	         	<%= f.text_field :another_last_name_kana, autofocus: true, class: "name-input" %>
+	         	<%= f.text_field :another_first_name, autofocus: true, placeholder: '名', class: "name-input" %>
 
-	         	<%= f.text_field :another_first_name_kana, autofocus: true, class: "name-input" %>
+	         	<%= f.text_field :another_last_name_kana, autofocus: true, placeholder: '性（ふりがな）' ,class: "name-input" %>
+
+	         	<%= f.text_field :another_first_name_kana, autofocus: true, placeholder: '名（ふりがな）', class: "name-input" %>
 			</div>
 			<label>郵便番号</label>
 			<div class="field">

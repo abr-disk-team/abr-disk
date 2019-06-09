@@ -12,9 +12,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def address_edit
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
     if @user == current_user && @user.update(user_params)
+      flash[:notice] = "User was successfully updated."
       redirect_to user_path(@user.id)
     else
       render :edit
@@ -39,6 +44,7 @@ class UsersController < ApplicationController
     @another_address = AnotherAddress.new(another_address_params)
     @another_address.user_id = current_user.id
     if @another_address.save
+      flash[:notice] = "Address was successfully created."
       redirect_to user_path(current_user.id)
     else
       render :another_address
@@ -48,10 +54,10 @@ class UsersController < ApplicationController
   private
   # ユーザー登録・更新のストロングパラメーター
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :phone_number, :postcode, :prefecture, :city, :block, :building)
+    params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :phone_number, :email, :postcode, :prefecture, :city, :block, :building)
   end
   # 別住所登録のストロングパラメーター
   def another_address_params
-    params.require(:another_address).permit(:another_last_name, :another_first_name, :another_last_name_kana, :another_first_name_kana, :another_postcode, :another_prefecture, :another_city, :another_block, :another_building)
+    params.require(:another_address).permit(:address_name,:another_last_name, :another_first_name, :another_last_name_kana, :another_first_name_kana, :another_postcode, :another_prefecture, :another_city, :another_block, :another_building)
   end
 end
