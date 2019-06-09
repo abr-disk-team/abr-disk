@@ -21,6 +21,11 @@ class UsersController < ApplicationController
   end
 
   def another_address
+    @another_address = AnotherAddress.new
+    
+  end
+  def another_address_create
+    @another_address
   end
 
   def user_params

@@ -40973,3 +40973,221 @@ Migrating to CreateAnotherAddresses (20190609155931)
   ↳ bin/rails:9
   [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:06:34 +0000
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (10.4ms)
+  Rendered users/show.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 15366ms (Views: 15221.8ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:23:21 +0000
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (8.9ms)
+  Rendered users/show.html.erb within layouts/application (59.7ms)
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:23:25 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (9.8ms)
+  Rendered users/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 5397ms (Views: 5261.9ms | ActiveRecord: 20.7ms)
+
+
+Completed 200 OK in 1639ms (Views: 1573.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:24:19 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (Unable to autoload constant Another_address, expected /vagrant/abr-disk/app/models/another_address.rb to define it):
+  
+app/controllers/users_controller.rb:24:in `another_address'
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:29:13 +0000
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (66.1ms)
+  Rendered users/another_address.html.erb within layouts/application (432.3ms)
+Completed 500 Internal Server Error in 643ms (ActiveRecord: 27.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `another_addresses_path' for #<#<Class:0x0000555e5ea76a90>:0x0000555e5ea22620>):
+     6: 		<div class="col-xs-6">
+     7: 			<h1>お届け先を追加する</h1>
+     8: 
+     9: 			<%= form_for(@another_address) do |f| %>
+    10: 			<label>名前</label>
+    11: 			<div class="field">
+    12: 	         	<%= f.text_field :another_last_name, autofocus: true, class: "name-input" %>
+  
+app/views/users/another_address.html.erb:9:in `_app_views_users_another_address_html_erb___2248211826552710314_46931901181400'
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:30:08 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (13.0ms)
+  Rendered users/another_address.html.erb within layouts/application (331.5ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `another_addresses_path' for #<#<Class:0x0000555e5ea76a90>:0x0000555e5f3799f8>):
+     6: 		<div class="col-xs-6">
+     7: 			<h1>お届け先を追加する</h1>
+     8: 
+     9: 			<%= form_for(@another_address) do |f| %>
+    10: 			<label>名前</label>
+    11: 			<div class="field">
+    12: 	         	<%= f.text_field :another_last_name, autofocus: true, class: "name-input" %>
+  
+app/views/users/another_address.html.erb:9:in `_app_views_users_another_address_html_erb___2248211826552710314_46931906385520'
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:32:58 +0000
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (69.6ms)
+  Rendered users/another_address.html.erb within layouts/application (474.9ms)
+Completed 500 Internal Server Error in 738ms (ActiveRecord: 28.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `another_addresses_path' for #<#<Class:0x00005628c09d2a30>:0x00005628c0a5ec88>):
+     6: 		<div class="col-xs-6">
+     7: 			<h1>お届け先を追加する</h1>
+     8: 
+     9: 			<%= form_for(@another_address) do |f| %>
+    10: 			<label>名前</label>
+    11: 			<div class="field">
+    12: 	         	<%= f.text_field :another_last_name, autofocus: true, class: "name-input" %>
+  
+app/views/users/another_address.html.erb:9:in `_app_views_users_another_address_html_erb___1661951482620320355_47366515134440'
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:35:43 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (6.2ms)
+  Rendered users/another_address.html.erb within layouts/application (131.9ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    33: 			</div>
+    34: 
+    35: 			<%= f.submit "登録", class: "button-right btn btn-default" %>
+    36: 			<%= link_to "マイページに戻る", user_path(@user.id), class: "button-left btn btn-default" %>
+    37: 		    <% end %>
+    38: 
+    39: 		</div>
+  
+app/views/users/another_address.html.erb:36:in `block in _app_views_users_another_address_html_erb___1661951482620320355_47366519424700'
+app/views/users/another_address.html.erb:9:in `_app_views_users_another_address_html_erb___1661951482620320355_47366519424700'
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:36:23 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (11.2ms)
+  Rendered users/another_address.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 4059ms (Views: 4021.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:36:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.6ms)
+  Rendered users/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 867ms (Views: 833.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:36:45 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.0ms)
+  Rendered users/another_address.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 613ms (Views: 573.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:36:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.5ms)
+  Rendered users/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 925ms (Views: 877.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/3/another_address" for 10.0.2.2 at 2019-06-09 16:36:55 +0000
+Processing by UsersController#another_address as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/another_address.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (4.4ms)
+  Rendered users/another_address.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 614ms (Views: 573.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2019-06-09 16:36:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_header.html.erb:8
+  Rendered users/_header.html.erb (5.0ms)
+  Rendered users/show.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 873ms (Views: 816.5ms | ActiveRecord: 7.7ms)
+
+
