@@ -1,2 +1,47 @@
-<h1>AnotherAddresses#edit</h1>
-<p>Find me in app/views/another_addresses/edit.html.erb</p>
+<!-- ヘッダー -->
+<%= render 'template/header' %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>お届け先を編集する</h1>
+
+			<%= form_for @another_address, :url => {:action => 'update'} do |f| %>
+
+			<label>お届け先名</label>
+			<div class="field">
+	         	<%= f.text_field :address_name, autofocus: true, class: "max-width-input", placeholder: '（例）職場・別荘'  %>
+			</div>
+
+			<label>お届け先氏名</label>
+			<div class="field">
+	         	<%= f.text_field :another_last_name, autofocus: true, placeholder: '性', class: "name-input" %>
+
+	         	<%= f.text_field :another_first_name, autofocus: true, placeholder: '名', class: "name-input" %>
+
+	         	<%= f.text_field :another_last_name_kana, autofocus: true, placeholder: '性（ふりがな）' ,class: "name-input" %>
+
+	         	<%= f.text_field :another_first_name_kana, autofocus: true, placeholder: '名（ふりがな）', class: "name-input" %>
+			</div>
+			<label>郵便番号</label>
+			<div class="field">
+	         	<%= f.text_field :another_postcode, autofocus: true, class: "max-width-input"  %>
+			</div>
+			<label>住所</label>
+			<div class="field">
+	         	<%= f.text_field :another_prefecture, autofocus: true, placeholder: '都道府県', class: "max-width-input" %>
+
+	         	<%= f.text_field :another_city, autofocus: true, placeholder: '市区町村',class: "max-width-input" %>
+
+	         	<%= f.text_field :another_block, autofocus: true, placeholder: '番地', class: "max-width-input"  %>
+
+	         	<%= f.text_field :another_building, autofocus: true, placeholder: '建物', class: "max-width-input" %>
+			</div>
+
+			<%= f.submit "登録", class: "button-right btn btn-default" %>
+			<%= link_to "マイページに戻る", user_path(current_user.id), class: "button-left btn btn-default" %>
+		    <% end %>
+
+		</div>
+	</div>
+</div>

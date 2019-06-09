@@ -36,21 +36,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def another_address
-    @another_address = AnotherAddress.new
-  end
-
-  def another_address_create
-    @another_address = AnotherAddress.new(another_address_params)
-    @another_address.user_id = current_user.id
-    if @another_address.save
-      flash[:notice] = "Address was successfully created."
-      redirect_to user_path(current_user.id)
-    else
-      render :another_address
-    end
-  end
-
   private
   # ユーザー登録・更新のストロングパラメーター
   def user_params

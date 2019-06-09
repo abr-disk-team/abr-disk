@@ -53,7 +53,7 @@
 							<th>お届け先名</th>
 							<th><label>郵便番号</label></th>
 							<th><label>住所</label></th>
-							<th></th>
+							<th colspan="2"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -62,11 +62,13 @@
 								<td><%= another_address.address_name %></td>
 								<td><%= another_address.another_postcode %></td>
 								<td><%= another_address.another_prefecture %><%= another_address.another_city %><%= another_address.another_block %><%= another_address.another_building %></td>
+								<td><%= link_to "編集", edit_user_another_address_path(@user.id, another_address.id)%></td>
+								<td><%= link_to "削除", user_another_address_path(@user.id, another_address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
 							</tr>
 						<% end %>
 					</tbody>
 				</table>
-				<%= link_to "新しい住所を登録する", another_address_path(@user.id), class: "button-right btn btn-default" %>
+				<%= link_to "新しい住所を登録する", new_user_another_address_path(@user.id), class: "button-right btn btn-default" %>
 			</div>
 		</div>
 		<div class="col-xs-5">
