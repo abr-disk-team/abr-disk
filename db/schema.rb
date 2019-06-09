@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_045502) do
+ActiveRecord::Schema.define(version: 2019_06_09_155931) do
+
+  create_table "another_addresses", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "another_last_name"
+    t.string "another_first_name"
+    t.string "another_last_name_kana"
+    t.string "another_first_name_kana"
+    t.string "address_name"
+    t.string "another_postcode"
+    t.string "another_prefecture"
+    t.string "another_city"
+    t.string "another_block"
+    t.string "another_building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "artists", force: :cascade do |t|
     t.string "artist"
