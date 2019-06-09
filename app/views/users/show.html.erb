@@ -1,38 +1,75 @@
 <!-- ヘッダー -->
-<%= render 'users/header' %>
+<%= render 'template/header' %>
 
 <div class="container">
 	<div class="row">
 		<h1>マイページ</h1>
 		<div class="col-xs-7">
-			<table class="table">
-				<h3>ユーザー情報</h3>
-				<thead>
-					<tr>
-						<th><label>ユーザー名</label></th>
-						<th><%= @user.last_name %><%= @user.first_name %></th>
-					</tr>
-					<tr>
-						<th><label>郵便番号</label></th>
-						<th><%= @user.postcode %></th>
-					</tr>
-					<tr>
-						<th><label>住所</label></th>
-						<th><%= @user.prefecture %><%= @user.city %><%= @user.block %><%= @user.building %></th>
-					</tr>
-					<tr>
-						<th><label>電話番号</label></th>
-						<th><%= @user.phone_number %></th>
-					</tr>
-					<tr>
-						<th><label>メールアドレス</label></th>
-						<th><%= @user.email %></th>
-					</tr>
+			<div class="clearfix">
+				<table class="table">
+					<h3>ユーザー情報</h3>
+					<thead>
+						<tr>
+							<th><label>ユーザー名</label></th>
+							<th><%= @user.last_name %><%= @user.first_name %></th>
+						</tr>
+						<tr>
+							<th><label>電話番号</label></th>
+							<th><%= @user.phone_number %></th>
+						</tr>
+						<tr>
+							<th><label>メールアドレス</label></th>
+							<th><%= @user.email %></th>
+						</tr>
 
-				</thead>
-			</table>
-			<%= link_to "新しい住所を登録する", another_address_path(@user.id), class: "button-right btn btn-default" %>
-			<%= link_to "編集する", edit_user_path(@user.id), class: "button-right btn btn-default" %>
+					</thead>
+				</table>
+				<%= link_to "編集する", edit_user_path(@user.id), class: "button-right btn btn-default" %>
+			</div>
+			<div class="clearfix">
+				<h3>お届け先</h3>
+				<table class="table">
+					<caption>自宅</caption>
+					<thead>
+						<tr>
+							<th><label>郵便番号</label></th>
+							<th><label>住所</label></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= @user.postcode %></td>
+							<td><%= @user.prefecture %><%= @user.city %><%= @user.block %><%= @user.building %></td>
+							<td><%= link_to "編集する", edit_address_path(@user.id), class: "btn btn-default" %></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table">
+					<caption>別のお届け先</caption>
+					<thead>
+						<tr>
+							<th>お届け先名</th>
+							<th><label>郵便番号</label></th>
+							<th><label>住所</label></th>
+							<th colspan="2"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @user.another_addresses.each do |another_address| %>
+							<tr>
+								<td><%= another_address.address_name %></td>
+								<td><%= another_address.another_postcode %></td>
+								<td><%= another_address.another_prefecture %><%= another_address.another_city %><%= another_address.another_block %><%= another_address.another_building %></td>
+								<td><%= link_to "編集", edit_user_another_address_path(@user.id, another_address.id)%></td>
+								<td><%= link_to "削除", user_another_address_path(@user.id, another_address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+				<%= link_to "新しい住所を登録する", new_user_another_address_path(@user.id), class: "button-right btn btn-default" %>
+			</div>
 		</div>
 		<div class="col-xs-5">
 			<div class="clearfix">
