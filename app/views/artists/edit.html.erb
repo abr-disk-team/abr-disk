@@ -1,0 +1,9 @@
+EDIT ARTIST
+
+<%= form_for(@artist) do |f| %>
+    <%= f.text_field :artist %>
+    <%= f.submit %>
+
+    <%= link_to "Destroy",@artist, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger destroy_artist_#{@artist.id}" %>
+
+<% end %>

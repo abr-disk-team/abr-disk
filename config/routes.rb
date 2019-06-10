@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
+  root 'home#top'
+
+  get 'users/another_address'
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
+  resources :items
+  resources :labels
+  resources :artists
+  resources :genres
+  resources :carts, only: [:show]
+  resources :orders
+
+  post '/add_item/:id' => 'carts#add_item'
+  post '/update_item' =>'carts#update_item'
+  delete '/delete_item' => 'carts#delete_item'
+
 end

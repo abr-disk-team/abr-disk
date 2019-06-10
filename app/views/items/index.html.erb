@@ -1,0 +1,42 @@
+ITEM INDEX
+<table border="1">
+    <thead>
+        <tr>
+            <th width="100px">image</th>
+            <th width="100px">cdname</th>
+            <th width="100px">stock</th>
+            <th width="100px">price</th>
+            <th width="100px">genre</th>
+            <th width="100px">artist</th>
+            <th width="100px">label</th>
+            <th width="100px"></th>
+        </tr>
+    </thead>
+    <tbody>
+<% @items.each do |item| %>
+        <tr>
+        <td>
+		    <%= attachment_image_tag(item, :jacket_image, :fill, 100, 100) %>
+        </td>
+        <td>
+            <%= item.cd_name %>
+        </td>
+        <td>
+            <%= item.stock %>
+        </td>
+        <td>
+            <%= item.price %>
+        </td>
+        <td>
+            <%= item.genre.genre %>
+        </td>
+        <td>
+            <%= item.artist.artist %>
+        </td>
+        <td>
+            <%= item.label.label %>
+        </td>
+        <td>
+        <%= link_to "view detail", item %>
+        </td>
+<% end %>

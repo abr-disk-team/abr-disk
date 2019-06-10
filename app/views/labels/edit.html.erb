@@ -1,0 +1,9 @@
+EDIT LABEL
+
+
+<%= form_for(@label) do |f| %>
+    <%= f.text_field :label %>
+    <%= f.submit %>
+    <%= link_to "Destroy",@label, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger destroy_label_#{@label.id}" %>
+
+<% end %>
