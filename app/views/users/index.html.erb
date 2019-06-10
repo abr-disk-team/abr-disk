@@ -1,0 +1,32 @@
+<!-- ヘッダー -->
+<%= render 'template/header' %>
+
+<div class="container">
+	<table  class="table">
+		<h1>ユーザー一覧</h1>
+		<thead>
+			<tr>
+				<th>ユーザー名</th>
+				<th>都道府県</th>
+				<th>電話番号</th>
+				<th>アドレス</th>
+				<th>最近の購入</th>
+				<th>詳細</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @users.each do |user| %>
+			<tr>
+				<td><%= user.last_name %><%= user.first_name %></td>
+				<td><%= user.prefecture %></td>
+				<td><%= user.phone_number %></td>
+				<td><%= user.email %></td>
+				<td>最近の購入</td>
+				<td><%= link_to "詳細", user_path(user.id) %></td>
+				<td><%= link_to "destroy", user_path(user.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

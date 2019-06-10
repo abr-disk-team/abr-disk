@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_06_09_063233) do
+=======
+ActiveRecord::Schema.define(version: 2019_06_09_155931) do
+
+  create_table "another_addresses", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "another_last_name"
+    t.string "another_first_name"
+    t.string "another_last_name_kana"
+    t.string "another_first_name_kana"
+    t.string "address_name"
+    t.string "another_postcode"
+    t.string "another_prefecture"
+    t.string "another_city"
+    t.string "another_block"
+    t.string "another_building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+>>>>>>> master
 
   create_table "artists", force: :cascade do |t|
     t.string "artist"
@@ -78,6 +98,34 @@ ActiveRecord::Schema.define(version: 2019_06_09_063233) do
     t.string "song"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "last_name"
+    t.string "first_name"
+    t.string "last_name_kana"
+    t.string "first_name_kana"
+    t.string "phone_number"
+    t.string "postcode"
+    t.integer "prefecture"
+    t.string "city"
+    t.string "block"
+    t.string "building"
+    t.boolean "admin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
