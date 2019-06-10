@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :carts
   resources :orders
   resources :contacts
-
+  get 'complete' => 'contacts#complete'
 end
