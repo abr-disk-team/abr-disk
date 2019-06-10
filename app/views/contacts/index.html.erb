@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-1 col-xs-1"></div>
+		<div class="col-xl-10 col-xs-10">
+
+			<h1 id="contact-heading">問い合わせ一覧</h1>
+			<% @contacts.each do |contact| %>
+			<div class="box">
+				<div class="row">
+					<div class="col-xl-2 col-xs-2">
+							<p>お名前</p>
+							<p>お問い合わせ日時</p>
+					</div>
+					<div class="col-xl-2 col-xs-2">
+							<p>sample</p>
+					</div>
+					<div class="col-xl-6 col-xs-6">
+							<%= contact.category %>
+						<br>
+							<%= contact.contact_content %>
+					</div>
+					<div class="col-xl-2 col-xs-2">
+							<p>sample</p>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<% end %>
+		</div>
+		<div class="col-xl-1 col-xs-1"></div>
+	</div>
+</div>
