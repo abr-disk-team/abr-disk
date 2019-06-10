@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.string "city"
     t.string "block"
     t.string "building"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

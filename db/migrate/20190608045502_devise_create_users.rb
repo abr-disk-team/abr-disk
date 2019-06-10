@@ -42,7 +42,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :block
       t.string :building
-      t.boolean :admin
+      t.boolean :admin, default: false
       t.timestamps null: false
     end
 
