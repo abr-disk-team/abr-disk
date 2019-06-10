@@ -79,3 +79,5 @@ gem 'cocoon'
 
 gem 'jp_prefecture'
 gem 'simple_form'
+
+gem 'pry-byebug', group: :development
