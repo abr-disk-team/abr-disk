@@ -1,7 +1,6 @@
 <!-- ヘッダー -->
 <%= render 'template/header' %>
 
-<<<<<<< HEAD
 <div class="container big-box">
     <div class="row">
         <div class="col-xl-2 col-xs-2">
@@ -41,62 +40,11 @@
             <h4><%= @item.price %></h4>
             <h4>在庫数|<%= @item.stock %></h4>
             <h4>レーベル:<%= @item.label.label %></h4>
-=======
-ITEM SHOW
-<table>
-<thead>
-        <tr>
-<<<<<<< HEAD
-=======
-
->>>>>>> c0fb8b7d2afb5f3fef4ddfa8fffbc1c93f9eea8a
-            <th width="100px">cdname</th>
-            <th width="100px">stock</th>
-            <th width="100px">price</th>
-            <th width="100px">genre</th>
-            <th width="100px">artist</th>
-            <th width="100px">label</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr>
-        <td>
-		<%= attachment_image_tag(@item, :jacket_image, :fill, 100, 100) %>
-        </td>
-        <td>
-            <%= @item.cd_name %>
-        </td>
-        <td>
-            <%= @item.stock %>
-        </td>
-        <td>
-            <%= @item.price %>
-        </td>
-        <td>
-            <%= @item.genre.genre %>
-        </td>
-        <td>
-            <%= @item.artist.artist %>
-        </td>
-        <td>
-            <%= @item.label.label %>
-        </td>
-        <td>
->>>>>>> master
             <% @item.discs.each do |dis| %>
                 <h4><%= dis.number %></h4>
             <% end %>
-<<<<<<< HEAD
+            <h4>add_cart</h4>
+            <%= link_to "addtocart", "/add_item/#{@item.id}" ,method: :post %>
         </div>
     </div>
 </div>
-=======
-        </td>
-    </tbody>
-</table>
-
-<h4>add_cart</h4>
-
-    <%= link_to "addtocart", "/add_item/#{@item.id}" ,method: :post %>
->>>>>>> master
