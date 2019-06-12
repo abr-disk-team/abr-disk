@@ -10,11 +10,9 @@
   </head>
 
   <body>
-<!-- ログアウトボタン(仮) -->
 
-    <% if user_signed_in? %>
-     <%= link_to " logout", destroy_user_session_path, method: :delete %>
-     <% end %>
+<!-- ヘッダー部分の高さ調整用div -->
+<div class="header-space"></div>
 
 <!-- フラッシュメッセージの表示 -->
     <div class="container">
