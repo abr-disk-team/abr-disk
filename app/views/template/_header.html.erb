@@ -1,4 +1,4 @@
-
+<!-- ユーザーのヘッダーテンプレート -->
 
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
@@ -24,12 +24,6 @@
                   <%= link_to " logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out logout" %>
                 </li>
               <% else %>
-                <li class="slidemenu-link">
-                  <%= link_to " Home", "/", class: "glyphicon glyphicon-home home" %>
-                </li>
-                <li class="slidemenu-link">
-                  <%= link_to " About", "/about", class: "glyphicon glyphicon-link about" %>
-                </li>
                 <li class="slidemenu-link">
                   <%= link_to " sign up", new_user_registration_path, class: "glyphicon glyphicon-edit sign_up" %>
                 </li>
