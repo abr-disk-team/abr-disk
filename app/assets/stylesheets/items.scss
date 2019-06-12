@@ -1,3 +1,31 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item-box{
+	width:200px;
+	height:350px;
+	/*border:solid black;*/
+	float:left;
+	margin:15px;
+}
+
+.item{
+	text-align:center;
+}
+
+.big-box{
+	margin-top:100px;
+}
+
+.genre{
+	border-bottom:solid black;
+}
+
+
+/*実装するか検討中*/
+/*#side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}*/
