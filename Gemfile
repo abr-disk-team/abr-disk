@@ -79,3 +79,10 @@ gem 'cocoon'
 
 gem 'jp_prefecture'
 gem 'simple_form'
+
+
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+gem 'pry-byebug', group: :development

@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   	if @contact.save
   		redirect_to complete_path
   	else
-  		render "new"
+  		render :action => "new"
   	end
   end
 

@@ -1,0 +1,46 @@
+<!-- 管理者のヘッダーテンプレート -->
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+          <nav class="nav navbar-nav navbar-left">
+            <h1>ABARANTI DISK</h1>
+          </nav>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in?%>
+                <li class="slidemenu-link">
+                  <%= link_to " Home", user_path(current_user.id), class: "glyphicon glyphicon-home" %>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " 購入履歴一覧", orders_path %>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " 商品一覧", items_path %>
+                </li>
+                <li class="slidemenu-link">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        商品登録/編集
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><%= link_to " 商品登録/編集", "#" %></li>
+                        <li role="presentation"><%= link_to " 商品登録/編集", "#" %></li>
+                        <li role="presentation"><%= link_to " 商品登録/編集", "#" %></li>
+                      </ul>
+                  </div>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " ユーザー一覧", users_path %>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " お問い合わせ一覧", contacts_path %>
+                </li>
+                <li class="slidemenu-link">
+                  <%= link_to " logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out logout" %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
+      </div>
+</header>

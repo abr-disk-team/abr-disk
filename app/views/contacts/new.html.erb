@@ -1,3 +1,16 @@
+<% if @contact.errors.any? %>
+  <h3><%= @contact.errors.count %> errors prohibited this obj from being saved:</h3>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% if user_signed_in? %>
+
 <h1>問い合わせフォーム</h1>
 <%= form_for(@contact) do |f| %>
     <br>
@@ -10,3 +23,20 @@
     <br>
     <%= f.submit '送信' %>
 <% end %>
+</div>
+
+<% else %>
+
+<h1>問い合わせフォーム</h1>
+<%= form_for(@contact) do |f| %>
+    <br>
+    <%= f.select :category,[["購入した商品について","購入した商品について"],["購入方法について","購入方法について"], ["お支払い方法について","お支払い方法について"], ["返品、返金について","返品、返金について"], ["ショップについて","ショップについて"]], prompt: 'カテゴリーを選択' %>
+    <br>
+    <br>
+    <%= f.text_area :contact_content, placeholder: 'お問い合わせ内容' %>
+    <br>
+    <br>
+    <br>
+    <%= f.submit '送信' %>
+<% end %>
+</div>
