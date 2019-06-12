@@ -4,7 +4,8 @@ class Item < ApplicationRecord
     belongs_to :artist
     belongs_to :genre
     has_many :discs
-    has_many :carts
+    has_many :cart_items
+    
 
     attachment :jacket_image
     accepts_nested_attributes_for :discs, allow_destroy: true

@@ -80,6 +80,10 @@ gem 'cocoon'
 gem 'jp_prefecture'
 gem 'simple_form'
 
+<<<<<<< HEAD
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+=======
+gem 'pry-byebug', group: :development
+>>>>>>> master

@@ -12,8 +12,15 @@ Rails.application.routes.draw do
   resources :labels
   resources :artists
   resources :genres
-  resources :carts
+  resources :carts, only: [:show]
   resources :orders
+
+
+  post '/add_item/:id' => 'carts#add_item'
+  post '/update_item' =>'carts#update_item'
+  delete '/delete_item' => 'carts#delete_item'
+
+
   resources :contacts
   get 'complete' => 'contacts#complete'
 

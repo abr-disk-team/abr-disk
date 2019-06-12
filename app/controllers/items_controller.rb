@@ -19,9 +19,13 @@ class ItemsController < ApplicationController
 
     def show
         @item = Item.find(params[:id])
+<<<<<<< HEAD
         @genres = Genre.all
+=======
+        @cart_item = @item.cart_items.new
+>>>>>>> master
     end
-
+ 
     def edit
         @item = Item.find(params[:id])
         @genres = Genre.all
