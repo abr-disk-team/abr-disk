@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :orders
   resources :contacts
   get 'complete' => 'contacts#complete'
+
+
 end

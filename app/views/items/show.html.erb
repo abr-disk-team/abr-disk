@@ -1,46 +1,48 @@
 <!-- ヘッダー -->
 <%= render 'template/header' %>
 
-ITEM SHOW
-<table>
-<thead>
-        <tr>
-
-            <th width="100px">cdname</th>
-            <th width="100px">stock</th>
-            <th width="100px">price</th>
-            <th width="100px">genre</th>
-            <th width="100px">artist</th>
-            <th width="100px">label</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr>
-        <td>
-		<%= attachment_image_tag(@item, :jacket_image, :fill, 100, 100) %>
-        </td>
-        <td>
-            <%= @item.cd_name %>
-        </td>
-        <td>
-            <%= @item.stock %>
-        </td>
-        <td>
-            <%= @item.price %>
-        </td>
-        <td>
-            <%= @item.genre.genre %>
-        </td>
-        <td>
-            <%= @item.artist.artist %>
-        </td>
-        <td>
-            <%= @item.label.label %>
-        </td>
-        <td>
+<div class="container big-box">
+    <div class="row">
+        <div class="col-xl-2 col-xs-2">
+            <%= render 'items/item' %>
+        </div>
+        <div class="col-xl-4 col-xs-4">
+            <%= attachment_image_tag @item, :jacket_image, :fill, 400, 400, format: 'jpeg', fallback: "no_image.jpg", size:'400x400' %>
+            <P>レビューに関すること</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+            <P>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</P>
+        </div>
+        <div class="col-xl-1 col-xs-1"></div>
+        <div class="col-xl-5 col-xs-5">
+            <h2><%= @item.cd_name %></h2>
+             <div class="row">
+                    <div class="col-xl-4 col-xs-4"></div>
+                    <div class="label label-default col-xl-4 col-xs-4">
+                        <%= @item.genre.genre %>
+                    </div>
+                    <div class="col-xl-4 col-xs-4"></div>
+                </div>
+            <h4><%= @item.artist.artist %></h4>
+            <h4><%= @item.price %></h4>
+            <h4>在庫数|<%= @item.stock %></h4>
+            <h4>レーベル:<%= @item.label.label %></h4>
             <% @item.discs.each do |dis| %>
-                <%= dis.number %>
+                <h4><%= dis.number %></h4>
             <% end %>
-    </tbody>
-</table>
+        </div>
+    </div>
+</div>

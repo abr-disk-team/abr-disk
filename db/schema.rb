@@ -10,9 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_06_09_063233) do
-=======
 ActiveRecord::Schema.define(version: 2019_06_09_155931) do
 
   create_table "another_addresses", force: :cascade do |t|
@@ -30,7 +27,6 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
->>>>>>> master
 
   create_table "artists", force: :cascade do |t|
     t.string "artist"
