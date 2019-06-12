@@ -5,7 +5,10 @@ ITEM SHOW
 <table>
 <thead>
         <tr>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c0fb8b7d2afb5f3fef4ddfa8fffbc1c93f9eea8a
             <th width="100px">cdname</th>
             <th width="100px">stock</th>
             <th width="100px">price</th>
@@ -42,5 +45,10 @@ ITEM SHOW
             <% @item.discs.each do |dis| %>
                 <%= dis.number %>
             <% end %>
+        </td>
     </tbody>
 </table>
+
+<h4>add_cart</h4>
+
+    <%= link_to "addtocart", "/add_item/#{@item.id}" ,method: :post %>

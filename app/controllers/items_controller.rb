@@ -19,9 +19,9 @@ class ItemsController < ApplicationController
 
     def show
         @item = Item.find(params[:id])
-
+        @cart_item = @item.cart_items.new
     end
-
+ 
     def edit
         @item = Item.find(params[:id])
     end
