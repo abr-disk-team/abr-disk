@@ -1,3 +1,45 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sign-up-box{
+	width: 600px;
+	margin: 170px auto;
+	border: solid 1px #000;
+	padding: 20px;
+}
+.sign-up-left{
+	width: 50%;
+	display:inline-block;
+	float:left;
+	text-align:center;
+	padding: 20px;
+}
+.sign-up-left-title{
+	margin-top: 75px;
+}
+.sign-up-left-login{
+	margin-top: 150px;
+}
+.sign-up-left-item{
+	margin-top: 50px;
+}
+.sign-up-right{
+	width: 50%;
+	display:inline-block;
+	float:left;
+}
+.name-input{
+	width: 49%;
+}
+.max-width-input{
+	width: 100%;
+}
+.button-right{
+	float: right;
+	margin-top: 20px;
+}
+.button-left{
+	float: left;
+	margin-top: 20px;
+}
