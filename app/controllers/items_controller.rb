@@ -11,19 +11,24 @@ class ItemsController < ApplicationController
         item.save
         redirect_to items_path
     end
-        
+
     def index
-        @items = Item.all
-        
+        @items = Item.paginate(page: params[:page], per_page: 20)
+        @genres = Genre.all
     end
 
     def show
         @item = Item.find(params[:id])
+<<<<<<< HEAD
+        @genres = Genre.all
+=======
         @cart_item = @item.cart_items.new
+>>>>>>> master
     end
  
     def edit
         @item = Item.find(params[:id])
+        @genres = Genre.all
     end
 
     def update
