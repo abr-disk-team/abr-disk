@@ -3,10 +3,16 @@ class CartsController < ApplicationController
     before_action :current_cart
     before_action :setup_cart_item!, only: [:add_item, :update_item, :delete_item]
 
-    def show
+    def new
         @cart = Cart.find(params[:id])
-        @cart_items = CartItem.all
+        @cart_items =@cart.cart_items
+    end
 
+    def show
+    end
+
+
+    def create
     end
 
     def add_item 
@@ -15,7 +21,7 @@ class CartsController < ApplicationController
         end
         @cart_item.quantity += params[:quantity].to_i
         @cart_item.save
-        redirect_to cart_path(@cart)
+        redirect_to new_cart_path
     end
     
     def update_item
@@ -26,6 +32,10 @@ class CartsController < ApplicationController
     def delete_item
         @cart_item.destroy
         redirect_to current_cart
+    end
+
+    def form
+        @cart = Cart.find(params[:id])
     end
 
     private

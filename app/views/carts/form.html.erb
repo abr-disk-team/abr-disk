@@ -1,0 +1,17 @@
+送り先を選ぶ
+<br>
+<input type="radio" name="address" value="a">実家<br>
+<input type="radio" name="address" value="b">登録した住所<br>
+<input type="radio" name="address" value="c">新しい住所に送る<br>
+
+
+支払い方法を選ぶ
+<br>
+<input type="radio" name="pay" value="ba">代金引換<br>
+<input type="radio" name="pay" value="bb">クレジットカード<br>
+<input type="radio" name="pay" value="bc">銀行振込<br>
+
+
+この内容で購入する（確認画面へ）
+
+<%= link_to "確認画面へ",  "/carts/#{@cart.id}" %>
