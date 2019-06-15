@@ -5,7 +5,7 @@ class Item < ApplicationRecord
     belongs_to :genre
     has_many :discs
     has_many :cart_items
-    
+    has_many :carts, through: CartItem
 
     attachment :jacket_image
     accepts_nested_attributes_for :discs, allow_destroy: true
