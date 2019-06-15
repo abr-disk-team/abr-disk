@@ -38,7 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :first_name_kana
       t.string :phone_number
       t.string :postcode
-      t.integer :prefecture
+      t.string :prefecture
       t.string :city
       t.string :block
       t.string :building

@@ -1,0 +1,21 @@
+{:uriI"Ÿfile://app/assets/javascripts/jquery.jpostal.js/test_npm/package.json?type=application/json&id=c054bfc34f64a330b764c7c2df9163017ac801564a01f0f2a6e63edbf1b81cfb:ET:load_pathI"app/assets/javascripts;T:filenameI"Capp/assets/javascripts/jquery.jpostal.js/test_npm/package.json;T:	nameI"'jquery.jpostal.js/test_npm/package;T:logical_pathI",jquery.jpostal.js/test_npm/package.json;T:content_typeI"application/json;T:sourceI"2{
+  "name": "test_npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-jpostal-ja": "^2.11.9"
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Qfile-digest://app/assets/javascripts/jquery.jpostal.js/test_npm/package.json;TTF:charsetI"
+utf-8;F:digest"%›½ü­Vë×¨ğæ_!ã“õSåà:Éàg‚Ş£Œå÷¨Ì:lengthi2:dependencies_digest"%ˆ8¬(PŒ½ùpujózúu¦‚pƒõÇ¶¤õŒä:idI"Ec054bfc34f64a330b764c7c2df9163017ac801564a01f0f2a6e63edbf1b81cfb;F:
+mtimel+Ho]

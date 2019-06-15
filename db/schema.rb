@@ -123,7 +123,7 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.string "first_name_kana"
     t.string "phone_number"
     t.string "postcode"
-    t.integer "prefecture"
+    t.string "prefecture"
     t.string "city"
     t.string "block"
     t.string "building"
