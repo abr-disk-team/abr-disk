@@ -1,0 +1,24 @@
+{:uriI"’file://app/assets/javascripts/jquery.jpostal.js/test/index.html?type=text/html&id=167508e24b51e33a9b64e62e3833cb5970c100d7f46b21896cb4a28e486ecce4:ET:load_pathI"app/assets/javascripts;T:filenameI"=app/assets/javascripts/jquery.jpostal.js/test/index.html;T:	nameI"!jquery.jpostal.js/test/index;T:logical_pathI"&jquery.jpostal.js/test/index.html;T:content_typeI"text/html;T:sourceI"n<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery.jpostal.js sample html</title>
+</head>
+<body>
+<h1>jquery.jpostal.js sample html</h1>
+
+<ul>
+	<li><a href="sample_1.html" >sample_1.html éƒµä¾¿ç•ªå·æ¬„ãŒ2ã¤</a></li>
+	<li><a href="sample_2.html">sample_2.html éƒµä¾¿ç•ªå·æ¬„ãŒ1ã¤</a></li>
+	<li><a href="sample_3.html">sample_3.htmlã€€å¤§å£äº‹æ¥­æ‰€</a></li>
+	<li><a href="sample_6.html">sample_6.html 1ãƒ•ã‚©ãƒ¼ãƒ ã«è¤‡æ•°ã®éƒµä¾¿ãƒ»ä½æ‰€æ¬„</a></li>
+	<li><a href="sample_7.html">sample_7.html [éƒµä¾¿â†’ä½æ‰€]ãƒœã‚¿ãƒ³</a></li>
+</ul>
+
+<div>Copyright(C) 2003-2014 Ninton G.K.</div>
+</body>
+</html>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Kfile-digest://app/assets/javascripts/jquery.jpostal.js/test/index.html;TTF:charsetI"
+utf-8;F:digest"%¬ˆü¶­âÕ^‚»_s›óî‘9”‰Ÿ^0^÷.Û´+:lengthin:dependencies_digest"%m6=;!†MêÄYDÛ•`&mdGëê@ÀÍ<:idI"E167508e24b51e33a9b64e62e3833cb5970c100d7f46b21896cb4a28e486ecce4;F:
+mtimel+Ho]

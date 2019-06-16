@@ -105,6 +105,16 @@
 				</table>
 				<%= link_to "もっと見る", "#", class: "button-right btn btn-default" %>
 			</div>
+			<div>
+				<% if @user.deleted_at == nil %>
+				<!-- @userが論理削除されていない場合 -->
+					<h3>退会する</h3>
+					<%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか?", class: "btn-sm btn-danger" %>
+				<% else %>
+				<!-- @userが論理削除されている場合 -->
+					<p>＊このユーザーは退会処理済みです。</p>
+				<% end %>
+			</div>
 
 		</div>
 	</div>
