@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # "User.with_deleted"で論理削除したユーザーとしていないユーザーを合わせて取得
+    @user = User.with_deleted.find(params[:id])
   end
 
   def edit
