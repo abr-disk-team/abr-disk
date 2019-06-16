@@ -29,4 +29,29 @@
 			<% end %>
 		</tbody>
 	</table>
+	<table  class="table">
+		<h1>退会ユーザー一覧</h1>
+		<thead>
+			<tr>
+				<th>ユーザー名</th>
+				<th>都道府県</th>
+				<th>電話番号</th>
+				<th>アドレス</th>
+				<th>最近の購入</th>
+				<th>詳細</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @deleted_users.each do |deleted_user| %>
+			<tr>
+				<td><%= deleted_user.last_name %><%= deleted_user.first_name %></td>
+				<td><%= deleted_user.prefecture %></td>
+				<td><%= deleted_user.phone_number %></td>
+				<td><%= deleted_user.email %></td>
+				<td>最近の購入</td>
+				<td><%= link_to "詳細", user_path(deleted_user.id) %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
 </div>
