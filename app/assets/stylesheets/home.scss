@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.background{
+.background-record{
 	background-image: url("record.jpeg");
 	background-size: cover;
 	background-position: center;
@@ -25,11 +25,23 @@
 	width: 200px;
 	border: 1px solid #fff;
 	margin: 0 auto;
-	border-radius: 10px;
+	border-radius: 15px;
 }
-.link-box:nth-child(2){
-	margin-top: 10px;
+.link-box:hover{
+	width: 250px;
+	height: 40px;
+	line-height: 40px;
+	background-color:rgba( 0, 0, 0, 50%);
 }
-.link-box:nth-child(3){
-	margin-top: 10px;
+.top-link{
+	color: #fff;
+	text-decoration: none;
+	text-decoration-line: none;
+	font-size: 20px;
+}
+.login-box{
+	margin-top: 20px;
+}
+.sign-box{
+	margin-top: 20px;
 }

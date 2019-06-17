@@ -1,27 +1,36 @@
 
-<div class="background">
+<div class="background-record">
+
 	<div class="container">
 		<div class="row">
 			<div class="top-list">
 				<h1 class="app-concept">TAKE DELIGHT IN MUSIC</h1>
 				<h1 class="app-title">ABARANTI DISK</h1>
 				<div class="link-group">
-					<div class="link-box">
-						<h3><%= link_to "CHECK IT OUT", items_path %></h3>
+					<%= link_to  items_path, class: "top-link" do %>
+						<div class="link-box">
+							CHECK IT OUT
+						</div>
+					<% end %>
+					<%= link_to new_user_session_path, class: "top-link" do %>
+						<div class="link-box login-box">
+							LOG IN
+						</div>
+					<% end %>
+					<%= link_to new_user_registration_path, class: "top-link" do %>
+					<div class="link-box sign-box">
+						SIGN UP
 					</div>
-					<div class="link-box">
-						<h3><%= link_to "LOG IN", new_user_session_path %></h3>
-					</div>
-					<div class="link-box">
-						<h3><%= link_to "SIGN UP",  new_user_registration_path %></h3>
-					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </div>
-    <script>
-          // 一旦hide()で隠してフェードインさせる
- 		 $('.app-concept').hide().fadeIn(5000);
- 		 $('.app-title').hide().fadeIn(5000);
-    </script>
+
+<script>
+  // 一旦hide()で隠してフェードインさせる
+	 $('.app-concept').hide().fadeIn(5000);
+	 $('.app-title').hide().fadeIn(5000);
+</script>
