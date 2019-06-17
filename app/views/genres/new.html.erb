@@ -1,6 +1,16 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
+
 NEW GENRE
 
 <%= form_for(@genre) do |f| %>
     <%= f.text_field :genre %>
     <%= f.submit %>
 <% end %>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

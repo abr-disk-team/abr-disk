@@ -1,3 +1,9 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
 <h1>CART の中身</h1>
 
 
@@ -21,3 +27,6 @@
     <%= link_to "購入画面へ", "/form_cart/#{@cart.id}" %>
 
 </table>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

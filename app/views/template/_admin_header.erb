@@ -1,5 +1,4 @@
 <!-- 管理者のヘッダーテンプレート -->
-
 <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container">
           <a class="navbar-brand" href="#">ABARANTI DISK</a>
@@ -17,7 +16,7 @@
           <nav class="nav navbar-nav navbar-right">
                 <li>
                   <a data-target="#" data-toggle="dropdown" aria-expanded="false">
-                    各種一覧
+                    一覧
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
@@ -27,16 +26,16 @@
                     <li><%= link_to "購入履歴一覧", orders_path %></li>
                   </ul>
                 </li>
-
                 <li>
                   <a data-target="#" data-toggle="dropdown" aria-expanded="false">
                     登録/編集
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li><%= link_to "商品登録/編集", "#" %></li>
-                    <li><%= link_to "商品登録/編集", "#" %></li>
-                    <li><%= link_to "商品登録/編集", "#" %></li>
+                    <li><%= link_to "商品", new_item_path %></li>
+                    <li><%= link_to "レーベル", new_label_path %></li>
+                    <li><%= link_to "ジャンル", new_genre_path %></li>
+                    <li><%= link_to "アーティスト", new_artist_path %></li>
                   </ul>
                 </li>
                 <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
