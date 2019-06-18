@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :items do
     resources :favorites, only: [:create, :destroy]
+    resources :reviews, only: [:new, :create, :edit, :update, :destroy]
   end
   resources :labels
   resources :artists
