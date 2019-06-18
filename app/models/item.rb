@@ -7,6 +7,7 @@ class Item < ApplicationRecord
     has_many :cart_items
     has_many :carts, through: CartItem
     has_many :favorites, dependent: :destroy
+    has_many :reviews, dependent: :destroy
 
     attachment :jacket_image
     accepts_nested_attributes_for :discs, allow_destroy: true

@@ -9,5 +9,6 @@ class User < ApplicationRecord
   has_many :another_addresses
   has_many :carts
   has_many :favorites, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   # has_many :contacts
 end
