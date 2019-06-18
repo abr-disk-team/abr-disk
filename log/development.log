@@ -5041,3 +5041,260 @@ Migrating to CreateFavorites (20190618091424)
   ↳ bin/rails:9
   [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 10.0.2.2 at 2019-06-18 09:24:22 +0000
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.4ms)
+Started GET "/" for 10.0.2.2 at 2019-06-18 09:24:26 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 4041ms (Views: 3964.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 7580ms (Views: 7442.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-18 09:25:16 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1152ms (Views: 1103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-18 09:25:33 +0000
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/items
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 214ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 09:25:33 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.1ms)
+  [1m[36mGenre Load (3.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (12.5ms)
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/index.html.erb within layouts/application (151.8ms)
+Completed 200 OK in 1069ms (Views: 976.3ms | ActiveRecord: 18.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-06-18 09:25:39 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sshxejNbFRfII9wNxx63EoE9FlO62BNEJPPFPEDsATHc6VUmLj6lvoDeDXkm4qfdpBfEBy3rPY9Bm3hkC5PJIQ=="}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-18 09:25:39 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 798ms (Views: 763.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-06-18 09:25:43 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (105.5ms)
+Completed 200 OK in 1252ms (Views: 1244.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-06-18 09:25:47 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TyGjvujHK3lty0z6TsI3smVarZeSSrbormEtK02ZXfX8P2iR1UYFiPfPIkjhYCvlRqI5EYyTN+uiBO4VAGkixw==", "user"=>{"last_name"=>"", "first_name"=>"", "last_name_kana"=>"", "first_name_kana"=>"", "email"=>"", "phone_number"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 1183ms (Views: 909.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-06-18 09:25:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 836ms (Views: 831.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-06-18 09:25:56 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGQqd+3cOauCxc3Y+faBOL+fMAKBh2c3WorVDKVOgBHuilG71U1z0ZvFsdreemIzRekXJWWVdVw9EO4YXVCpcA==", "user"=>{"email"=>"yu.job96@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "yu.job96@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/items
+Completed 302 Found in 481ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 09:25:57 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.9ms)
+  [1m[36mGenre Load (2.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (5.5ms)
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (1.3ms)
+  Rendered items/index.html.erb within layouts/application (146.6ms)
+Completed 200 OK in 955ms (Views: 899.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2019-06-18 09:26:04 +0000
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/new.html.erb:2
+  Rendered template/_admin_header.erb (1.4ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/new.html.erb:18
+  [1m[36mArtist Load (4.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/items/new.html.erb:20
+  [1m[36mLabel Load (4.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  ↳ app/views/items/new.html.erb:22
+  Rendered items/_song_fields.html.erb (16.2ms)
+  Rendered items/_disc_fields.html.erb (86.2ms)
+  Rendered items/_song_fields.html.erb (14.4ms)
+  Rendered items/_disc_fields.html.erb (56.5ms)
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/new.html.erb within layouts/application (399.4ms)
+Completed 200 OK in 1327ms (Views: 1143.6ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 17:40:53 +0000
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (2.5ms)
+  [1m[36mGenre Load (5.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (14.3ms)
+  [1m[36mItem Load (7.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered items/index.html.erb within layouts/application (221.4ms)
+Completed 200 OK in 32854ms (Views: 32706.9ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 17:42:03 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.5ms)
+  [1m[36mGenre Load (2.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (6.7ms)
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (1.1ms)
+  Rendered items/index.html.erb within layouts/application (158.6ms)
+Completed 200 OK in 1452ms (Views: 1400.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 17:42:07 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.4ms)
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (5.2ms)
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/index.html.erb within layouts/application (118.5ms)
+Completed 200 OK in 1067ms (Views: 1028.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2019-06-18 17:42:12 +0000
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/new.html.erb:2
+  Rendered template/_admin_header.erb (1.9ms)
+  [1m[36mGenre Load (3.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/new.html.erb:18
+  [1m[36mArtist Load (8.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/items/new.html.erb:20
+  [1m[36mLabel Load (4.6ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  ↳ app/views/items/new.html.erb:22
+  Rendered items/_song_fields.html.erb (15.6ms)
+  Rendered items/_disc_fields.html.erb (92.0ms)
+  Rendered items/_song_fields.html.erb (14.0ms)
+  Rendered items/_disc_fields.html.erb (47.7ms)
+  Rendered template/_footer.html.erb (0.8ms)
+  Rendered items/new.html.erb within layouts/application (588.7ms)
+Completed 200 OK in 1582ms (Views: 1374.3ms | ActiveRecord: 54.8ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2019-06-18 17:42:47 +0000
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FYo5BaahgmvnoKnIZ7flz6pwCZk8w6F9jGVa7L5Wve+iZB0e5BUTG4hJT6yTwJMXWS9bNtEYQyXsEmikhKzlPg==", "item"=>{"cd_name"=>"っっs", "price"=>"", "stock"=>"", "jacket_image"=>"{}", "discs_attributes"=>{"0"=>{"number"=>"4", "_destroy"=>"false", "songs_attributes"=>{"1560879756877"=>{"song"=>"ファwg", "_destroy"=>"false"}, "1560879759747"=>{"song"=>"がrg", "_destroy"=>"false"}}}}}, "commit"=>"Create Item"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:11
+Redirected to http://localhost:3000/items
+Completed 302 Found in 43ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 17:42:47 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (3.6ms)
+  [1m[36mGenre Load (3.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (6.8ms)
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (122.7ms)
+Completed 200 OK in 1075ms (Views: 1003.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-18 17:42:55 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.3ms)
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (3.9ms)
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 930ms (Views: 890.0ms | ActiveRecord: 5.0ms)
+
+

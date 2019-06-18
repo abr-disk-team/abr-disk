@@ -8,5 +8,6 @@ class User < ApplicationRecord
   # アソシエーションの記載
   has_many :another_addresses
   has_many :carts
+  has_many :favorites, dependent: :destroy
   # has_many :contacts
 end

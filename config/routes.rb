@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :users do
     resources :another_addresses, only: [:new, :create, :edit, :update, :destroy]
   end
-  resources :items
+  resources :items do
+    resources :favorites, only: [:create, :destroy]
+  end
   resources :labels
   resources :artists
   resources :genres
