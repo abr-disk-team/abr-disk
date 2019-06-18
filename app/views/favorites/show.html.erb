@@ -1,0 +1,32 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
+
+<div class="container">
+	<h1>いいね一覧</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>商品名</th>
+				<th>アーティスト</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @favorites.each do |favorite| %>
+				<% item = Item.find_by(item_id: favorite.item_id) %>
+					<tr>
+						<td><%= link_to item.cd_name, item_path(item.id) %></td>
+						<td><%= item.artist.artist %></td>
+						<td><%= link_to "商品詳細ページ", item_path(item.id) %></td>
+					</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>
