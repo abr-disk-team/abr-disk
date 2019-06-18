@@ -107,7 +107,7 @@
 
 					</thead>
 				</table>
-				<%= link_to "もっと見る", "#", class: "button-right btn btn-default" %>
+				<%= link_to "もっと見る", user_favorites_path(current_user.id), class: "button-right btn btn-default" %>
 			</div>
 			<div>
 				<% if @user.deleted_at == nil %>

@@ -5298,3 +5298,180 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 930ms (Views: 890.0ms | ActiveRecord: 5.0ms)
 
 
+Started GET "/items" for 10.0.2.2 at 2019-06-18 18:03:47 +0000
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.erb (1.9ms)
+  [1m[36mGenre Load (5.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:6
+  Rendered items/_item.html.erb (13.3ms)
+  [1m[36mItem Load (5.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:15
+  Rendered template/_footer.html.erb (1.0ms)
+  Rendered items/index.html.erb within layouts/application (222.6ms)
+Completed 200 OK in 5878ms (Views: 5748.4ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:03:54 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.4ms)
+  [1m[36mAnotherAddress Load (5.3ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (129.2ms)
+Completed 200 OK in 1027ms (Views: 956.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-18 18:04:04 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/new.html.erb:2
+  Rendered template/_admin_header.erb (1.1ms)
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered contacts/new.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 791ms (Views: 729.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:04:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.3ms)
+  [1m[36mAnotherAddress Load (2.0ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 801ms (Views: 741.8ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:04:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.4ms)
+  [1m[36mAnotherAddress Load (2.8ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (119.6ms)
+Completed 200 OK in 963ms (Views: 914.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-18 18:04:24 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/new.html.erb:2
+  Rendered template/_admin_header.erb (1.0ms)
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered contacts/new.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 774ms (Views: 723.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contacts/new" for 10.0.2.2 at 2019-06-18 18:05:41 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/new.html.erb:2
+  Rendered template/_admin_header.erb (1.3ms)
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered contacts/new.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 1084ms (Views: 1036.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:05:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.2ms)
+  [1m[36mAnotherAddress Load (1.3ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 728ms (Views: 692.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:07:07 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.9ms)
+  [1m[36mAnotherAddress Load (2.3ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (127.3ms)
+Completed 200 OK in 1387ms (Views: 1327.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users/1/favorites" for 10.0.2.2 at 2019-06-18 18:07:11 +0000
+Processing by FavoritesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:15
+  Rendering favorites/show.html.erb within layouts/application
+  Rendered template/_admin_header.erb (1.3ms)
+  [1m[36mFavorite Load (7.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/favorites/show.html.erb:19
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered favorites/show.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 743ms (Views: 678.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:07:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.2ms)
+  [1m[36mAnotherAddress Load (2.7ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 972ms (Views: 921.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-18 18:07:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered template/_admin_header.erb (1.1ms)
+  [1m[36mAnotherAddress Load (1.5ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:64
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 794ms (Views: 735.4ms | ActiveRecord: 10.0ms)
+
+

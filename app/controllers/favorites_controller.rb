@@ -11,6 +11,10 @@ class FavoritesController < ApplicationController
 		favorite.destroy
 		redirect_to item_path(item.id)
 	end
+	def show
+		@favorites = current_user.favorites
+		# @favorites = Favorite.where(user_id: params[:id])
+	end
   # 以下記載をitems/showの該当部分に記載する
   # <% if @item.favorited_by?(current_user) %>
   #       <%= link_to item_favorites_path(@item.id), method: :delete do %>
