@@ -43,8 +43,11 @@
             <% @item.discs.each do |dis| %>
                 <h4><%= dis.number %></h4>
             <% end %>
-            <h4>add_cart</h4>
-            <%= link_to "addtocart", "/add_item/#{@item.id}" ,method: :post %>
+
+            <%= form_for([@item, @cart_item], url:"/add_item/#{@item.id}") do |f| %>
+                <%= f.number_field :quantity %>
+                <%= f.submit "カートに追加" %>
+            <% end %>
         </div>
     </div>
 </div>
