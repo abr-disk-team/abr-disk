@@ -1,11 +1,13 @@
 # ABARANTI DISK (CDショップのECサイト)
 
 
-* System dependencies
+## System dependencies
+
 ruby 2.5.5
 rails 5.2.3
 
-* Usage
+## Usage
+
 デモサイトです。以下の機能を実装しました。
 gem deviseによる会員登録ログイン・ログアウト機能。
 gem paranoiaによる会員の論理削除。
@@ -16,7 +18,8 @@ gem cocoonのネストしたフォームによる商品登録機能。
 pay.jpによるクレジットカード決済機能。
 別の送付先登録機能。
 
-* Author
+## Author
+
 Yuji Ishibashi, Norihiro Ogawa, Wataru Kashiwagi
 
 
