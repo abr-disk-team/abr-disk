@@ -1,7 +1,5 @@
 # ABARANTI DISK (CDショップのECサイト)
 
-ABARANTI DISK
-====
 
 * System dependencies
 ruby 2.5.5
