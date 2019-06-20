@@ -19,15 +19,15 @@
 		</thead>
 		<tbody>
 			<% @favorites.each do |favorite| %>
-				<% item = Item.find_by(item_id: favorite.item_id) %>
 					<tr>
-						<td><%= link_to item.cd_name, item_path(item.id) %></td>
-						<td><%= item.artist.artist %></td>
-						<td><%= link_to "商品詳細ページ", item_path(item.id) %></td>
+						<td><%= link_to favorite.item.cd_name, item_path(favorite.item.id) %></td>
+						<td><%= favorite.item.artist.artist %></td>
+						<td><%= link_to "商品詳細ページ", item_path(favorite.item.id) %></td>
 					</tr>
 			<% end %>
 		</tbody>
 	</table>
+	<%= link_to "マイページに戻る", user_path(current_user.id), class: "btn btn-default button-right" %>
 </div>
 
 <!-- フッター -->
