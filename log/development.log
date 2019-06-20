@@ -29235,3 +29235,239 @@ Completed 200 OK in 1046ms (Views: 991.1ms | ActiveRecord: 6.4ms)
 Completed 200 OK in 1104ms (Views: 1037.4ms | ActiveRecord: 14.3ms)
 
 
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-06-20 17:02:57 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uFXioqIwsoaFoHzYsJH6JNcVVrw+UMeuFehBJbuTFLu9ts4fbm4t4NTpjSlmeaNZByVGR5mZ+fPL4f/QXVh7bw=="}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 317ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-20 17:02:58 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 5616ms (Views: 5548.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:03:10 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  Rendered template/_header.html.erb (41.0ms)
+  Rendered items/index.html.erb within layouts/application (86.4ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 14.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:       <a class="navbar-brand" href="#">ABARANTI DISK</a>
+    5:     <div class="collapse navbar-collapse">
+    6:       <ul class="nav navbar-nav navbar-left">
+    7:         <li><%= link_to " マイページ", user_path(current_user.id), class: "glyphicon glyphicon-home" %></li>
+    8:         <li><%= link_to " 商品一覧", items_path, class: "glyphicon glyphicon-record" %></li>
+    9:         <li><%= link_to " カートを見る", "#", class: "glyphicon glyphicon-shopping-cart" %></li>
+   10:       </ul>
+  
+app/views/template/_header.html.erb:7:in `_app_views_template__header_html_erb___500029167372016878_70157855444120'
+app/views/items/index.html.erb:5:in `_app_views_items_index_html_erb___1493388058771017668_70157855361800'
+Started GET "/" for 10.0.2.2 at 2019-06-20 17:03:22 +0000
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1454ms (Views: 1385.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:05:24 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  Rendered template/_header.html.erb (19.1ms)
+  Rendered items/index.html.erb within layouts/application (43.5ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:       <a class="navbar-brand" href="#">ABARANTI DISK</a>
+    5:     <div class="collapse navbar-collapse">
+    6:       <ul class="nav navbar-nav navbar-left">
+    7:         <li><%= link_to " マイページ", user_path(current_user.id), class: "glyphicon glyphicon-home" %></li>
+    8:         <li><%= link_to " 商品一覧", items_path, class: "glyphicon glyphicon-record" %></li>
+    9:         <li><%= link_to " カートを見る", "#", class: "glyphicon glyphicon-shopping-cart" %></li>
+   10:       </ul>
+  
+app/views/template/_header.html.erb:7:in `_app_views_template__header_html_erb___500029167372016878_70157735131580'
+app/views/items/index.html.erb:5:in `_app_views_items_index_html_erb___1493388058771017668_70157735193140'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:10:25 +0000
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  Rendered template/_visiter_header.html.erb (4.0ms)
+  [1m[36mDisc Load (10.0ms)[0m  [1m[34mSELECT "discs".* FROM "discs"[0m
+  ↳ app/views/items/index.html.erb:13
+  [1m[36mSong Load (4.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/items/index.html.erb:19
+  [1m[36mGenre Load (5.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (12.9ms)
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:28
+  Rendered template/_footer.html.erb (1.4ms)
+  Rendered items/index.html.erb within layouts/application (186.5ms)
+Completed 200 OK in 4803ms (Views: 4569.3ms | ActiveRecord: 58.6ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-06-20 17:10:35 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (259.1ms)
+Completed 200 OK in 1174ms (Views: 1142.5ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-06-20 17:11:25 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"48Kk54du+rmPPe3pbJQIplkfpI6Sz83+7Fib+Qxie9vpa/r6aTl0p4zpTAszW0zuuCz1TIlcTn4x6ciN1iYO5A==", "user"=>{"last_name"=>"山田", "first_name"=>"テスト", "last_name_kana"=>"やまだ", "first_name_kana"=>"てすと", "email"=>"test@test", "phone_number"=>"0000000", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (8.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."deleted_at" IS NULL LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 1634ms (Views: 1281.0ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-06-20 17:11:39 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIg4WyBXvFBkEGO5wuFKnTFgtGON3l+TbBBf8VkoQEU1kfSKACzDoq9SLTrgvJU8zRm0tkW7ikeX1apuj+hBKA==", "user"=>{"last_name"=>"山田", "first_name"=>"テスト", "last_name_kana"=>"やまだ", "first_name_kana"=>"てすと", "email"=>"test@testtest", "phone_number"=>"0000000", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."deleted_at" IS NULL LIMIT ?[0m  [["email", "test@testtest"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (22.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "last_name", "first_name", "last_name_kana", "first_name_kana", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@testtest"], ["encrypted_password", "$2a$11$qvzoJbH10g1TGkYoDxjFBeM4uHzD.GZwR87RG1w8jiEyQJacVmW6u"], ["last_name", "山田"], ["first_name", "テスト"], ["last_name_kana", "やまだ"], ["first_name_kana", "てすと"], ["phone_number", "0000000"], ["created_at", "2019-06-20 17:11:39.394591"], ["updated_at", "2019-06-20 17:11:39.394591"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/items
+Completed 302 Found in 382ms (ActiveRecord: 40.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:11:39 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (137.1ms)
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial template/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/abr-disk/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-core-1.1.1/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    2: <% if user_signed_in? && current_user.admin %>
+    3:     <%= render 'template/admin_header' %>
+    4: <% elsif user_signed_in? %>
+    5:     <%= render 'template/header' %>
+    6: <% else %>
+    7:     <%= render 'template/visiter_header' %>
+    8: <% end %>
+  
+app/views/items/index.html.erb:5:in `_app_views_items_index_html_erb__3009970645110067404_70249505549760'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:11:55 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_user_header.html.erb (6.4ms)
+  [1m[36mDisc Load (9.3ms)[0m  [1m[34mSELECT "discs".* FROM "discs"[0m
+  ↳ app/views/items/index.html.erb:13
+  [1m[36mSong Load (5.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/items/index.html.erb:19
+  [1m[36mGenre Load (3.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (6.7ms)
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:28
+  Rendered template/_footer.html.erb (0.8ms)
+  Rendered items/index.html.erb within layouts/application (406.4ms)
+Completed 200 OK in 1757ms (Views: 1676.5ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2019-06-20 17:12:00 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  Rendered users/show.html.erb within layouts/application (50.1ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial template/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/abr-disk/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-core-1.1.1/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    2: <% if user_signed_in? && current_user.admin %>
+    3:     <%= render 'template/admin_header' %>
+    4: <% else %>
+    5:     <%= render 'template/header' %>
+    6: <% end %>
+    7: 
+    8: <div class="container">
+  
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___4126891518618074442_70249506655960'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 17:12:03 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:20)
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:20
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_user_header.html.erb (3.5ms)
+  [1m[36mDisc Load (7.1ms)[0m  [1m[34mSELECT "discs".* FROM "discs"[0m
+  ↳ app/views/items/index.html.erb:13
+  [1m[36mSong Load (7.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/items/index.html.erb:19
+  [1m[36mGenre Load (1.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (5.4ms)
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:28
+  Rendered template/_footer.html.erb (1.2ms)
+  Rendered items/index.html.erb within layouts/application (201.0ms)
+Completed 200 OK in 1445ms (Views: 1367.1ms | ActiveRecord: 30.4ms)
+
+

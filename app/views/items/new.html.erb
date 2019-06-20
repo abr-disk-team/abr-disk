@@ -1,13 +1,11 @@
+<!-- ヘッダー -->
 <% if user_signed_in? && current_user.admin %>
     <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
 <% else %>
-    <%= render 'template/header' %>
+    <%= render 'template/visiter_header' %>
 <% end %>
-
-
-
-<!-- ヘッダー -->
-<%= render 'template/header' %>
 
 <div class="container big-box">
     <div class="row">

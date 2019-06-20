@@ -1,0 +1,30 @@
+<!-- ビジターのヘッダーテンプレート -->
+<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+      <a class="navbar-brand" href="#">ABARANTI DISK</a>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to " 商品一覧", items_path, class: "glyphicon glyphicon-record" %></li>
+        <li><%= link_to " カートを見る", "#", class: "glyphicon glyphicon-shopping-cart" %></li>
+      </ul>
+      <!-- ここは検索機能が出来次第変更する。 -->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="検索キーワード">
+        </div>
+        <button type="submit" class="btn btn-default">検索</button>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+          <li class="slidemenu-link">
+            <%= link_to " sign up", new_user_registration_path, class: "glyphicon glyphicon-edit sign_up" %>
+          </li>
+          <li class="slidemenu-link">
+            <%= link_to " login", new_user_session_path, class: "glyphicon glyphicon-log-in sign_in" %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ヘッダーの高さ調整用div -->
+<div class="header-space"></div>
