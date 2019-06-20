@@ -6,7 +6,7 @@ class LabelsController < ApplicationController
     end
 
     def create
-        label = Label.new(params_label)
+        label = Label.new(label_params)
         label.save
         redirect_to new_label_path
     end
@@ -17,7 +17,7 @@ class LabelsController < ApplicationController
 
     def update
         @label = Label.find(params[:id])
-        @label.update(params_label)
+        @label.update(label_params)
         redirect_to new_label_path
     end
 
@@ -29,7 +29,7 @@ class LabelsController < ApplicationController
 
     private
 
-    def params_label
+    def label_params
         params.require(:label).permit(:label)
     end
 end

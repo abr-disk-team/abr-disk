@@ -2,12 +2,12 @@ class ItemsController < ApplicationController
 
     def new
         @item = Item.new
-        @item.discs.build
-        @disc = Disc.new
+        @disc = @item.discs.build
+        @song = @disc.songs.build
     end
 
     def create
-        item = Item.new(params_item)
+        item = Item.new(item_params)
         item.save
         redirect_to items_path
     end
@@ -15,13 +15,16 @@ class ItemsController < ApplicationController
     def index
         @items = Item.paginate(page: params[:page], per_page: 20)
         @genres = Genre.all
+        @discs = Disc.all
+        @songs = Song.all
         @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(5).pluck(:item_id))
     end
 
     def show
         @item = Item.find(params[:id])
-        @genres = Genre.all
-        @cart_item = @item.cart_items.new
+        # @cart_item = @item.cart_items.new
+        @discs = @item.discs.all
+        @songs = Song.all
     end
 
     def edit
@@ -43,7 +46,7 @@ class ItemsController < ApplicationController
 
     private
 
-    def params_item
+    def item_params
         params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy, songs_attributes: [:id, :song, :_destroy]])
     end
 end

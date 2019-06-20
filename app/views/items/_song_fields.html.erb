@@ -1,3 +1,6 @@
-<p>song</p>
-  <%= f.input :song %>
-  <%= link_to_remove_association "削除", f %>
+<div class="nested-fields">
+	<div class="form-inline">
+		<%= f.input :song, label: "曲" %>
+		<%= link_to_remove_association "削除", f %>
+	</div>
+</div>

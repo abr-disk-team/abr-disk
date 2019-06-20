@@ -86,7 +86,9 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 gem 'pry-byebug', group: :development
+
 gem 'pry-rails', group: :development
 
 gem 'paranoia'
+
 

@@ -1,27 +1,0 @@
-{:uriI"¢file://app/assets/javascripts/jquery.jpostal.js/selenium/config_local_cake.html?type=text/html&id=e97034255fa5a937ee5a8dc835a80e00d3a082bede0ae48d1601c1cba4b1808c:ET:load_pathI"app/assets/javascripts;T:filenameI"Mapp/assets/javascripts/jquery.jpostal.js/selenium/config_local_cake.html;T:	nameI"1jquery.jpostal.js/selenium/config_local_cake;T:logical_pathI"6jquery.jpostal.js/selenium/config_local_cake.html;T:content_typeI"text/html;T:sourceI"Ú<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://localhost/jquery.jpostal.js/sample_1.html" />
-<title>config</title>
-</head>
-<body>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">config</td></tr>
-</thead><tbody>
-<tr>
-	<td>store</td>
-	<td>http://localhost/jquery.jpostal.js/test/</td>
-	<td>BASE_URL</td>
-</tr>
-</tbody></table>
-</body>
-</html>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"[file-digest://app/assets/javascripts/jquery.jpostal.js/selenium/config_local_cake.html;TTF:charsetI"
-utf-8;F:digest"%˜ÐÛ<AÌ-g÷Š$¶2å–S˜Wv³Êt5
-tElMYŠ:lengthiÚ:dependencies_digest"%Áy3dgÞ!SÇ„å=*™gN¯âôÂO6ž¢A&š:idI"Ee97034255fa5a937ee5a8dc835a80e00d3a082bede0ae48d1601c1cba4b1808c;F:
-mtimel+Ho]

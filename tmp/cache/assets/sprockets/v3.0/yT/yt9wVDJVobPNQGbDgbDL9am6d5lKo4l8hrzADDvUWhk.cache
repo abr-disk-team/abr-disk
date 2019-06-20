@@ -1,36 +1,0 @@
-{:uriI"ñfile://app/assets/javascripts/jquery.jpostal.js/package.json?type=application/json&id=70d6371cbab352aa8c1d42526a23b987eca79979d91c7d5804ac9d7b9e5ee5c4:ET:load_pathI"app/assets/javascripts;T:filenameI":app/assets/javascripts/jquery.jpostal.js/package.json;T:	nameI"jquery.jpostal.js/package;T:logical_pathI"#jquery.jpostal.js/package.json;T:content_typeI"application/json;T:sourceI"Í{
-  "name": "jquery-jpostal-ja",
-  "version": "2.13.5",
-  "description": "A jQuery plug-in that automatically enters a japanese zip code into the address field when you enter it.",
-  "peerDependencies": {
-    "jquery": "*"
-  },
-  "main": "jquery.jpostal.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ninton/jquery.jpostal.js.git"
-  },
-  "keywords": [
-    "zip",
-    "address",
-    "jquery"
-  ],
-  "author": "Ninton G.K.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ninton/jquery.jpostal.js/issues"
-  },
-  "homepage": "https://github.com/ninton/jquery.jpostal.js#readme"
-}
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Hfile-digest://app/assets/javascripts/jquery.jpostal.js/package.json;TTF:charsetI"
-utf-8;F:digest"%
-•P2“oeFñrêáfbÚjQÊJ£uÈ¢‚¿Ì¿„b:lengthiÍ:dependencies_digest"%ô$I”¨ÿå‘∏l≠hÔ(æ˝(u€;\r¸Ω‘Nk€ˆ`:idI"E70d6371cbab352aa8c1d42526a23b987eca79979d91c7d5804ac9d7b9e5ee5c4;F:
-mtimel+Ho]

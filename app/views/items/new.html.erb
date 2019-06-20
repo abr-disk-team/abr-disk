@@ -1,40 +1,70 @@
-<!-- ヘッダー -->
 <% if user_signed_in? && current_user.admin %>
     <%= render 'template/admin_header' %>
 <% else %>
     <%= render 'template/header' %>
 <% end %>
 
-NEW ITEMS
 
-<%= simple_form_for(@item) do |f| %>
-    cd_name
-    <%= f.input :cd_name %>
-    price
-    <%= f.input :price %>
-    stock
-    <%= f.input :stock %>
-    genre
-    <%= f.collection_select  :genre_id,  Genre.all, :id, :genre %>
-    artist
-    <%= f.collection_select  :artist_id,  Artist.all, :id, :artist %>
-    label
-    <%= f.collection_select  :label_id,  Label.all, :id, :label %>
-    jacket
-    <%= f.attachment_field :jacket_image %>
 
- ディスクを追加する。。。
- <div style="background-color:#EDF700;"class="discs">
-    <%= f.fields_for :discs do |disc| %>
-        <%= render 'disc_fields', f:disc %>
-    <% end %>
-    <div class="link">
-        <%= link_to_add_association 'ディスク追加', f, :discs %>
+<!-- ヘッダー -->
+<%= render 'template/header' %>
+
+<div class="container big-box">
+    <div class="row">
+        <div class="col-lg-4 col-xs-12">
+            <div class="row">
+                <div class="item">
+                    <%= attachment_image_tag @item, :jacket_image, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-thumbnail" %>
+                </div>
+                <br>
+
+                <%= simple_form_for(@item) do |f| %>
+                    <%= f.label "ジャケット画像" %>
+                    <%= f.attachment_field :jacket_image %>
+                <br>
+                    <%= f.input :price, label: "価格" %>
+                <br>
+                    <%= f.input :stock, label: "在庫数" %>
+                <br>
+                    <%= f.label "ジャンル" %>
+                    <%= f.collection_select :genre_id, Genre.all, :id, :genre, {prompt: ""}, {class: "form-control input-sm"} %>
+                <br>
+                    <%= f.label "レーベル" %>
+                    <%= f.collection_select  :label_id,  Label.all, :id, :label, {prompt: ""}, {class: "form-control input-sm"} %>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-xs-12">
+                <%= f.input :cd_name, label: "タイトル" %>
+            <br>
+                <%= f.label "アーティスト" %>
+                <%= f.collection_select  :artist_id,  Artist.all, :id, :artist, {prompt: ""}, {class: "form-control input-sm"} %>
+            <br>
+                <%= f.label "曲一覧" %>
+                <div class="discs">
+                    <%= f.fields_for :discs do |disc| %>
+                        <%= render 'disc_fields', f:disc %>
+                    <% end %>
+                    <%= f.fields_for :discs do |disc| %>
+                        <%= render 'disc_fields', f:disc %>
+                    <% end %>
+                    <div class="link btn btn-default btn-lg col-xs-4">
+                        <%= link_to_add_association 'ディスク追加', f, :discs %>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-12">
+                <div class="actions">
+                    <%= f.submit '登録する', class: "btn btn-default btn-lg col-xs-12" %>
+                </div>
+            <% end %>
+        </div>
     </div>
-    </div>
-    <%= f.submit %>
+</div>
 
 <% end %>
 
 <!-- フッター -->
 <%= render 'template/footer' %>
+
