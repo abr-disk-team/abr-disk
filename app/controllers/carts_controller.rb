@@ -15,7 +15,7 @@ class CartsController < ApplicationController
     def create
     end
 
-    def add_item 
+    def add_item
         if @cart_item.blank?
             @cart_item = @cart.cart_items.build(item_id: params[:id],quantity:1)
         end
@@ -23,7 +23,7 @@ class CartsController < ApplicationController
         @cart_item.save
         redirect_to new_cart_path
     end
-    
+
     def update_item
         @cart_item.update(quantity: params[:quantity].to_i)
         redirect_to current_path

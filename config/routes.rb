@@ -11,9 +11,12 @@ Rails.application.routes.draw do
   get 'users/:id/favorites' => 'favorites#show', as: "user_favorites"
 
   resources :items do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
   end
+  delete 'items/:item_id/favorites/index' => "favorites#destroy_index", as: "destroy_index"
+  post   'items/:item_id/favorites/index' => "favorites#create_index", as: "create_index"
+  get 'search', to: 'items#index'
   resources :labels
   resources :artists
   resources :genres

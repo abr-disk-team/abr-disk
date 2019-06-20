@@ -7,10 +7,12 @@ class ReviewsController < ApplicationController
 	def create
 		review = Review.new(review_params)
 		review.user_id = current_user.id
-		review.item_id = params[:id]
+		review.item_id = params[:item_id]
 		if review.save
 			redirect_to item_path(review.item_id)
 		else
+			@item = Item.find(params[:item_id])
+			@review = Review.new(review_params)
 			render :new
 		end
 	end
@@ -40,6 +42,6 @@ class ReviewsController < ApplicationController
   private
 
 	def review_params
-	    params.require(:item).permit(:review_comment,:review_star)
+	    params.require(:review).permit(:review_comment,:review_star)
 	end
 end

@@ -28,8 +28,7 @@
                 </div>
                 <div class="panel-body">
                     <% @all_ranks.each.with_index(1) do |item, i| %>
-                        第　<%= i %> 位
-                        <%= item.cd_name %>
+                        第 <%= i %> 位 <%= link_to item.cd_name, item_path(item.id) %><br>
                     <% end %>
                 </div>
             </div>
