@@ -1,6 +1,10 @@
 
 <!-- ヘッダー -->
-<%= render 'template/header' %>
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
 
 <div class="container big-box">
     <div class="row">
@@ -52,3 +56,6 @@
         </div>
     </div>
 </div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

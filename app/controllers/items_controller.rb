@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
         @genres = Genre.all
         @discs = Disc.all
         @songs = Song.all
+        @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(5).pluck(:item_id))
     end
 
     def show

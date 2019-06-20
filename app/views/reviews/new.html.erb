@@ -1,0 +1,29 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
+
+<div class="container">
+
+	<h2>New Revier</h2>
+	<%= form_for [@item, @review] do |f| %>
+	  <div class="field row">
+		<label>評価（星）</label>
+		<%= f.text_area :review_star %>
+      </div>
+	  <div class="field row">
+		<label>コメント</label><br>
+		<%= f.text_field :review_comment %>
+      </div>
+      <div class="field row">
+      <%= f.submit 'Create Review'%>
+     </div>
+	<% end %>
+
+</div>
+
+
+<!-- フッター -->
+<%= render 'template/footer' %>

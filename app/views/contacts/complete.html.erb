@@ -1,2 +1,12 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
+
 <h1>お問い合わせありがとうございました！</h1>
 <p>返信まで少々お待ちください。</p>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

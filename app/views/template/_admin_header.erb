@@ -1,0 +1,47 @@
+<!-- 管理者のヘッダーテンプレート -->
+<nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+          <a class="navbar-brand" href="#">ABARANTI DISK</a>
+          <nav>
+            <ul class="nav navbar-nav navbar-left">
+                <li><%= link_to "管理者マイページ", user_path(current_user.id) %></li>
+                      <!-- ここは検索機能が出来次第変更する。 -->
+                <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="検索キーワード">
+                  </div>
+                  <button type="submit" class="btn btn-default">検索</button>
+                </form>
+          </nav>
+          <nav class="nav navbar-nav navbar-right">
+                <li>
+                  <a data-target="#" data-toggle="dropdown" aria-expanded="false">
+                    一覧
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to " ユーザー一覧", users_path %></li>
+                    <li><%= link_to " お問い合わせ一覧", contacts_path %></li>
+                    <li><%= link_to "商品一覧", items_path %></li>
+                    <li><%= link_to "購入履歴一覧", orders_path %></li>
+                  </ul>
+                </li>
+                <li>
+                  <a data-target="#" data-toggle="dropdown" aria-expanded="false">
+                    登録/編集
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "商品", new_item_path %></li>
+                    <li><%= link_to "レーベル", new_label_path %></li>
+                    <li><%= link_to "ジャンル", new_genre_path %></li>
+                    <li><%= link_to "アーティスト", new_artist_path %></li>
+                  </ul>
+                </li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </nav>
+      </div>
+</nav>
+<!-- ヘッダーの高さ調整用div -->
+<div class="header-space"></div>

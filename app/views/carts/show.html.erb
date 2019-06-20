@@ -1,3 +1,11 @@
-<h1>CART NEW</h1>
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
 
-<%= @cart %>
+carts#show
+
+<!-- フッター -->
+<%= render 'template/footer' %>
