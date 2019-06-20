@@ -15,20 +15,4 @@ class FavoritesController < ApplicationController
 		@favorites = current_user.favorites
 		# @favorites = Favorite.where(user_id: params[:id])
 	end
-  # 以下記載をitems/showの該当部分に記載する
-  # <% if @item.favorited_by?(current_user) %>
-  #       <%= link_to item_favorites_path(@item.id), method: :delete do %>
-  #         <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span>
-  #       <% end %>
-  #       <br>
-  #       <%= @item.favorites.count %>
-  #       <span style="font-size: 8px;">いいね</span>
-  #   <% else %>
-  #       <%= link_to item_favorites_path(@item.id), method: :post do %>
-  #         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-  #       <% end %>
-  #       <br>
-  #        <%= @item.favorites.count %>
-  #        <span style="font-size: 8px;">いいね</span>
-  #   <% end %>
 end

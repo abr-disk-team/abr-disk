@@ -10,17 +10,6 @@
 <div class="container big-box">
     <div class="row">
         <div class="col-lg-2 col-xs-12">
-            <% @discs.each do |dis| %>
-            [<%= dis.number %>]
-            (<%= dis.item_id %>)
-            <br>
-            <% end %>
-
-             <% @songs.each do |song| %>
-            [<%= song.song %>]
-            (<%= song.disc_id %>)
-            <br>
-            <% end %>
            <%= render 'items/item' %>
         </div>
 

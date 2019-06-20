@@ -8,19 +8,37 @@
 
 # アドミンユーザー
 User.create!(
-	admin: true,
-	email: "test@test.com",
-	password: "111111",
-	last_name: "山田",
-	first_name: "テスト",
-	last_name_kana: "やまだ",
-	first_name_kana: "てすと",
-	phone_number: "0368694700",
-	postcode: "1500041",
-	prefecture: "東京都",
-	city: "渋谷区神南",
-	block: "１丁目１９−１１",
-	building: "パークウェースクエア`2 4階"
+	[
+		{
+			admin: true,
+			email: "test@test.com",
+			password: "111111",
+			last_name: "山田",
+			first_name: "テスト",
+			last_name_kana: "やまだ",
+			first_name_kana: "てすと",
+			phone_number: "0368694700",
+			postcode: "1500041",
+			prefecture: "東京都",
+			city: "渋谷区神南",
+			block: "１丁目１９−１１",
+			building: "パークウェースクエア`2 4階"
+		},
+		{
+			email: "user@user.com",
+			password: "222222",
+			last_name: "ユーザー",
+			first_name: "太郎",
+			last_name_kana: "ゆーざー",
+			first_name_kana: "たろう",
+			phone_number: "0368694700",
+			postcode: "1500041",
+			prefecture: "東京都",
+			city: "渋谷区神南",
+			block: "１丁目１９−１１",
+			building: "パークウェースクエア`2 4階"
+		},
+	]
 
 )
 Genre.create!(
