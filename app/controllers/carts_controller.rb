@@ -5,7 +5,7 @@ class CartsController < ApplicationController
 
     def show
         @cart = Cart.find(params[:id])
-        @cart_items =@cart.cart_items
+        @cart_items = @cart.cart_items
     end
 
     def add_item
@@ -30,8 +30,6 @@ class CartsController < ApplicationController
     def confirm
         @cart = Cart.find(params[:id])
         @cart_items = @cart.cart_items
-        binding.pry
-        @cart_sum = @cart_items.items.sum(:price)
     end
 
     private
