@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
   delete 'items/:item_id/favorites/index' => "favorites#destroy_index", as: "destroy_index"
   post   'items/:item_id/favorites/index' => "favorites#create_index", as: "create_index"
+  get 'search', to: 'items#index'
   resources :labels
   resources :artists
   resources :genres

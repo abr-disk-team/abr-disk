@@ -37433,3 +37433,935 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
 Completed 200 OK in 951ms (Views: 897.7ms | ActiveRecord: 16.6ms)
 
 
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:31:30 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (3.2ms)
+  [1m[36mGenre Load (3.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (21.6ms)
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (269.1ms)
+Completed 200 OK in 1451ms (Views: 1237.1ms | ActiveRecord: 75.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:31:36 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.5ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (5.4ms)
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (3.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered items/index.html.erb within layouts/application (140.8ms)
+Completed 200 OK in 1109ms (Views: 1049.5ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:32:22 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (1.7ms)
+  Rendered items/index.html.erb within layouts/application (45.2ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 6.8ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected ','
+...or(@q, url:search_path) do |f|, class: "navbar-form navbar-l...
+...                              ^
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+...ss: "navbar-form navbar-left" );@output_buffer.safe_append='
+...                              ^
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                 end 
+                          ^~~
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected ','
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+app/views/template/_admin_header.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/template/_admin_header.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/items/index.html.erb:3:in `_app_views_items_index_html_erb__181010415745724787_70115495705540'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:32:41 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (1.9ms)
+  Rendered items/index.html.erb within layouts/application (52.6ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 6.4ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected tLABEL
+...or(@q, url:search_path), class: "navbar-form navbar-left" do...
+...                         ^~~~~~
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected keyword_do_block, expecting keyword_end
+...s: "navbar-form navbar-left" do |f| @output_buffer.safe_appe...
+...                             ^~
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected tLABEL
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/items/index.html.erb:3:in `_app_views_items_index_html_erb__181010415745724787_70115496511820'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:33:23 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.8ms)
+  Rendered items/index.html.erb within layouts/application (65.7ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 7.7ms)
+
+
+  
+SyntaxError (/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+..._form_for(@q, url:search_path), class: "navbar-form navbar-l...
+...                              ^
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:9: syntax error, unexpected keyword_do_block, expecting ')'
+...s: "navbar-form navbar-left" do |f|  ,class: "navbar-form na...
+...                             ^~
+/vagrant/abr-disk/app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/template/_admin_header.html.erb:9: syntax error, unexpected keyword_do_block, expecting ')'
+app/views/template/_admin_header.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/items/index.html.erb:3:in `_app_views_items_index_html_erb__181010415745724787_70115577479640'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:34:01 +0000
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (4.3ms)
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (6.1ms)
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (1.3ms)
+  Rendered items/index.html.erb within layouts/application (214.7ms)
+Completed 200 OK in 1191ms (Views: 1110.9ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:34:09 +0000
+  
+ActionController::RoutingError (uninitialized constant ItemController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:34:37 +0000
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"f"}, "commit"=>"検索"}
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from search at /vagrant/abr-disk/app/controllers/items_controller.rb:50)
+Completed 406 Not Acceptable in 2802ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionController::UnknownFormat (ItemsController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:34:42 +0000
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"f"}, "commit"=>"検索"}
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from search at /vagrant/abr-disk/app/controllers/items_controller.rb:50)
+Completed 406 Not Acceptable in 2753ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ItemsController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items" for 10.0.2.2 at 2019-06-20 21:37:32 +0000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (3.3ms)
+  [1m[36mGenre Load (2.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (21.2ms)
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (4.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered items/index.html.erb within layouts/application (297.6ms)
+Completed 200 OK in 4919ms (Views: 4646.1ms | ActiveRecord: 90.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:37:41 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"f"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.0ms)
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (5.2ms)
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (4.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (1.2ms)
+  Rendered items/index.html.erb within layouts/application (177.3ms)
+Completed 200 OK in 1275ms (Views: 1191.1ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:45:41 +0000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"f"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (5.6ms)
+  [1m[36mGenre Load (2.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (22.6ms)
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%f%'[0m
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered items/index.html.erb within layouts/application (247.3ms)
+Completed 500 Internal Server Error in 548ms (ActiveRecord: 67.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Item::ActiveRecord_Relation:0x0000564471203148>):
+    62:         </div>
+    63:     </div>
+    64:     <div class="item">
+    65:         <%= will_paginate @items, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+    66:     </div>
+    67: </div>
+    68: 
+  
+app/views/items/index.html.erb:65:in `_app_views_items_index_html_erb__2240277464424576779_47425976921220'
+Started GET "/search?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=f&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:47:31 +0000
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"f"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (7.2ms)
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (22.2ms)
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%f%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (264.8ms)
+Completed 200 OK in 4445ms (Views: 4231.1ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:47:41 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>""}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (1.8ms)
+  [1m[36mGenre Load (3.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (9.6ms)
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (1.0ms)
+  Rendered items/index.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 1222ms (Views: 1145.6ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=y&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:47:45 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"y"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (11.3ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%y%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/index.html.erb within layouts/application (161.1ms)
+Completed 200 OK in 1076ms (Views: 1006.3ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:47:50 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.1ms)
+  [1m[36mGenre Load (2.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (5.7ms)
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (3.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (171.0ms)
+Completed 200 OK in 1280ms (Views: 1195.9ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:50:12 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.5ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (4.9ms)
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/index.html.erb within layouts/application (162.6ms)
+Completed 200 OK in 1218ms (Views: 1138.2ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:50:17 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (1.8ms)
+  [1m[36mGenre Load (2.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (10.6ms)
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (3.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.6ms)
+  Rendered items/index.html.erb within layouts/application (160.4ms)
+Completed 200 OK in 1160ms (Views: 1088.2ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=s&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:50:22 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"s"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.0ms)
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (4.7ms)
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%s%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.9ms)
+  Rendered items/index.html.erb within layouts/application (140.2ms)
+Completed 200 OK in 1087ms (Views: 1027.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:50:26 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>""}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.6ms)
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (5.6ms)
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 1054ms (Views: 990.4ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:51:47 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>""}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (3.1ms)
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (20.7ms)
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (246.6ms)
+Completed 200 OK in 4155ms (Views: 3963.9ms | ActiveRecord: 53.3ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:51:57 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (3.0ms)
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (4.3ms)
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (1.1ms)
+  Rendered items/index.html.erb within layouts/application (165.5ms)
+Completed 200 OK in 1068ms (Views: 1004.9ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:53:42 +0000
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (6.8ms)
+  [1m[36mGenre Load (4.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (25.3ms)
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (2.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.9ms)
+  Rendered items/index.html.erb within layouts/application (274.1ms)
+Completed 200 OK in 4558ms (Views: 4346.4ms | ActiveRecord: 68.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-06-20 21:53:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/show.html.erb within layouts/application
+  Rendered template/_admin_header.html.erb (7.4ms)
+  [1m[36mAnotherAddress Load (2.2ms)[0m  [1m[34mSELECT "another_addresses".* FROM "another_addresses" WHERE "another_addresses"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:66
+  [1m[36mFavorite Load (2.5ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 5]]
+  ↳ app/views/users/show.html.erb:101
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:103
+  [1m[36mArtist Load (5.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:104
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:103
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:104
+  Rendered template/_footer.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (155.2ms)
+Completed 200 OK in 1282ms (Views: 1191.5ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/items?utf8=%E2%9C%93&q%5Bcd_name_cont%5D=yes&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-06-20 21:53:52 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cd_name_cont"=>"yes"}, "commit"=>"検索"}
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "count(item_id) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/abr-disk/app/controllers/items_controller.rb:22)
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT  "favorites"."item_id" FROM "favorites" GROUP BY "favorites"."item_id" ORDER BY count(item_id) desc LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/items_controller.rb:22
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/items_controller.rb:22
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  Rendered template/_admin_header.html.erb (2.0ms)
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/items/_item.html.erb:7
+  Rendered items/_item.html.erb (4.4ms)
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT  DISTINCT "items".* FROM "items" WHERE "items"."cd_name" LIKE '%yes%' LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:17
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:34
+  [1m[36mFavorite Exists (4.7ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."item_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["item_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:26
+  Rendered template/_footer.html.erb (0.7ms)
+  Rendered items/index.html.erb within layouts/application (123.3ms)
+Completed 200 OK in 962ms (Views: 899.7ms | ActiveRecord: 17.5ms)
+
+

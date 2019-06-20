@@ -5,13 +5,13 @@
           <nav>
             <ul class="nav navbar-nav navbar-left">
                 <li><%= link_to "管理者マイページ", user_path(current_user.id) %></li>
-                      <!-- ここは検索機能が出来次第変更する。 -->
-                <form class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="検索キーワード">
-                  </div>
-                  <button type="submit" class="btn btn-default">検索</button>
-                </form>
+                <!-- 検索機能 -->
+                <div class="navbar-form navbar-left">
+                  <%= search_form_for @q do |f|  %>
+                      <%= f.text_field :cd_name_cont, placeholder: "検索キーワード", class: "form-control"%>
+                    <%= f.submit "検索", class: "btn btn-default"%>
+                  <% end %>
+                </div>
           </nav>
           <nav class="nav navbar-nav navbar-right">
                 <li>
