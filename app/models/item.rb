@@ -15,6 +15,7 @@ class Item < ApplicationRecord
 
 
     attachment :jacket_image
+
     accepts_nested_attributes_for :discs, allow_destroy: true
 
 end
