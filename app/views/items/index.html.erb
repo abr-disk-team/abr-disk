@@ -15,39 +15,49 @@
 
         <div class="col-lg-10 col-xs-12">
             <% @items.each do |item| %>
-            <div class="item-box">
+                <div class="item-box">
 
-                <div class="item img-rounded img-responsive">
-                    <%= attachment_image_tag item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-responsive img-thumbnail" %>
-                </div>
-                    <br>
-                <div class="row">
-                    <div class="col-lg-4 col-xs-4"></div>
-                    <div class="label label-default col-lg-4 col-xs-4">
-                        <%= item.genre.genre %>
+                    <div class="item img-rounded img-responsive">
+                        <%= attachment_image_tag item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-responsive img-thumbnail" %>
                     </div>
-                    <div class="col-lg-4 col-xs-4"></div>
-                </div>
+                        <br>
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-4"></div>
+                        <div class="label label-default col-lg-4 col-xs-4">
+                            <%= item.genre.genre %>
+                        </div>
+                        <div class="col-lg-4 col-xs-4"></div>
+                    </div>
 
-                <div class="item">
-                    <%= item.cd_name %>
-                    <span>【<%= item.artist.artist %>】</span>
-                </div>
+                    <div class="item">
+                        <%= item.cd_name %>
+                        <span>【<%= item.artist.artist %>】</span>
+                        <!-- いいね機能 -->
+                        <% if user_signed_in? && item.favorited_by?(current_user) %>
+                            <%= link_to destroy_index_path(item.id), method: :delete do %>
+                              <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span>
+                            <% end %>
+                        <% elsif user_signed_in? %>
+                            <%= link_to create_index_path(item.id), method: :post do %>
+                              <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                            <% end %>
+                        <% end %>
+                    </div>
 
-                <div class="item">
-                    <span>価格|</span>
-                    <%= item.price %>
-                </div>
+                    <div class="item">
+                        <span>価格|</span>
+                        <%= item.price %>
+                    </div>
 
-                <div class="item">
-                    <span>在庫数|</span>
-                    <%= item.stock %>
-                </div>
+                    <div class="item">
+                        <span>在庫数|</span>
+                        <%= item.stock %>
+                    </div>
 
-                <div class="item">
-                    <%= link_to "詳細を見る", item , class: "btn btn-default btn-xs" %>
+                    <div class="item">
+                        <%= link_to "詳細を見る", item , class: "btn btn-default btn-xs" %>
+                    </div>
                 </div>
-            </div>
             <% end %>
         </div>
     </div>
