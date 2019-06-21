@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_06_16_080941) do
+=======
+ActiveRecord::Schema.define(version: 2019_06_18_192630) do
+>>>>>>> master
 
   create_table "another_addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -67,6 +71,13 @@ ActiveRecord::Schema.define(version: 2019_06_16_080941) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "genres", force: :cascade do |t|
     t.string "genre"
     t.datetime "created_at", null: false
@@ -99,6 +110,15 @@ ActiveRecord::Schema.define(version: 2019_06_16_080941) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
+    t.text "review_comment"
+    t.string "review_star", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "songs", force: :cascade do |t|
     t.integer "disc_id"
     t.string "song"
@@ -127,7 +147,7 @@ ActiveRecord::Schema.define(version: 2019_06_16_080941) do
     t.string "city"
     t.string "block"
     t.string "building"
-    t.boolean "admin", default: false
+    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -85,4 +85,10 @@ gem 'simple_form'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
-gem 'pry-rails'
+gem 'pry-byebug', group: :development
+
+gem 'pry-rails', group: :development
+
+gem 'paranoia'
+
+

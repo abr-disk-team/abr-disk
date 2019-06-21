@@ -2,10 +2,12 @@ class UsersController < ApplicationController
 
   def index
   	@users = User.all
+    @deleted_users = User.only_deleted
   end
 
   def show
-    @user = User.find(params[:id])
+    # "User.with_deleted"で論理削除したユーザーとしていないユーザーを合わせて取得
+    @user = User.with_deleted.find(params[:id])
   end
 
   def edit
@@ -28,11 +30,14 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    if @user.destroy
+    if @user == current_user && @user.destroy
+      flash[:notice] = "当サイトをご利用いただきありがとうございました。"
+      redirect_to root_path
+    elsif @user != current_user && @user.destroy
       flash[:notice] = "User was successfully destroyed."
       redirect_to users_path
     else
-      redirect_to users_path
+      redirect_to user_path(current_user)
     end
   end
 

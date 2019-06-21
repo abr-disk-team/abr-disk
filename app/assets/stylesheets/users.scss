@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.from-top{
+	padding-top:170px;
+}
 .sign-up-box{
 	width: 600px;
-	margin: 170px auto;
+	margin: 0 auto;
 	border: solid 1px #000;
+	border-radius: 15px;
 	padding: 20px;
+	background-color:rgba( 80, 80, 80, 50%);
 }
 .sign-up-left{
 	width: 50%;
@@ -39,7 +44,13 @@
 	float: right;
 	margin-top: 20px;
 }
+.log-in-btn{
+	margin-top: 124px;
+}
 .button-left{
 	float: left;
 	margin-top: 20px;
+}
+.sing-up-link{
+	color: #000;
 }

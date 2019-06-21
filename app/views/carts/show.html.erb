@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>CART の中身</h1>
 
 
@@ -34,3 +35,16 @@
 
 <h2>購入画面へ</h2>
     <%= link_to "購入画面へ", "/form_cart/#{@cart.id}" %>
+=======
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% else %>
+    <%= render 'template/header' %>
+<% end %>
+
+carts#show
+
+<!-- フッター -->
+<%= render 'template/footer' %>
+>>>>>>> master

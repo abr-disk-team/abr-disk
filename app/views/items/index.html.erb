@@ -7,24 +7,35 @@
 
 <div class="container big-box">
     <div class="row">
-        <div class="col-xl-2 col-xs-2">
+        <div class="col-lg-2 col-xs-12">
+            <% @discs.each do |dis| %>
+            [<%= dis.number %>]
+            (<%= dis.item_id %>)
+            <br>
+            <% end %>
+
+             <% @songs.each do |song| %>
+            [<%= song.song %>]
+            (<%= song.disc_id %>)
+            <br>
+            <% end %>
            <%= render 'items/item' %>
         </div>
 
-        <div class="col-xl-10 col-xs-10">
+        <div class="col-lg-10 col-xs-12">
             <% @items.each do |item| %>
             <div class="item-box">
 
                 <div class="item img-rounded img-responsive">
-                    <%= attachment_image_tag item, :jacket_image, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-responsive" %>
+                    <%= attachment_image_tag item, :jacket_image, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-responsive img-thumbnail" %>
                 </div>
                     <br>
                 <div class="row">
-                    <div class="col-xl-4 col-xs-4"></div>
-                    <div class="label label-default col-xl-4 col-xs-4">
+                    <div class="col-lg-4 col-xs-4"></div>
+                    <div class="label label-default col-lg-4 col-xs-4">
                         <%= item.genre.genre %>
                     </div>
-                    <div class="col-xl-4 col-xs-4"></div>
+                    <div class="col-lg-4 col-xs-4"></div>
                 </div>
 
                 <div class="item">
@@ -53,3 +64,6 @@
         <%= will_paginate @items, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
     </div>
 </div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

@@ -1,47 +1,35 @@
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title item">ジャンルから探す</h3>
-                </div>
-                <div class="panel-body">
-                    <% @genres.each do |genre| %>
-                        <h4 class="item genre"><%= genre.genre %></h4>
-                        <br>
-                    <% end %>
-                </div>
-            </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title item">ジャンルから探す</h3>
+    </div>
+
+    <div class="panel-body">
+        <% @genres.each do |genre| %>
+            <h5 class="item genre"><%= genre.genre %></h5>
+            <br>
+        <% end %>
+        <h5 class="item genre">その他</h5>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">レートから探す</h3>
+    </div>
+    <div class="panel-body">★★★★★</div>
+    <div class="panel-body">★★★★</div>
+    <div class="panel-body">★★★</div>
+    <div class="panel-body">★★</div>
+    <div class="panel-body">★</div>
+</div>
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">レートから探す</h3>
+                    <h3 class="panel-title">いいねランキング</h3>
                 </div>
                 <div class="panel-body">
-                    ★★★★★
-                </div>
-                <div class="panel-body">
-                    ★★★★
-                </div>
-                <div class="panel-body">
-                    ★★★
-                </div>
-                <div class="panel-body">
-                    ★★
-                </div>
-                <div class="panel-body">
-                    ★
-                </div>
-                <div class="panel-body">
-                    ★★★★★
-                </div>
-                <div class="panel-body">
-                    ★★★★
-                </div>
-                <div class="panel-body">
-                    ★★★
-                </div>
-                <div class="panel-body">
-                    ★★
-                </div>
-                <div class="panel-body">
-                    ★
+                    <% @all_ranks.each.with_index(1) do |item, i| %>
+                        第　<%= i %> 位
+                        <%= item.cd_name %>
+                    <% end %>
                 </div>
             </div>
