@@ -100,7 +100,19 @@
                     </tbody>
                 <% end %>
             </table>
+<<<<<<< HEAD
             <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
+=======
+            <% end %>
+<<<<<<< HEAD
+
+            <%= form_for([@item, @cart_item], url:"/add_item/#{@item.id}") do |f| %>
+                <%= f.number_field :quantity %>
+                <%= f.submit "カートに追加" %>
+            <% end %>
+=======
+>>>>>>> master
+>>>>>>> kashiwagi
         </div>
     </div>
 </div>
