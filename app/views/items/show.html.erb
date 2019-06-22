@@ -7,7 +7,7 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 
-<div class="container big-box">
+<div class="container">
     <div class="row box2">
         <div class="col-xs-12 col-lg-4">
             <div class="item">
@@ -53,13 +53,15 @@
                     <h4 class="item">取扱なし</h4>
                 <% end %>
                 <div class="item">
-                    <button class="btn btn-danger"><span class="glyphicon glyphicon-shopping-cart">カートに入れる</span></button>
+                    <%= form_for(@cart_item, url:"/items/#{@item.id}/cart_items") do |f| %>
+                        <%= f.number_field :quantity %>
+                        <%= f.submit "カートに追加", class: "btn btn-danger glyphicon glyphicon-shopping-cart" %>
+                    <% end %>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-
         <h3>収録曲</h3>
         <div class="col-xs-12 col-lg-12">
             <% @discs.each do |dis| %>
@@ -100,19 +102,7 @@
                     </tbody>
                 <% end %>
             </table>
-<<<<<<< HEAD
             <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
-=======
-            <% end %>
-<<<<<<< HEAD
-
-            <%= form_for([@item, @cart_item], url:"/add_item/#{@item.id}") do |f| %>
-                <%= f.number_field :quantity %>
-                <%= f.submit "カートに追加" %>
-            <% end %>
-=======
->>>>>>> master
->>>>>>> kashiwagi
         </div>
     </div>
 </div>

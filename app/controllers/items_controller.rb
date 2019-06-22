@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
     def show
         @item = Item.find(params[:id])
-        # @cart_item = @item.cart_items.new
+        @cart_item = @item.cart_items.new
         @discs = @item.discs.all
         @songs = Song.all
     end

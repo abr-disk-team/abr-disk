@@ -14,7 +14,6 @@
 <label><%= f.radio_button :shopping_address, "実家" %>実家</label>
 <label><%= f.radio_button :shopping_address, "別住所" %>登録した住所</label>
 <label><%= f.radio_button :shopping_address, "新住所" %>新しい住所に送る</label>
-
 <br>
 支払い方法を選ぶ
 <br>
@@ -23,14 +22,11 @@
 <label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
 <br>
 この内容で購入する（確認画面へ）
-
-<<<<<<< HEAD
-<%= f.submit%>
-
+<%= f.submit %>
 <% end %>
-=======
 <%= link_to "確認画面へ",  "/carts/#{@cart.id}" %>
 
 <!-- フッター -->
 <%= render 'template/footer' %>
->>>>>>> master
+
+
