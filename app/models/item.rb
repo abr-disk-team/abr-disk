@@ -3,7 +3,8 @@ class Item < ApplicationRecord
     belongs_to :label
     belongs_to :artist
     belongs_to :genre
-    has_many :discs, dependent: :destroy, inverse_of: :item
+    has_many :discs, inverse_of: :item
+    has_many :songs, through: :discs
     has_many :cart_items
 
 	validates :price, presence: true

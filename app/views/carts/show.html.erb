@@ -1,11 +1,52 @@
+<<<<<<< HEAD
+<h1>CART の中身</h1>
+
+
+<table>
+<tr>
+<th width='100px'>数量</th>
+<th width='100px'>価格</th>
+<th width='100px'>ジャンル</th>
+<th width='100px'>アーティスト</th>
+<th width='100px'>レーベル</th>
+</tr>
+
+<% @cart_items.each do |f| %>
+    <tr>
+    <td>
+    <%= f.quantity %>
+    </td>
+    <td>
+    <%= f.item.price %>
+    </td>
+    <td>
+    <%= f.item.genre.genre %>
+    </td>
+    <td>
+    <%= f.item.artist.artist %>
+    </td>
+    <td>
+    <%= f.item.label.label %>
+    </td>
+    </tr>
+<% end %>
+
+</table>
+
+<h2>購入画面へ</h2>
+    <%= link_to "購入画面へ", "/form_cart/#{@cart.id}" %>
+=======
 <!-- ヘッダー -->
 <% if user_signed_in? && current_user.admin %>
     <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
 <% else %>
-    <%= render 'template/header' %>
+    <%= render 'template/visiter_header' %>
 <% end %>
 
 carts#show
 
 <!-- フッター -->
 <%= render 'template/footer' %>
+>>>>>>> master

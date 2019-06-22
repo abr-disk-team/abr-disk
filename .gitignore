@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> kashiwagi
 *.rbc
 capybara-*.html
 .rspec
@@ -64,4 +67,8 @@ yarn-debug.log*
 
 # Ignore uploaded files in development
 /storage/*
+<<<<<<< HEAD
 !/storage/.keep
+=======
+!/storage/.keep
+>>>>>>> kashiwagi

@@ -1,8 +1,10 @@
 <!-- ヘッダー -->
 <% if user_signed_in? && current_user.admin %>
     <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
 <% else %>
-    <%= render 'template/header' %>
+    <%= render 'template/visiter_header' %>
 <% end %>
 
 <div class="container">
@@ -94,29 +96,28 @@
 			</div>
 			<div class="clearfix">
 				<table class="table">
-					<h3>いいね一覧</h3>
+					<h3>いいねした商品</h3>
 					<thead>
-						<tr>
-							<th><label>商品名</label></th>
-							<th>商品名</th>
-						</tr>
-						<tr>
-							<th><label>アーティスト名</label></th>
-							<th>アーティスト名</th>
-						</tr>
-
+						<% @favorites.each do |favorite| %>
+							<tr>
+								<th><label><%= favorite.item.cd_name %></label></th>
+								<th><%= favorite.item.artist.artist %></th>
+							</tr>
+						<% end %>
 					</thead>
 				</table>
 				<%= link_to "もっと見る", user_favorites_path(current_user.id), class: "button-right btn btn-default" %>
 			</div>
 			<div>
-				<% if @user.deleted_at == nil %>
+				<% if @user.admin == false && @user.deleted_at == nil %>
 				<!-- @userが論理削除されていない場合 -->
 					<h3>退会する</h3>
 					<%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか?", class: "btn-sm btn-danger" %>
-				<% else %>
+				<% elsif @user.admin == false %>
 				<!-- @userが論理削除されている場合 -->
 					<p>＊このユーザーは退会処理済みです。</p>
+				<% else %>
+					<P>＊このユーザーは管理者です。</P>
 				<% end %>
 			</div>
 

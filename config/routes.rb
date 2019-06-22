@@ -11,9 +11,12 @@ Rails.application.routes.draw do
   get 'users/:id/favorites' => 'favorites#show', as: "user_favorites"
 
   resources :items do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
   end
+  delete 'items/:item_id/favorites/index' => "favorites#destroy_index", as: "destroy_index"
+  post   'items/:item_id/favorites/index' => "favorites#create_index", as: "create_index"
+  get 'search', to: 'items#index'
   resources :labels
   resources :artists
   resources :genres
@@ -21,11 +24,13 @@ Rails.application.routes.draw do
   resources :orders
 
 
-  post '/add_item/:id' => 'carts#add_item'
+  post '/add_item/:item_id' => 'carts#add_item'
   post '/update_item' =>'carts#update_item'
-  delete '/delete_item' => 'carts#delete_item'
-  get '/form_cart/:id' =>'carts#form'
 
+  get '/form_cart/:id' =>'carts#form'
+  patch '/check_cart/:id' =>'carts#check'
+  get '/confirm_cart/:id' => 'carts#confirm'
+  delete '/delete_item' => 'carts#delete_item'
 
 
   resources :contacts

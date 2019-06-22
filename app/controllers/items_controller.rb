@@ -2,14 +2,15 @@ class ItemsController < ApplicationController
 
     def new
         @item = Item.new
-        # @disc = @item.discs.build
-        # @song = @disc.songs.build
+        @disc = @item.discs.build
+        @song = @disc.songs.build
     end
 
     def create
         @item = Item.new(item_params)
+        # binding.pry
         if @item.save
-            redirect_to items_path
+            redirect_to item_path(@item.id)
         else
             render :action => "new"
         end
@@ -20,14 +21,15 @@ class ItemsController < ApplicationController
         @genres = Genre.all
         @discs = Disc.all
         @songs = Song.all
+        @q = Item.ransack(params[:q])
+        @items = @q.result(distinct: true).paginate(page: params[:page], per_page: 20)
         @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(5).pluck(:item_id))
     end
 
     def show
         @item = Item.find(params[:id])
-        # @cart_item = @item.cart_items.new
+        @cart_item = @item.cart_items.new
         @discs = @item.discs.all
-        @songs = Song.all
     end
 
     def edit
@@ -51,7 +53,7 @@ class ItemsController < ApplicationController
 
     private
     def item_params
-        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :done, :_destroy,
+        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy,
                                                                                                                 songs_attributes: [:id, :song, :_destroy ]])
     end
 end

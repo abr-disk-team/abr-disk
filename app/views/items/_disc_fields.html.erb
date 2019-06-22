@@ -1,15 +1,18 @@
 <div class="nested-fields panel panel-default">
-    <div class="panel-heading">
+    <div class="field panel-heading">
       ディスク
       <%= f.number_field :number %>
       <%= link_to_remove_association "削除", f %>
-      </div>
+    </div>
+
     <div class="panel-body">
-    <div class="songs" >
+      <div id="songs" >
         <%= f.fields_for :songs do |song| %>
           <%= render 'song_fields', f: song %>
         <% end %>
-        <%= link_to_add_association '曲を追加する', f, :songs %>
+        <div class="links">
+          <%= link_to_add_association '曲を追加する', f, :songs %>
+        </div>
       </div>
     </div>
 </div>
