@@ -1,7 +1,7 @@
 <!-- 管理者のヘッダーテンプレート -->
 <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container">
-          <a class="navbar-brand" href="#">ABARANTI DISK</a>
+          <%= link_to "ABARANTI DISK", items_path, class: "navbar-brand" %>
           <nav>
             <ul class="nav navbar-nav navbar-left">
                 <li><%= link_to "管理者マイページ", user_path(current_user.id) %></li>

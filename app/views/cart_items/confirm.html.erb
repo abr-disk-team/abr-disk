@@ -1,0 +1,59 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+<!-- 注文確定画面 -->
+<div class="container">
+    <h1><%= current_user.last_name %><%= current_user.first_name %>さんのCART</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>ジャンル</th>
+                <th>アーティスト</th>
+                <th>レーベル</th>
+                <th>単価</th>
+                <th>数量</th>
+                <th>小計</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% current_user.cart_items.each do |cart_item| %>
+                <tr>
+                    <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
+                    <td><%= cart_item.item.genre.genre %></td>
+                    <td><%= cart_item.item.artist.artist %></td>
+                    <td><%= cart_item.item.label.label %></td>
+                    <td><%= cart_item.item.price %></td>
+                    <td><%= cart_item.quantity %></td>
+                    <td><%= cart_item.item.price * cart_item.quantity %></td>
+                    <td><%= link_to "カートから削除", "/items/#{cart_item.item.id}/cart_items/#{cart_item.id}", method: :delete, class: "btn btn-danger" %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+    <h1>カート合計金額：</h1>
+    <div class="cleafix">
+        <h1>送り先を選ぶ</h1>
+        <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
+            <%= f.select :another_address_id, current_user.another_addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+            <br>
+            支払い方法を選ぶ
+            <br>
+            <label><%= f.radio_button :payment, "代金引換"%>代金引換</label>
+            <label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
+            <label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
+            <br>
+            <%= f.submit "購入を確定する", class: "btn btn-default button-left"  %>
+        <% end %>
+    </div>
+    <%= link_to "購入編集画面に戻る", order_form_path(current_user.id), class: "btn btn-default button-left" %>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_06_16_080941) do
-=======
-ActiveRecord::Schema.define(version: 2019_06_18_192630) do
->>>>>>> master
+ActiveRecord::Schema.define(version: 2019_06_22_103002) do
 
   create_table "another_addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -41,10 +37,9 @@ ActiveRecord::Schema.define(version: 2019_06_18_192630) do
   create_table "cart_items", force: :cascade do |t|
     t.integer "quantity", default: 0
     t.integer "item_id"
-    t.integer "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.integer "user_id"
     t.index ["item_id"], name: "index_cart_items_on_item_id"
   end
 
@@ -102,12 +97,22 @@ ActiveRecord::Schema.define(version: 2019_06_18_192630) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.integer "item_id", null: false
+    t.integer "order_quantity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "cart_id"
     t.string "shopping_address"
     t.string "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "another_address_id"
+    t.integer "user_id"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -11,17 +11,18 @@
 
 	<h2>New Review</h2>
 	<%= form_for [@item, @review] do |f| %>
-	  <div class="field row">
-		<label>評価（星）</label><br>
-		<%= f.select :review_star, ["1", "2", "3", "4", "5"], {:prompt => "選択してください"}, class: "max-width-input" %>
-      </div>
-	  <div class="field row">
-		<label>コメント</label><br>
-		<%= f.text_field :review_comment, class: "max-width-input  review-field" %>
-      </div>
-      <div class="field row">
-      <%= f.submit 'Create Review', class: "btn btn-default button-right" %>
-     </div>
+		<%= f.hidden_field :item_id, value: @item.id %>
+	    <div class="field" id="star">
+	        <%= f.label :review_star %>
+	        <%= f.hidden_field :review_star, id: :review_review_star %>
+	    </div>
+		<div class="field row">
+			<label>コメント</label><br>
+			<%= f.text_field :review_comment, class: "max-width-input  review-field" %>
+	    </div>
+	    <div class="field row">
+	    	<%= f.submit 'Create Review', class: "btn btn-default button-right" %>
+	    </div>
 	<% end %>
 
 </div>
@@ -29,3 +30,14 @@
 
 <!-- フッター -->
 <%= render 'template/footer' %>
+
+
+<script>
+$('#star').raty({
+
+  size     : 36,
+  starOff:  "/assets/star-off.png",
+  starOn : "/assets/star-on.png",
+  scoreName: 'review[review_star]'
+});
+</script>
