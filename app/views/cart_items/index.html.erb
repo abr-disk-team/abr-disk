@@ -39,7 +39,7 @@
     </table>
     <h1>カート合計金額：</h1>
     <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-left" %>
-    <%= link_to "購入画面へ進む", order_confirm_path(current_user.id), class: "btn btn-default button-right" %>
+    <%= link_to "購入画面へ進む", order_form_path(current_user.id), class: "btn btn-default button-right" %>
 </div>
 <!-- フッター -->
 <%= render 'template/footer' %>

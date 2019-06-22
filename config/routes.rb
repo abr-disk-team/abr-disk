@@ -7,14 +7,13 @@ Rails.application.routes.draw do
   resources :users do
     resources :another_addresses, only: [:new, :create, :edit, :update, :destroy]
     resources :cart_items, only: [:index]
+    resources :orders, only: [:show, :create, :index]
   end
   get 'users/:id/address' => 'users#address_edit', as: "edit_address"
   get 'users/:id/favorites' => 'favorites#show', as: "user_favorites"
 
-  get 'users/:user_id/cart_items/form' =>'cart_items#form', as: "order_confirm"
-  get 'users/:user_id/carts/:id/confirm' => 'carts#confirm'
-  post 'users/:user_id/carts/:cart_id/add_item/:item_id' => 'carts#add_item'
-  post 'users/:user_id/carts/:cart_id/add_item/:item_id/update_item' =>'carts#update_item'
+  get 'users/:user_id/cart_items/form' =>'cart_items#form', as: "order_form"
+  get 'users/:user_id/cart_items/confirm' => 'cart_items#confirm', as: "order_confirm"
   # patch '/check_cart/:id' =>'carts#check'
   # delete '/delete_item' => 'carts#delete_item'
 
@@ -23,7 +22,7 @@ Rails.application.routes.draw do
   resources :items do
     resource :favorites, only: [:create, :destroy]
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
-    resources :cart_items, only: [:create, :create, :destroy]
+    resources :cart_items, only: [:create, :destroy, :update]
   end
   delete 'items/:item_id/favorites/index' => "favorites#destroy_index", as: "destroy_index"
   post   'items/:item_id/favorites/index' => "favorites#create_index", as: "create_index"
@@ -31,7 +30,6 @@ Rails.application.routes.draw do
   resources :labels
   resources :artists
   resources :genres
-  resources :orders
   resources :contacts
   get 'complete' => 'contacts#complete'
 

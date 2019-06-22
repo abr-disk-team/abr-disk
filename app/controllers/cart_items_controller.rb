@@ -5,9 +5,13 @@ class CartItemsController < ApplicationController
   def index
   end
 
-  # 注文確認画面
+  # 注文編集
   def form
-    
+    @order = Order.new
+  end
+  # 注文確認画面
+  def confirm
+    @order = Order.new
   end
 
   def edit

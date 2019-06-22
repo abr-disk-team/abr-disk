@@ -6,7 +6,7 @@
 <% else %>
     <%= render 'template/visiter_header' %>
 <% end %>
-<!-- 注文確認画面 -->
+<!-- 注文確定画面 -->
 <div class="container">
     <h1><%= current_user.last_name %><%= current_user.first_name %>さんのCART</h1>
     <table class="table">
@@ -38,27 +38,22 @@
         </tbody>
     </table>
     <h1>カート合計金額：</h1>
-    <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-left" %>
-    <%= link_to "購入画面へ進む", "#", class: "btn btn-default button-right" %>
-
-送り先を選ぶ
-<%= form_for @cart, url:"/check_cart/#{@cart.id}" do |f| %>
-	<br>
-	<label><%= f.radio_button :shopping_address, "実家" %>実家</label>
-	<label><%= f.radio_button :shopping_address, "別住所" %>登録した住所</label>
-	<label><%= f.radio_button :shopping_address, "新住所" %>新しい住所に送る</label>
-	<br>
-	支払い方法を選ぶ
-	<br>
-	<label><%= f.radio_button :payment, "代金引換"%>代金引換</label>
-	<label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
-	<label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
-	<br>
-	この内容で購入する（確認画面へ）
-	<%= f.submit %>
-<% end %>
+    <div class="cleafix">
+        <h1>送り先を選ぶ</h1>
+        <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
+            <%= f.select :another_address_id, current_user.another_addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+            <br>
+            支払い方法を選ぶ
+            <br>
+            <label><%= f.radio_button :payment, "代金引換"%>代金引換</label>
+            <label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
+            <label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
+            <br>
+            <%= f.submit "購入を確定する", class: "btn btn-default button-left"  %>
+        <% end %>
+    </div>
+    <%= link_to "購入編集画面に戻る", order_form_path(current_user.id), class: "btn btn-default button-left" %>
 </div>
-<%= link_to "確認画面へ",  "/carts/#{@cart.id}" %>
 
 <!-- フッター -->
 <%= render 'template/footer' %>
