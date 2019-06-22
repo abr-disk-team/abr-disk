@@ -7,7 +7,7 @@
     <div class="panel-body">
     <div class="songs" >
         <%= f.fields_for :songs do |song| %>
-          <%= render 'song_fields', f:song %>
+          <%= render 'song_fields', f: song %>
         <% end %>
         <%= link_to_add_association '曲を追加する', f, :songs %>
       </div>
