@@ -15,18 +15,6 @@
   </head>
 
   <body>
-
-<!-- フラッシュメッセージの表示 -->
-    <div class="container">
-      <div class="row">
-        <% if flash[:notice] %>
-          <div id="notice">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
     <%= yield %>
     <script>
         $(window).ready( function() {

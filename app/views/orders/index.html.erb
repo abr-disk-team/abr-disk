@@ -16,16 +16,17 @@
                 <th>購入日</th>
                 <th>送付先名</th>
                 <th>送付先住所</th>
-                <th></th>
+                <th>お支払い方法</th>
             </tr>
         </thead>
         <tbody>
             <% @user.orders.each do |order| %>
                 <tr>
-                    <td><%= order.created_at %></td>
+                    <td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
                     <td><%= order.address.address_name %></td>
                     <td><%= order.address.postcode %><%= order.address.prefecture %><%= order.address.city %><%= order.address.block %><%= order.address.building %></td>
-                    <td><%= link_to "詳細を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
+                    <td><%= order.payment %></td>
+                    <td><%= link_to "購入商品を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
                 </tr>
             <% end %>
         </tbody>

@@ -28,3 +28,13 @@
 </nav>
 <!-- ヘッダーの高さ調整用div -->
 <div class="header-space"></div>
+<!-- フラッシュメッセージの表示 -->
+    <div class="container">
+      <div class="row">
+        <% if flash[:notice] %>
+          <div id="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      </div>
+    </div>

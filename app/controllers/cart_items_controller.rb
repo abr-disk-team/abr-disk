@@ -5,16 +5,19 @@ class CartItemsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     total_price(@user.cart_items)
-
   end
 
   # 注文編集
   def form
+    @user = User.find(params[:user_id])
     @order = Order.new
+    total_price(@user.cart_items)
   end
   # 注文確認画面
   def confirm
+    @user = User.find(params[:user_id])
     @order = Order.new
+    total_price(@user.cart_items)
   end
 
   def edit

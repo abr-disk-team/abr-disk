@@ -1,9 +1,5 @@
 class OrdersController < ApplicationController
 
-    def show
-        @order = Order.find(params[:id])
-    end
-
     def create
         order = Order.new(order_params)
         order.user_id = current_user.id
@@ -11,6 +7,11 @@ class OrdersController < ApplicationController
         buy(order, current_user.cart_items)
         flash[:notice] = "お買い上げありがとうございました。"
         redirect_to items_path
+    end
+
+    def show
+        @order = Order.find(params[:id])
+        total_price(@order.order_items)
     end
 
     def index
@@ -27,4 +28,12 @@ class OrdersController < ApplicationController
             cart_item.destroy
         end
     end
+    def total_price(order_items)
+        @total_price = 0
+        order_items.each do |order_item|
+          subtotal = order_item.item.price * order_item.order_quantity
+          @total_price += subtotal
+        end
+    end
+
 end

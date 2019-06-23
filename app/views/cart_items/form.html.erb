@@ -8,7 +8,7 @@
 <% end %>
 <!-- 注文確認画面 -->
 <div class="container">
-    <h1><%= current_user.last_name %><%= current_user.first_name %>さんのCART</h1>
+    <h2>注文内容確認</h2>
     <table class="table">
         <thead>
             <tr>
@@ -19,11 +19,10 @@
                 <th>単価</th>
                 <th>数量</th>
                 <th>小計</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
-            <% current_user.cart_items.each do |cart_item| %>
+            <% @user.cart_items.each do |cart_item| %>
                 <tr>
                     <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
                     <td><%= cart_item.item.genre.genre %></td>
@@ -32,28 +31,30 @@
                     <td><%= cart_item.item.price %></td>
                     <td><%= cart_item.quantity %></td>
                     <td><%= cart_item.item.price * cart_item.quantity %></td>
-                    <td><%= link_to "カートから削除", "/items/#{cart_item.item.id}/cart_items/#{cart_item.id}", method: :delete, class: "btn btn-danger" %></td>
                 </tr>
             <% end %>
         </tbody>
     </table>
-    <h1>カート合計金額：</h1>
+    <div class="clearfix">
+        <h3 class="tatal-price">合計金額：<%= @total_price %> 円</h3>
+    </div>
     <div class="cleafix">
-        <h1>送り先を選ぶ</h1>
+        <h2>送り先を選ぶ</h2>
         <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
-            <%= f.select :address_id, current_user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+            <%= f.select :address_id, @user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
         	<br>
-        	支払い方法を選ぶ
+    	<h2>支払い方法を選ぶ</h2>
         	<br>
         	<label><%= f.radio_button :payment, "代金引換"%>代金引換</label>
         	<label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
         	<label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
         	<br>
-        	この内容で購入する（確認画面へ）
-        	<%= link_to "確認画面へ",  order_confirm_path(current_user.id), class: "btn btn-default button-left" %>
         <% end %>
+        	<%= link_to "確認画面へ",  order_confirm_path(@user.id), class: "btn btn-default button-left" %>
+            <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-right" %>
+
+
     </div>
-    <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-left" %>
 </div>
 
 

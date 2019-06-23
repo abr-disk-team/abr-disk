@@ -39,9 +39,18 @@
                   </ul>
                 </li>
                 <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-            </ul>
           </nav>
       </div>
 </nav>
 <!-- ヘッダーの高さ調整用div -->
 <div class="header-space"></div>
+<!-- フラッシュメッセージの表示 -->
+    <div class="container">
+      <div class="row">
+        <% if flash[:notice] %>
+          <div id="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      </div>
+    </div>
