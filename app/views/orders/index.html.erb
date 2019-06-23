@@ -6,35 +6,30 @@
 <% else %>
     <%= render 'template/visiter_header' %>
 <% end %>
-<!-- カート内確認画面 -->
+
+<!-- 購入履歴一覧画面 -->
 <div class="container">
     <h1><%= current_user.last_name %><%= current_user.first_name %>さんの購入履歴</h1>
     <table class="table">
         <thead>
             <tr>
+                <th>購入日</th>
+                <th>送付先名</th>
+                <th>送付先住所</th>
                 <th></th>
-
             </tr>
         </thead>
         <tbody>
             <% current_user.orders.each do |order| %>
-                <div>
-                    <h6>購入商品</h6>
-                    <% order.order_items.each do |order_item| %>
-                        <tr>
-                            <td><%= attachment_image_tag order_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
-                            <td><%= order_item.item.genre.genre %></td>
-                            <td><%= order_item.item.artist.artist %></td>
-                            <td><%= order_item.item.label.label %></td>
-                            <td><%= order_item.item.price %></td>
-                            <td><%= order_item.order_quantity %></td>
-                        </tr>
-                    <% end %>
-                </div>
+                <tr>
+                    <td><%= order.created_at %></td>
+                    <td><%= order.another_address.address_name %></td>
+                    <td><%= order.another_address.another_postcode %><%= order.another_address.another_prefecture %><%= order.another_address.another_city %><%= order.another_address.another_block %><%= order.another_address.another_building %></td>
+                    <td><%= link_to "詳細を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
+                </tr>
             <% end %>
         </tbody>
     </table>
-    <h1>合計金額：</h1>
     <%= link_to "マイページに戻る", user_path(current_user.id), class: "btn btn-default button-left" %>
 </div>
 <!-- フッター -->
