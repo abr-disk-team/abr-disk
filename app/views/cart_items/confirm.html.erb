@@ -8,7 +8,7 @@
 <% end %>
 <!-- 注文確定画面 -->
 <div class="container">
-    <h1><%= current_user.last_name %><%= current_user.first_name %>さんのCART</h1>
+    <h1>以下の内容で注文を確定します</h1>
     <table class="table">
         <thead>
             <tr>
@@ -19,11 +19,10 @@
                 <th>単価</th>
                 <th>数量</th>
                 <th>小計</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
-            <% current_user.cart_items.each do |cart_item| %>
+            <% @user.cart_items.each do |cart_item| %>
                 <tr>
                     <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
                     <td><%= cart_item.item.genre.genre %></td>
@@ -32,16 +31,17 @@
                     <td><%= cart_item.item.price %></td>
                     <td><%= cart_item.quantity %></td>
                     <td><%= cart_item.item.price * cart_item.quantity %></td>
-                    <td><%= link_to "カートから削除", "/items/#{cart_item.item.id}/cart_items/#{cart_item.id}", method: :delete, class: "btn btn-danger" %></td>
                 </tr>
             <% end %>
         </tbody>
     </table>
-    <h1>カート合計金額：</h1>
+    <div class="clearfix">
+        <h3 class="tatal-price">合計金額：<%= @total_price %> 円</h3>
+    </div>
     <div class="cleafix">
-        <h1>送り先を選ぶ</h1>
-        <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
-            <%= f.select :another_address_id, current_user.another_addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+        <h2>送り先を選ぶ</h2>
+        <%= form_for @order, url:"/users/#{@user.id}/orders" do |f| %>
+            <%= f.select :address_id, @user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
             <br>
             支払い方法を選ぶ
             <br>

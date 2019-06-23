@@ -1,9 +1,5 @@
 class OrdersController < ApplicationController
 
-    def show
-        @order = Order.find(params[:id])
-    end
-
     def create
         order = Order.new(order_params)
         order.user_id = current_user.id
@@ -13,11 +9,17 @@ class OrdersController < ApplicationController
         redirect_to items_path
     end
 
+    def show
+        @order = Order.find(params[:id])
+        total_price(@order.order_items)
+    end
+
     def index
+        @user = User.find(params[:user_id])
     end
     private
     def order_params
-        params.require(:order).permit(:another_address_id, :payment)
+        params.require(:order).permit(:address_id, :payment)
     end
     def buy(order, cart_items)
         cart_items.each do |item|
@@ -26,4 +28,12 @@ class OrdersController < ApplicationController
             cart_item.destroy
         end
     end
+    def total_price(order_items)
+        @total_price = 0
+        order_items.each do |order_item|
+          subtotal = order_item.item.price * order_item.order_quantity
+          @total_price += subtotal
+        end
+    end
+
 end

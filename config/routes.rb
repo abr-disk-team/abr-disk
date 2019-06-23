@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'addresses/new'
+  get 'addresses/edit'
   root 'home#top'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users do
-    resources :another_addresses, only: [:new, :create, :edit, :update, :destroy]
+    resources :addresses, only: [:new, :create, :edit, :update, :destroy]
     resources :cart_items, only: [:index]
     resources :orders, only: [:show, :create, :index]
   end

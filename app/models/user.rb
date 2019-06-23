@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # gem paranoiaの設定
   acts_as_paranoid
   # アソシエーションの記載
-  has_many :another_addresses
+  has_many :addresses
   has_many :cart_items
   has_many :favorites, dependent: :destroy
   has_many :reviews, dependent: :destroy

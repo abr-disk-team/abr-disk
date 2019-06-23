@@ -7,8 +7,8 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 <!-- カート内確認画面 -->
-<div class="container">
-    <h1><%= current_user.last_name %><%= current_user.first_name %>さんのCART</h1>
+<div class="container clearfix">
+    <h1><%= @user.last_name %><%= @user.first_name %>さんのCART</h1>
     <table class="table">
         <thead>
             <tr>
@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <% current_user.cart_items.each do |cart_item| %>
+            <% @user.cart_items.each do |cart_item| %>
                 <tr>
                     <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
                     <td><%= cart_item.item.genre.genre %></td>
@@ -37,7 +37,9 @@
             <% end %>
         </tbody>
     </table>
-    <h1>カート合計金額：</h1>
+    <div class="clearfix">
+        <h3 class="tatal-price">カート合計金額：<%= @total_price %> 円</h3>
+    </div>
     <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-left" %>
     <%= link_to "購入画面へ進む", order_form_path(current_user.id), class: "btn btn-default button-right" %>
 </div>

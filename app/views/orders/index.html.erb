@@ -6,35 +6,31 @@
 <% else %>
     <%= render 'template/visiter_header' %>
 <% end %>
-<!-- カート内確認画面 -->
+
+<!-- 購入履歴一覧画面 -->
 <div class="container">
-    <h1><%= current_user.last_name %><%= current_user.first_name %>さんの購入履歴</h1>
+    <h1><%= @user.last_name %><%= @user.first_name %>さんの購入履歴</h1>
     <table class="table">
         <thead>
             <tr>
-                <th></th>
-
+                <th>購入日</th>
+                <th>送付先名</th>
+                <th>送付先住所</th>
+                <th>お支払い方法</th>
             </tr>
         </thead>
         <tbody>
-            <% current_user.orders.each do |order| %>
-                <div>
-                    <h6>購入商品</h6>
-                    <% order.order_items.each do |order_item| %>
-                        <tr>
-                            <td><%= attachment_image_tag order_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
-                            <td><%= order_item.item.genre.genre %></td>
-                            <td><%= order_item.item.artist.artist %></td>
-                            <td><%= order_item.item.label.label %></td>
-                            <td><%= order_item.item.price %></td>
-                            <td><%= order_item.order_quantity %></td>
-                        </tr>
-                    <% end %>
-                </div>
+            <% @user.orders.each do |order| %>
+                <tr>
+                    <td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
+                    <td><%= order.address.address_name %></td>
+                    <td><%= order.address.postcode %><%= order.address.prefecture %><%= order.address.city %><%= order.address.block %><%= order.address.building %></td>
+                    <td><%= order.payment %></td>
+                    <td><%= link_to "購入商品を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
+                </tr>
             <% end %>
         </tbody>
     </table>
-    <h1>合計金額：</h1>
     <%= link_to "マイページに戻る", user_path(current_user.id), class: "btn btn-default button-left" %>
 </div>
 <!-- フッター -->
