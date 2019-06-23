@@ -32,24 +32,11 @@
         $(window).ready( function() {
           $('#postcode1').jpostal({
             postcode : [
-              '#user_postcode',
+              '#address_postcode',
             ],
             address : {
-              '#user_prefecture'  : '%3',
-              '#user_city'  : '%4%5',
-            }
-          });
-        });
-    </script>
-        <script>
-        $(window).ready( function() {
-          $('#postcode1').jpostal({
-            postcode : [
-              '#another_address_another_postcode',
-            ],
-            address : {
-              '#another_address_another_prefecture'  : '%3',
-              '#another_address_another_city'  : '%4%5',
+              '#address_prefecture'  : '%3',
+              '#address_city'  : '%4%5',
             }
           });
         });

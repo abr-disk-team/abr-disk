@@ -41,7 +41,7 @@
     <div class="cleafix">
         <h1>送り先を選ぶ</h1>
         <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
-            <%= f.select :another_address_id, current_user.another_addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+            <%= f.select :address_id, current_user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
             <br>
             支払い方法を選ぶ
             <br>

@@ -1,0 +1,46 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>お届け先を編集する</h1>
+
+			<%= form_for @address, :url => {:action => 'update'} do |f| %>
+
+			<label>お届け先名</label>
+			<div class="field">
+	         	<%= f.text_field :address_name, autofocus: true, class: "max-width-input", placeholder: '（例）職場・別荘'  %>
+			</div>
+
+			<label>郵便番号</label>
+			<div class="field">
+	         	<%= f.text_field :postcode, autofocus: true, class: "max-width-input"  %>
+			</div>
+			<label>住所</label>
+			<div class="field">
+	         	<%= f.text_field :prefecture, autofocus: true, placeholder: '都道府県', class: "max-width-input" %>
+
+	         	<%= f.text_field :city, autofocus: true, placeholder: '市区町村',class: "max-width-input" %>
+
+	         	<%= f.text_field :block, autofocus: true, placeholder: '番地', class: "max-width-input"  %>
+
+	         	<%= f.text_field :building, autofocus: true, placeholder: '建物', class: "max-width-input" %>
+			</div>
+
+			<%= f.submit "登録", class: "button-right btn btn-default" %>
+			<%= link_to "マイページに戻る", user_path(current_user.id), class: "button-left btn btn-default" %>
+		    <% end %>
+
+		</div>
+	</div>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

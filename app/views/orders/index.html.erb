@@ -9,7 +9,7 @@
 
 <!-- 購入履歴一覧画面 -->
 <div class="container">
-    <h1><%= current_user.last_name %><%= current_user.first_name %>さんの購入履歴</h1>
+    <h1><%= @user.last_name %><%= @user.first_name %>さんの購入履歴</h1>
     <table class="table">
         <thead>
             <tr>
@@ -20,11 +20,11 @@
             </tr>
         </thead>
         <tbody>
-            <% current_user.orders.each do |order| %>
+            <% @user.orders.each do |order| %>
                 <tr>
                     <td><%= order.created_at %></td>
-                    <td><%= order.another_address.address_name %></td>
-                    <td><%= order.another_address.another_postcode %><%= order.another_address.another_prefecture %><%= order.another_address.another_city %><%= order.another_address.another_block %><%= order.another_address.another_building %></td>
+                    <td><%= order.address.address_name %></td>
+                    <td><%= order.address.postcode %><%= order.address.prefecture %><%= order.address.city %><%= order.address.block %><%= order.address.building %></td>
                     <td><%= link_to "詳細を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
                 </tr>
             <% end %>

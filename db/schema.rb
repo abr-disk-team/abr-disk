@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_22_103002) do
+ActiveRecord::Schema.define(version: 2019_06_23_051414) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "address_name"
+    t.string "postcode"
+    t.string "prefecture"
+    t.string "city"
+    t.string "block"
+    t.string "building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "another_addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -106,13 +118,11 @@ ActiveRecord::Schema.define(version: 2019_06_22_103002) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "cart_id"
-    t.string "shopping_address"
     t.string "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "another_address_id"
     t.integer "user_id"
+    t.integer "address_id"
   end
 
   create_table "reviews", force: :cascade do |t|

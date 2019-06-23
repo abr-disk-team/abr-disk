@@ -14,10 +14,11 @@ class OrdersController < ApplicationController
     end
 
     def index
+        @user = User.find(params[:user_id])
     end
     private
     def order_params
-        params.require(:order).permit(:another_address_id, :payment)
+        params.require(:order).permit(:address_id, :payment)
     end
     def buy(order, cart_items)
         cart_items.each do |item|
