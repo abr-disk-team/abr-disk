@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     # "User.with_deleted"で論理削除したユーザーとしていないユーザーを合わせて取得
     @user = User.with_deleted.find(params[:id])
+    @orders = Orders.where(user_id: current_user.id).limit(3)
     @favorites = Favorite.where(user_id: current_user.id).limit(5)
   end
 
