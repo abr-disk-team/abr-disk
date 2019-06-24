@@ -7,6 +7,10 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ogawa
 <div class="container">
     <div class="row box2">
         <div class="col-xs-12 col-lg-4">
@@ -102,7 +106,20 @@
                     </tbody>
                 <% end %>
             </table>
+<<<<<<< HEAD
             <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
+=======
+
+            <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
+
+
+
+            <%= form_for([@item, @cart_item], url:"/add_item/#{@item.id}") do |f| %>
+                <%= f.number_field :quantity %>
+                <%= f.submit "カートに追加" %>
+            <% end %>
+
+>>>>>>> ogawa
         </div>
     </div>
 </div>

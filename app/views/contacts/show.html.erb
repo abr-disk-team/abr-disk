@@ -1,0 +1,63 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+
+
+
+<div class="container contact-box">
+	<div class="row">
+		<div class="col-xl-12 col-xs-12">
+			<h1 class="contact-heading">お問い合わせ詳細</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xl-1 col-xs-1"></div>
+		<div class="col-xl-10 col-xs-10">
+				<table class="table table-bordered" border="1" style="table-layout:auto;width:100%;">
+				<tbody>
+					<tr>
+						<td>ID:</td>
+						<td class="text-center"><%= @contact.id %></td>
+					</tr>
+					<tr>
+						<td>お名前</td>
+						<td class="text-center"><%= @contact.name %></td>
+					</tr>
+					<tr>
+						<td>メール</td>
+						<td class="text-center"><%= @contact.contact_email %></td>
+					</tr>
+					<tr>
+						<td>カテゴリー</td>
+						<td class="text-center"><%= @contact.category %></td>
+					</tr>
+					<tr>
+						<td>お問い合わせ内容</td>
+						<td class="text-center"><%= @contact.contact_content %></td>
+					</tr>
+					<tr>
+						<td>対応状況</td>
+						<td>
+							<%= form_for(@contact) do |f| %>
+								<%= f.select :status,[["未対応","未対応"],["対応済","対応済"],["対応中","対応中"]], {include_blank: true}, {class: "form-control"} %>
+							<%= f.submit '編集して登録する' %>
+							<% end %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xl-1 col-xs-1"></div>
+	</div>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>
+
+

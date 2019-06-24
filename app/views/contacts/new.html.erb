@@ -19,33 +19,52 @@
       </div>
     <% end %>
 
-    <% if user_signed_in? %>
-        <h1>問い合わせフォーム</h1>
+    <div class="contact contact-heading">
+        <h1><span class="far fa-envelope">お問い合わせフォーム</span></h1>
+        <p>24時間365日対応します。</p>
+    </div>
         <%= form_for(@contact) do |f| %>
-            <br>
-            <%= f.select :category,[["購入した商品について","購入した商品について"],["購入方法について","購入方法について"], ["お支払い方法について","お支払い方法について"], ["返品、返金について","返品、返金について"], ["ショップについて","ショップについて"]], prompt: 'カテゴリーを選択' %>
-            <br>
-            <br>
-            <%= f.text_area :contact_content, placeholder: 'お問い合わせ内容' %>
-            <br>
-            <br>
-            <br>
-            <%= f.submit '送信' %>
+            <div class="row form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2 col-xs-12">
+                    <%= f.label :name, "お名前", :style=>"color:#777;" %>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <%= f.text_field :name, placeholder: '〇〇〇〇〇', class: "form-control" %>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2 col-xs-12">
+                    <%= f.label :contact_email, "e-mail", :style=>"color:#777;" %>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <%= f.email_field :contact_email, placeholder: '〇〇〇@〇〇〇', class: "form-control" %>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2 col-xs-12">
+                    <%= f.label :category, "カテゴリー", :style=>"color:#777;" %>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <%= f.select :category,[["購入した商品について","購入した商品について"],["購入方法について","購入方法について"], ["お支払い方法について","お支払い方法について"], ["返品、返金について","返品、返金について"], ["ショップについて","ショップについて"]], {prompt: 'カテゴリーを選択'}, {class: "form-control"} %>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2 col-xs-12">
+                    <%= f.label :contact_content, "お問い合わせ内容", :style=>"color:#777;" %>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <%= f.text_area :contact_content, placeholder: '〇〇〇〇〇', class: "form-control" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-2"></div>
+                    <%= f.submit '送信', class: "btn btn-success col-lg-8 col-xs-12" %>
+            </div>
         <% end %>
-    <% else %>
-        <h1>問い合わせフォーム</h1>
-        <%= form_for(@contact) do |f| %>
-            <br>
-            <%= f.select :category,[["購入した商品について","購入した商品について"],["購入方法について","購入方法について"], ["お支払い方法について","お支払い方法について"], ["返品、返金について","返品、返金について"], ["ショップについて","ショップについて"]], prompt: 'カテゴリーを選択' %>
-            <br>
-            <br>
-            <%= f.text_area :contact_content, placeholder: 'お問い合わせ内容' %>
-            <br>
-            <br>
-            <br>
-            <%= f.submit '送信' %>
-        <% end %>
-    <% end %>
 </div>
 
 <!-- フッター -->
