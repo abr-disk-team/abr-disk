@@ -7,39 +7,37 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 
-<div class="container-fluid">
+<div class="container contact-box">
 	<div class="row">
-		<div class="col-xl-1 col-xs-1"></div>
-		<div class="col-xl-10 col-xs-10">
-
-			<h1 class="contact-heading">問い合わせ一覧</h1>
-			<% @contacts.each do |contact| %>
-			<div class="box">
-				<div class="row">
-					<div class="col-xl-2 col-xs-2">
-							<p>お名前</p>
-							<p>お問い合わせ日時</p>
-					</div>
-					<div class="col-xl-2 col-xs-2">
-							<p>sample</p>
-					</div>
-					<div class="col-xl-6 col-xs-6">
-							<%= contact.category %>
-						<br>
-							<%= contact.contact_content %>
-					</div>
-					<div class="col-xl-2 col-xs-2">
-							<p>sample</p>
-					</div>
-				</div>
-			</div>
-
-			<br>
-			<br>
-			<br>
-			<% end %>
+		<div class="col-xl-12 col-xs-12">
+			<h1 class="contact-heading">お問い合わせ一覧</h1>
+			<table class="table table-bordered row">
+				<thead>
+					<tr>
+						<th class="text-center col-xl-1 col-xs-1">ID</th>
+						<th class="text-center col-xl-1 col-xs-1">お名前</th>
+						<th class="text-center col-xl-2 col-xs-2">email</th>
+						<th class="text-center col-xl-2 col-xs-2">カテゴリー</th>
+						<th class="text-center col-xl-4 col-xs-4">お問い合わせ内容</th>
+						<th class="text-center col-xl-1 col-xs-1">対応状況</th>
+						<th class="text-center col-xl-1 col-xs-1">詳細へ</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @contacts.each do |contact| %>
+					<tr>
+						<td class="text-right"><%= contact.id %></td>
+						<td class="text-center"><%= contact.name %></td>
+						<td class="text-center"><%= contact.contact_email %></td>
+						<td class="text-center"><%= contact.category %></td>
+						<td class="text-left"><%= contact.contact_content %></td>
+						<td class="text-center"><%= contact.status %></td>
+						<td class="text-center"><%= link_to "詳細", contact_path(contact.id) %></td>
+					</tr>
+					<% end%>
+				</tbody>
+			</table>
 		</div>
-		<div class="col-xl-1 col-xs-1"></div>
 	</div>
 </div>
 
