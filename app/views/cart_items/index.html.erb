@@ -23,17 +23,23 @@
             </tr>
         </thead>
         <tbody>
-            <% @user.cart_items.each do |cart_item| %>
-                <tr>
-                    <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
-                    <td><%= cart_item.item.genre.genre %></td>
-                    <td><%= cart_item.item.artist.artist %></td>
-                    <td><%= cart_item.item.label.label %></td>
-                    <td><%= cart_item.item.price %></td>
-                    <td><%= cart_item.quantity %></td>
-                    <td><%= cart_item.item.price * cart_item.quantity %></td>
-                    <td><%= link_to "カートから削除", "/items/#{cart_item.item.id}/cart_items/#{cart_item.id}", method: :delete, class: "btn btn-danger" %></td>
-                </tr>
+            <% if @user.cart_items.any? %>
+                <% @user.cart_items.each do |cart_item| %>
+                    <tr>
+                        <td><%= attachment_image_tag cart_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
+                        <td><%= cart_item.item.genre.genre %></td>
+                        <td><%= cart_item.item.artist.artist %></td>
+                        <td><%= cart_item.item.label.label %></td>
+                        <td><%= cart_item.item.price %></td>
+                        <td><%= cart_item.quantity %></td>
+                        <td><%= cart_item.item.price * cart_item.quantity %></td>
+                        <td><%= link_to "カートから削除", "/items/#{cart_item.item.id}/cart_items/#{cart_item.id}", method: :delete, class: "btn btn-danger" %></td>
+                    </tr>
+                <% end %>
+            <% else %>
+            <tr>
+                <td>カートにはまだ何も入っていません。</td>
+            </tr>
             <% end %>
         </tbody>
     </table>
