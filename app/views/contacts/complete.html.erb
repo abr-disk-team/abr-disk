@@ -1,2 +1,17 @@
-<h1>お問い合わせありがとうございました！</h1>
-<p>返信まで少々お待ちください。</p>
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+
+<div class="contact contact-heading">
+        <h1>お問い合わせありがとうございました！</h1>
+        <h3>返信まで少々お待ちください。</h3>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

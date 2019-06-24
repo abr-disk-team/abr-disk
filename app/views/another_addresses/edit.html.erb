@@ -1,5 +1,11 @@
 <!-- ヘッダー -->
-<%= render 'template/header' %>
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
 
 <div class="container">
 	<div class="row">
@@ -45,3 +51,6 @@
 		</div>
 	</div>
 </div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

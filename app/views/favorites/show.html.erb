@@ -1,0 +1,34 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+<div class="container">
+	<h1>いいね一覧</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>商品名</th>
+				<th>アーティスト</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @favorites.each do |favorite| %>
+					<tr>
+						<td><%= link_to favorite.item.cd_name, item_path(favorite.item.id) %></td>
+						<td><%= favorite.item.artist.artist %></td>
+						<td><%= link_to "商品詳細ページ", item_path(favorite.item.id) %></td>
+					</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<%= link_to "マイページに戻る", user_path(current_user.id), class: "btn btn-default button-right" %>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

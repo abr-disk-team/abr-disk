@@ -1,3 +1,12 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
 NEW ARTIST
 
 <%= form_for(@artist) do |f| %>
@@ -5,3 +14,6 @@ NEW ARTIST
 
     <%= f.submit %>
 <% end %>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

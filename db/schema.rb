@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_06_09_063233) do
-=======
-ActiveRecord::Schema.define(version: 2019_06_09_155931) do
+ActiveRecord::Schema.define(version: 2019_06_23_171220) do
 
   create_table "another_addresses", force: :cascade do |t|
     t.integer "user_id"
@@ -30,7 +27,6 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
->>>>>>> master
 
   create_table "artists", force: :cascade do |t|
     t.string "artist"
@@ -38,12 +34,22 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.integer "user_id"
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "quantity", default: 0
     t.integer "item_id"
-    t.integer "quantity"
+    t.integer "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["item_id"], name: "index_cart_items_on_item_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "payment"
+    t.string "shopping_address"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -52,11 +58,21 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "contact_email"
+    t.string "name"
+    t.string "status", default: "未対応"
   end
 
   create_table "discs", force: :cascade do |t|
     t.integer "item_id"
     t.integer "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -93,6 +109,15 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
+    t.text "review_comment"
+    t.string "review_star", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "songs", force: :cascade do |t|
     t.integer "disc_id"
     t.string "song"
@@ -117,13 +142,15 @@ ActiveRecord::Schema.define(version: 2019_06_09_155931) do
     t.string "first_name_kana"
     t.string "phone_number"
     t.string "postcode"
-    t.integer "prefecture"
+    t.string "prefecture"
     t.string "city"
     t.string "block"
     t.string "building"
-    t.boolean "admin"
+    t.boolean "admin", default: false
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

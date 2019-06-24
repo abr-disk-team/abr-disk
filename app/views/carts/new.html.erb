@@ -1,4 +1,35 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+<h1>CART の中身</h1>
 
 
-<h1>CART NEW</h1>
+<table>
+<% @cart_items.each do |f| %>
+    <tr>
+    <%= f.quantity %>
+    </tr>
+    <tr>
+    <%= f.item.price %>
+    </tr>
+    <%= f.item.genre.genre %>
+    <%= f.item.artist.artist %>
+    <%= f.item.label.label %>
+    <br>
+<% end %>
 
+
+
+<h2>購入画面へ</h2>
+    <%= link_to "購入画面へ", "/form_cart/#{@cart.id}" %>
+
+</table>
+
+<!-- フッター -->
+<%= render 'template/footer' %>

@@ -1,3 +1,61 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item-box{
+	width:200px;
+	height:350px;
+	/*border:solid black;*/
+	float:left;
+	margin:15px;
+}
+
+.item{
+	text-align:center;
+}
+
+.item-image{
+	margin:0 auto;
+}
+
+
+.box2{
+/*	background-color:#FFFF99;*/
+}
+.box3{
+	background-color:#FFFF99;
+}
+
+.genre{
+	/*border-bottom:dashed 1px black ;*/
+	border-bottom:1px dotted #bab6b6 !important;
+}
+.genre2{
+	padding:10px 0;
+	margin:10px;
+	border-top:1px dotted #bab6b6 !important;
+	border-bottom:1px dotted #bab6b6 !important;
+}
+
+.item-discs{
+	border:1px;
+}
+
+.productDetail{
+	background-color: #e6ecf9;
+	border-radius:30px;
+	padding:10px;
+}
+
+
+/*#item_jacket_image{
+	margin:0 auto;
+}*/
+
+
+/*実装するか検討中*/
+/*#side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}*/

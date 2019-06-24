@@ -1,0 +1,31 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+<div class="container">
+
+	<h2>New Review</h2>
+	<%= form_for [@item, @review] do |f| %>
+	  <div class="field row">
+		<label>評価（星）</label><br>
+		<%= f.select :review_star, ["1", "2", "3", "4", "5"], {:prompt => "選択してください"}, class: "max-width-input" %>
+      </div>
+	  <div class="field row">
+		<label>コメント</label><br>
+		<%= f.text_field :review_comment, class: "max-width-input  review-field" %>
+      </div>
+      <div class="field row">
+      <%= f.submit 'Create Review', class: "btn btn-default button-right" %>
+     </div>
+	<% end %>
+
+</div>
+
+
+<!-- フッター -->
+<%= render 'template/footer' %>

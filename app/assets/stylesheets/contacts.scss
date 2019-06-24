@@ -3,12 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.box{
-	width:100%;
-	height:200px;
-	border:solid black;
+
+.contact-heading{
+	text-align:center;
 }
 
-#contact-heading{
-	text-align:center;
+.contact{
+	/*background-color: #f8f8f8;
+	border-color: #e7e7e7;*/
+	color: #777;
+}
+
+.contact-box{
+	color: #777;
 }
