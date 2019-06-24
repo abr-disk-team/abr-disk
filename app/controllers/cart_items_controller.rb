@@ -29,7 +29,8 @@ class CartItemsController < ApplicationController
     cart_item.item_id  = params[:item_id]
     cart_item.user_id = current_user.id
     cart_item.save
-    redirect_to user_cart_items_path(current_user.id)
+    flash[:notice] = "一件の商品がカートに追加されました。"
+    redirect_to items_path
   end
   # カートアイテム編集
   def update
