@@ -28,7 +28,8 @@
                 </div>
                 <div class="panel-body">
                     <% @all_ranks.each.with_index(1) do |item, i| %>
-                        第 <%= i %> 位 <%= link_to item.cd_name, item_path(item.id) %><br>
+                        <h5>第 <%= i %> 位 <%= link_to item.cd_name, item_path(item.id) %></h5>
+                        <p class="favorite-rank-count"><%= item.favorites.count%> いいね</p>
                     <% end %>
                 </div>
             </div>

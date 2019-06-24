@@ -7,30 +7,23 @@ class CartsController < ApplicationController
         @cart = Cart.find(params[:id])
         @cart_items = @cart.cart_items
     end
-
-<<<<<<< HEAD
-
-    def create
-    end
-
-=======
->>>>>>> kashiwagi
     def add_item
         if @cart_item.blank?
             @cart_item = @cart.cart_items.build(item_id: params[:id])
         end
         @cart_item.quantity += params[:cart_item][:quantity].to_i
         @cart_item.save
-<<<<<<< HEAD
         redirect_to new_cart_path
+    end
+    def index
+        @user = current_user
+        @carts = @user.carts
     end
 
     def update_item
         @cart_item.update(quantity: params[:quantity].to_i)
         redirect_to current_path
-=======
         redirect_to cart_path(@cart)
->>>>>>> kashiwagi
     end
 
     def form
@@ -42,7 +35,7 @@ class CartsController < ApplicationController
         @cart.update(cart_params)
         redirect_to :action => "confirm"
     end
-   
+
     def confirm
         @cart = Cart.find(params[:id])
         @cart_items = @cart.cart_items
