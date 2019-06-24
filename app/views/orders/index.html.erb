@@ -1,0 +1,37 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+
+<!-- 購入履歴一覧画面 -->
+<div class="container">
+    <h1><%= @user.last_name %><%= @user.first_name %>さんの購入履歴</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>購入日</th>
+                <th>送付先名</th>
+                <th>送付先住所</th>
+                <th>お支払い方法</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @user.orders.each do |order| %>
+                <tr>
+                    <td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
+                    <td><%= order.address.address_name %></td>
+                    <td><%= order.address.postcode %><%= order.address.prefecture %><%= order.address.city %><%= order.address.block %><%= order.address.building %></td>
+                    <td><%= order.payment %></td>
+                    <td><%= link_to "購入商品を確認する", user_order_path(current_user.id, order.id), class:  "btn  btn btn-success" %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+    <%= link_to "マイページに戻る", user_path(current_user.id), class: "btn btn-default button-left" %>
+</div>
+<!-- フッター -->
+<%= render 'template/footer' %>
