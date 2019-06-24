@@ -7,9 +7,13 @@ class ItemsController < ApplicationController
     end
 
     def create
-        item = Item.new(item_params)
-        item.save
-        redirect_to items_path
+        @item = Item.new(item_params)
+        # binding.pry
+        if @item.save
+            redirect_to item_path(@item.id)
+        else
+            render :action => "new"
+        end
     end
 
     def index
@@ -26,18 +30,19 @@ class ItemsController < ApplicationController
         @item = Item.find(params[:id])
         @cart_item = @item.cart_items.new
         @discs = @item.discs.all
-        @songs = Song.all
     end
 
     def edit
         @item = Item.find(params[:id])
-        @genres = Genre.all
     end
 
     def update
-        item = Item.find(params[:id])
-        item.update(params_item)
-        redirect_to items_path
+        @item = Item.find(params[:id])
+        if @item.update(item_params)
+            redirect_to items_path
+        else
+            render :action => "edit"
+        end
     end
 
     def destroy
@@ -47,8 +52,8 @@ class ItemsController < ApplicationController
     end
 
     private
-
     def item_params
-        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy, songs_attributes: [:id, :song, :_destroy]])
+        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy,
+                                                                                                                songs_attributes: [:id, :song, :_destroy ]])
     end
 end
