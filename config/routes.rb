@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'card/new'
+  get 'card/show'
   get 'addresses/new'
   get 'addresses/edit'
   root 'home#top'

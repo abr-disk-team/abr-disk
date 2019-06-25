@@ -91,4 +91,4 @@ gem 'pry-rails', group: :development
 
 gem 'paranoia'
 
-
+gem 'payjp'

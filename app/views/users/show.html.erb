@@ -44,13 +44,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<% @user.addresses.each do |address| %>
+						<% if @user.addresses.any? %>
+							<% @user.addresses.each do |address| %>
+								<tr>
+									<td><%= address.address_name %></td>
+									<td><%= address.postcode %></td>
+									<td><%= address.prefecture %><%= address.city %><%= address.block %><%= address.building %></td>
+									<td><%= link_to "編集", edit_user_address_path(@user.id, address.id)%></td>
+									<td><%= link_to "削除", user_address_path(@user.id, address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
+								</tr>
+							<% end %>
+						<% else %>
 							<tr>
-								<td><%= address.address_name %></td>
-								<td><%= address.postcode %></td>
-								<td><%= address.prefecture %><%= address.city %><%= address.block %><%= address.building %></td>
-								<td><%= link_to "編集", edit_user_address_path(@user.id, address.id)%></td>
-								<td><%= link_to "削除", user_address_path(@user.id, address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
+								<td>登録している住所はまだありません。</td>
 							</tr>
 						<% end %>
 					</tbody>
@@ -69,10 +75,16 @@
 							</tr>
 					</thead>
 					<tbody>
-						<% @orders.each do |order| %>
+						<% if @orders.any? %>
+							<% @orders.last(3).each do |order| %>
+								<tr>
+									<td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
+									<td><%= order.address.address_name %></td>
+								</tr>
+							<% end %>
+						<% else %>
 							<tr>
-								<td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
-								<td><%= order.address.address_name %></td>
+								<td>購入履歴はまだありません。</td>
 							</tr>
 						<% end %>
 					</tbody>
@@ -89,11 +101,17 @@
 							</tr>
 					</thead>
 					<tbody>
-						<% @favorites.each do |favorite| %>
-							<tr>
-								<td><%= favorite.item.cd_name %></td>
-								<td><%= favorite.item.artist.artist %></td>
-							</tr>
+						<% if @favorites.any? %>
+								<% @favorites.each do |favorite| %>
+									<tr>
+										<td><%= favorite.item.cd_name %></td>
+										<td><%= favorite.item.artist.artist %></td>
+									</tr>
+								<% end %>
+							<% else %>
+								<tr>
+									<td>いいねしている商品はまだありません。</td>
+								</tr>
 						<% end %>
 					</tbody>
 				</table>
