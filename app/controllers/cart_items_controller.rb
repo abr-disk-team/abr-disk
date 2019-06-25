@@ -1,6 +1,7 @@
 class CartItemsController < ApplicationController
 
     before_action :check_address, only: [:form]
+    before_action :check_login, only: [:create, :index]
 
   # カート内確認
   def index
@@ -72,5 +73,11 @@ class CartItemsController < ApplicationController
         flash[:notice] = "住所を入力してください。"
         redirect_to new_user_address_path(user.id)
       end
+  end
+  def check_login
+    unless user_signed_in?
+      flash[:check] = "カート機能を利用するにはユーザー登録が必要です。"
+      redirect_to items_path
+    end
   end
 end
