@@ -9,17 +9,28 @@ class OrdersController < ApplicationController
         redirect_to items_path
     end
 
+    def edit
+        @order = Order.find(params[:id])
+    end
+    def update
+        order = Order.find(params[:id])
+        order.update(order_params)
+        flash[:notice] = "購入履歴が更新されました。"
+        redirect_to user_orders_path(current_user.id)
+    end
+
     def show
         @order = Order.find(params[:id])
         total_price(@order.order_items)
     end
 
     def index
+        @orders = Order.all
         @user = User.find(params[:user_id])
     end
     private
     def order_params
-        params.require(:order).permit(:address_id, :payment)
+        params.require(:order).permit(:address_id, :payment, :status)
     end
     def buy(order, cart_items)
         cart_items.each do |item|

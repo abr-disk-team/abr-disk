@@ -40,7 +40,7 @@
     </div>
     <div class="cleafix">
         <h2>送り先を選ぶ</h2>
-        <%= form_for @order, url:"/users/#{current_user.id}/orders" do |f| %>
+        <%= form_for @order, url:"/users/#{current_user.id}/cart_items/form_confirm" do |f| %>
             <%= f.select :address_id, @user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
         	<br>
     	<h2>支払い方法を選ぶ</h2>
@@ -49,10 +49,9 @@
         	<label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
         	<label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
         	<br>
-        <% end %>
-        	<%= link_to "確認画面へ",  order_confirm_path(@user.id), class: "btn btn-default button-left" %>
+        	<%= f.submit "確認画面へ", class: "btn btn-default button-left" %>
             <%= link_to "商品一覧に戻る", items_path, class: "btn btn-default button-right" %>
-
+        <% end %>
 
     </div>
 </div>

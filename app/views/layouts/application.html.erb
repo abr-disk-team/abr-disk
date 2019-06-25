@@ -19,15 +19,7 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <% if flash[:notice] %>
-          <div class="notice alert alert-success">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+
     <%= yield %>
     <script>
         $(window).ready( function() {

@@ -42,7 +42,7 @@ User.create!(
 )
 
 Genre.create!(
-    [{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "洋楽"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"},]
+	[{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"}]
 )
 Label.create!(
     [{label: "ワーナーミュージック ジャパン"},{label: "Sony Music Japan International(SMJI)"},{label: "JYPエンターテインメント"},{label: "ユニバーサルミュージック"},{label: "エイベックス・グループ"},{label: "キングレコード"}]
@@ -50,8 +50,6 @@ Label.create!(
 Artist.create!(
     [{artist: "TWICE"},{artist: "Alan Walker"},{artist: "MOMOLAND"},{artist: "少女時代"},{artist: "IZ*ONE    "},{artist: "BLACKPINK"},{artist: "KARA"}]
 )
-
-
 Item.create!(
 	[
 		{
