@@ -42,7 +42,6 @@ User.create!(
 )
 
 Genre.create!(
-<<<<<<< HEAD
 	[{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"}]
 )
 Label.create!(
@@ -52,13 +51,3 @@ Artist.create!(
 	[{artist: "TWICE"},{artist: "MOMOLAND"},{artist: "少女時代"},{artist: "IZ*ONE	"},{artist: "BLACKPINK"},{artist: "KARA"}]
 )
 
-=======
-    [{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"},]
-)
-Label.create!(
-    [{label: "ワーナーミュージック ジャパン"},{label: "ソニー・ミュージックエンタテインメント"},{label: "JYPエンターテインメント"},{label: "ユニバーサルミュージック"},{label: "エイベックス・グループ"},{label: "キングレコード"}]
-)
-Artist.create!(
-    [{artist: "TWICE"},{artist: "MOMOLAND"},{artist: "少女時代"},{artist: "IZ*ONE    "},{artist: "BLACKPINK"},{artist: "KARA"}]
-)
->>>>>>> ogawa

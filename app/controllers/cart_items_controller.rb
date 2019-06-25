@@ -13,10 +13,16 @@ class CartItemsController < ApplicationController
     @order = Order.new
     total_price(@user.cart_items)
   end
+  def form_confirm
+    @order = Order.new(order_params)
+    @user = User.find(params[:user_id])
+    total_price(@user.cart_items)
+    render :confirm
+  end
   # 注文確認画面
   def confirm
     @user = User.find(params[:user_id])
-    @order = Order.new
+    @order = Order.new(order_params)
     total_price(@user.cart_items)
   end
 
@@ -48,6 +54,9 @@ class CartItemsController < ApplicationController
   private
   def cart_item_params
     params.require(:cart_item).permit(:quantity)
+  end
+  def order_params
+    params.require(:order).permit(:address_id, :payment)
   end
   def total_price(cart_items)
     @total_price = 0

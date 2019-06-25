@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'users/:id/favorites' => 'favorites#show', as: "user_favorites"
 
   get 'users/:user_id/cart_items/form' =>'cart_items#form', as: "order_form"
+  post 'users/:user_id/cart_items/form_confirm' => 'cart_items#form_confirm'
   get 'users/:user_id/cart_items/confirm' => 'cart_items#confirm', as: "order_confirm"
   # patch '/check_cart/:id' =>'carts#check'
   # delete '/delete_item' => 'carts#delete_item'
