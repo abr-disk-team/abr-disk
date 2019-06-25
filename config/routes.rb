@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :addresses, only: [:new, :create, :edit, :update, :destroy]
     resources :cart_items, only: [:index]
-    resources :orders, only: [:show, :create, :index]
+    resources :orders, only: [:show, :create, :index, :edit, :update]
   end
   get 'users/:id/address' => 'users#address_edit', as: "edit_address"
   get 'users/:id/favorites' => 'favorites#show', as: "user_favorites"

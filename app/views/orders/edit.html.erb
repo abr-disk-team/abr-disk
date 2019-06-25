@@ -1,0 +1,35 @@
+<!-- ヘッダー -->
+<% if user_signed_in? && current_user.admin %>
+    <%= render 'template/admin_header' %>
+<% elsif user_signed_in? %>
+    <%= render 'template/user_header' %>
+<% else %>
+    <%= render 'template/visiter_header' %>
+<% end %>
+<!-- 注文確定画面 -->
+<div class="container">
+    <div class="cleafix">
+        <h2>購入履歴を編集</h2>
+        <%= form_for @order, url:"/users/#{@order.user.id}/orders/#{@order.id}" do |f| %>
+            <h3>送付先を編集</h3>
+            <%= f.select :address_id, @order.user.addresses.collect { |p| [ p.address_name, p.id ] }, {:prompt => "住所を選択"} %>
+            <br>
+            <h3>支払い方法を編集</h3>
+            <br>
+            <label><%= f.radio_button :payment, "代金引換"%>代金引換</label>
+            <label><%= f.radio_button :payment, "クレジットカード"%>クレジットカード</label>
+            <label><%= f.radio_button :payment, "銀行振込"%>銀行振込</label>
+            <br>
+            <h3>ステータスを編集</h3>
+            <%= f.select :status, ["準備中", "発送済み"], {:prompt => "選択してください"} %>
+            <br>
+            <br>
+            <br>
+            <%= f.submit "注文を更新する", class: "btn btn-default"  %>
+        <% end %>
+    </div>
+    <%= link_to "購入履歴一覧画面に戻る", user_orders_path(current_user.id), class: "btn btn-default button-left" %>
+</div>
+
+<!-- フッター -->
+<%= render 'template/footer' %>
