@@ -3,6 +3,9 @@ class GenresController < ApplicationController
 
     def new
         @genre = Genre.new
+        unless user_signed_in? && current_user.admin
+            redirect_to items_path
+        end
     end
 
     def create
@@ -13,6 +16,9 @@ class GenresController < ApplicationController
 
     def edit
         @genre = Genre.find(params[:id])
+        unless user_signed_in? && current_user.admin
+            redirect_to items_path
+        end
     end
 
     def update

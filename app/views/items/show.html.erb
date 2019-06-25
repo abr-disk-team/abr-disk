@@ -7,10 +7,6 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ogawa
 <div class="container">
     <div class="row box2">
         <div class="col-xs-12 col-lg-4">
@@ -19,9 +15,8 @@
             </div>
         </div>
         <div class="col-xs-12 col-lg-5">
-            <ul class="list-group">
-                <li class="list-group-item cleat-fix">
-                    CD:<%= @item.cd_name %>
+            <div class="text-center clear-fix">
+                <span style="font-size: 40px; font-weight: bold; "><%= @item.cd_name %></span>
                     <!-- いいね機能 -->
                     <% if @item.favorited_by?(current_user) %>
                         <%= link_to item_favorites_path(@item.id), method: :delete do %>
@@ -32,14 +27,12 @@
                           <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"  style="font-size: 25px; float: right"></span>
                         <% end %>
                     <% end %>
-                </li>
-                <li class="list-group-item">
-                    アーティスト：<%= @item.artist.artist %>
-                </li>
-                <li class="list-group-item">
-                    ジャンル：<%= @item.genre.genre %>
-                </li>
-            </ul>
+            </div>
+            <div class="text-center clear-fix" style="font-size: 20px;">
+                <%=link_to @item.artist.artist, "#" %>
+                <div class="label label-warning"><%=link_to @item.genre.genre, "#" %></div>
+            </div>
+            <div class="text-right"><%=link_to @item.label.label, "#" %></div>
 
             <div class="genre2">
                 <span>
@@ -69,20 +62,20 @@
         <h3>収録曲</h3>
         <div class="col-xs-12 col-lg-12">
             <% @discs.each do |dis| %>
-                <% dis.songs.each do |song| %>
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><%= "ディスク#{song.disc.number}" %></th>
+                                <th><%= "ディスク#{dis.number}" %></th>
                             </tr>
                         </thead>
                         <tbody>
+                            <% dis.songs.each do |song| %>
                             <tr>
                                 <td><%= song.song %></td>
                             </tr>
+                            <% end %>
                         </tbody>
                     </table>
-                <% end %>
             <% end %>
         </div>
 
@@ -106,9 +99,6 @@
                     </tbody>
                 <% end %>
             </table>
-<<<<<<< HEAD
-            <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
-=======
 
             <%= link_to "レビューを追加", new_item_review_path(@item.id), class: "btn btn-default button-right" %>
 
@@ -119,7 +109,6 @@
                 <%= f.submit "カートに追加" %>
             <% end %>
 
->>>>>>> ogawa
         </div>
     </div>
 </div>

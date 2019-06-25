@@ -7,12 +7,8 @@
     <%= render 'template/visiter_header' %>
 <% end %>
 
-<<<<<<< HEAD
-<div class="container">
-=======
 
-<div class="container big-box">
->>>>>>> ogawa
+<div class="container">
     <div class="row">
         <div class="col-lg-2 col-xs-12">
            <%= render 'items/item' %>
@@ -50,13 +46,17 @@
                     </div>
 
                     <div class="item">
-                        <span>価格|</span>
-                        <%= item.price %>
+                        <span>価格(税込)|</span>
+                        ¥<%= (item.price * 1.08).ceil %>
                     </div>
 
                     <div class="item">
                         <span>在庫数|</span>
-                        <%= item.stock %>
+                        <% if item.stock > 0 %>
+                            <span class="item">取扱中</span>
+                        <% else %>
+                            <span class="item">取扱なし</span>
+                        <% end %>
                     </div>
 
                     <div class="item">
