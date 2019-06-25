@@ -1,5 +1,6 @@
 class CartItemsController < ApplicationController
 
+    before_action :check_address, only: [:form]
 
   # カート内確認
   def index
@@ -64,5 +65,12 @@ class CartItemsController < ApplicationController
       subtotal = cart_item.item.price * cart_item.quantity
       @total_price += subtotal
     end
+  end
+  def check_address
+      user = User.find(params[:user_id])
+      unless user.addresses.any?
+        flash[:notice] = "住所を入力してください。"
+        redirect_to new_user_address_path(user.id)
+      end
   end
 end
