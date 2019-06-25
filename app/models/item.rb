@@ -3,8 +3,7 @@ class Item < ApplicationRecord
     belongs_to :label
     belongs_to :artist
     belongs_to :genre
-    has_many :discs, inverse_of: :item
-    has_many :songs, through: :discs
+    has_many :discs, dependent: :destroy
     has_many :cart_items
 
 	validates :price, presence: true
@@ -17,10 +16,11 @@ class Item < ApplicationRecord
     has_many :carts, through: CartItem
     has_many :favorites, dependent: :destroy
     has_many :reviews, dependent: :destroy
+    has_many :order_items
 
     attachment :jacket_image
 
-    accepts_nested_attributes_for :discs, reject_if: :all_blank, allow_destroy: true
+    accepts_nested_attributes_for :discs, allow_destroy: true
 
     # userがいいねしているか確認するメソッド
     def favorited_by?(user)

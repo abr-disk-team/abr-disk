@@ -2,8 +2,10 @@ class ItemsController < ApplicationController
 
     def new
         @item = Item.new
-        @disc = @item.discs.build
-        @song = @disc.songs.build
+        @item.discs.build
+        unless user_signed_in? && current_user.admin
+            redirect_to items_path
+        end
     end
 
     def create
@@ -34,6 +36,9 @@ class ItemsController < ApplicationController
 
     def edit
         @item = Item.find(params[:id])
+        unless user_signed_in? && current_user.admin
+            redirect_to item_path(@item.id)
+        end
     end
 
     def update
@@ -53,7 +58,6 @@ class ItemsController < ApplicationController
 
     private
     def item_params
-        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy,
-                                                                                                                songs_attributes: [:id, :song, :_destroy ]])
+        params.require(:item).permit(:cd_name, :price, :stock, :genre_id, :label_id, :artist_id, :jacket_image, discs_attributes: [:id, :number, :_destroy, songs_attributes: [:id, :song, :_destroy ]])
     end
 end

@@ -1,0 +1,85 @@
+<div class="container">
+    <%= form_with(model: item, local: true) do |form| %>
+    <% if item.errors.any? %>
+        <h3><%= item.errors.count %> errors prohibited this obj from being saved:</h3>
+        <div id="error_explanation" class="alert alert-danger">
+            <ul>
+                <% item.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="row">
+        <div class="col-lg-4 col-xs-12">
+            <div class="row">
+                <div class="item">
+                    <%= attachment_image_tag item, :jacket_image, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", size:'200x200', class: "img-rounded img-thumbnail" %>
+                </div>
+                <br>
+
+
+                    <div class="field">
+                    <%= form.label :jacket_image, "ジャケット画像" %>
+                    <%= form.attachment_field :jacket_image, placeholder: "ジャケット画像" %>
+                    </div>
+                <br>
+                <div class="field">
+                    <%= form.label :price, "価格" %>
+                <br>
+                    <%= form.number_field :price, {class: 'col-lg-12 col-xs-12'} %>
+                </div>
+                <br>
+                <div class="field">
+                    <%= form.label :stock, "在庫数" %>
+                <br>
+                    <%= form.number_field :stock, {class: 'col-lg-12 col-xs-12'} %>
+                </div>
+                <br>
+                <div class="field">
+                    <%= form.label :genre_id, "ジャンル" %>
+                <br>
+                    <%= form.select :genre_id, Genre.all.collect { |p| [ p.genre, p.id ] }, {include_blank: true}, {class: 'col-lg-12 col-xs-12'} %>
+                </div>
+                <br>
+                <div class="field">
+                    <%= form.label :label_id, "レーベル" %>
+                <br>
+                    <%= form.select :label_id,  Label.all.collect { |p| [ p.label, p.id ] }, {include_blank: true}, {class: 'col-lg-12 col-xs-12'} %>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-xs-12">
+            <div class="field">
+                <%= form.label :cd_name, "タイトル" %>
+            <br>
+                <%= form.text_field :cd_name, {class: 'col-lg-12 col-xs-12'} %>
+            </div>
+            <br>
+            <div class="field">
+                <%= form.label "アーティスト" %>
+            <br>
+                <%= form.select  :artist_id,  Artist.all.collect { |p| [ p.artist, p.id ] }, {include_blank: true}, {class: 'col-lg-12 col-xs-12'} %>
+            </div>
+            <br>
+                <%= form.label "曲一覧" %>
+                <div id="discs">
+                    <%= form.fields_for :discs do |f| %>
+                        <%= render 'disc_fields', f: f %>
+                    <% end %>
+                    <div class="links btn btn-default btn-lg col-xs-4">
+                        <%= link_to_add_association 'ディスク追加', form, :discs %>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-12">
+                <div class="actions">
+                    <%= form.submit '登録する', class: "btn btn-default btn-lg col-xs-12" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -42,11 +42,26 @@ User.create!(
 )
 
 Genre.create!(
-    [{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"},]
+    [{genre: "Jポップ"},{genre: "ヒップホップ"},{genre: "洋楽"},{genre: "ROCK"},{genre: "R&B"},{genre: "Kポップ"},{genre: "演歌"},{genre: "その他"},]
 )
 Label.create!(
-    [{label: "ワーナーミュージック ジャパン"},{label: "ソニー・ミュージックエンタテインメント"},{label: "JYPエンターテインメント"},{label: "ユニバーサルミュージック"},{label: "エイベックス・グループ"},{label: "キングレコード"}]
+    [{label: "ワーナーミュージック ジャパン"},{label: "Sony Music Japan International(SMJI)"},{label: "JYPエンターテインメント"},{label: "ユニバーサルミュージック"},{label: "エイベックス・グループ"},{label: "キングレコード"}]
 )
 Artist.create!(
-    [{artist: "TWICE"},{artist: "MOMOLAND"},{artist: "少女時代"},{artist: "IZ*ONE    "},{artist: "BLACKPINK"},{artist: "KARA"}]
+    [{artist: "TWICE"},{artist: "Alan Walker"},{artist: "MOMOLAND"},{artist: "少女時代"},{artist: "IZ*ONE    "},{artist: "BLACKPINK"},{artist: "KARA"}]
 )
+
+
+Item.create!(
+	[
+		{
+			price: "1000",
+			stock: "100",
+			genre_id: 1,
+			artist_id: 1,
+			label_id: 1,
+			cd_name: "sample",
+		},
+	]
+)
+

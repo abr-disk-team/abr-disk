@@ -9,7 +9,7 @@
 
 <div class="container">
 	<div class="row">
-		<h1>マイページ</h1>
+		<h1><%= @user.last_name %><%= @user.first_name %>様のマイページ</h1>
 		<div class="col-xs-7">
 			<div class="clearfix">
 				<table class="table">
@@ -33,48 +33,29 @@
 				<%= link_to "編集する", edit_user_path(@user.id), class: "button-right btn btn-default" %>
 			</div>
 			<div class="clearfix">
-				<h3>お届け先</h3>
 				<table class="table">
-					<caption>自宅</caption>
+					<caption>お届け先</caption>
 					<thead>
 						<tr>
-							<th><label>郵便番号</label></th>
-							<th><label>住所</label></th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><%= @user.postcode %></td>
-							<td><%= @user.prefecture %><%= @user.city %><%= @user.block %><%= @user.building %></td>
-							<td><%= link_to "編集する", edit_address_path(@user.id), class: "btn btn-default" %></td>
-						</tr>
-					</tbody>
-				</table>
-
-				<table class="table">
-					<caption>別のお届け先</caption>
-					<thead>
-						<tr>
-							<th>お届け先名</th>
+							<th><label>お届け先名</label></th>
 							<th><label>郵便番号</label></th>
 							<th><label>住所</label></th>
 							<th colspan="2"></th>
 						</tr>
 					</thead>
 					<tbody>
-						<% @user.another_addresses.each do |another_address| %>
+						<% @user.addresses.each do |address| %>
 							<tr>
-								<td><%= another_address.address_name %></td>
-								<td><%= another_address.another_postcode %></td>
-								<td><%= another_address.another_prefecture %><%= another_address.another_city %><%= another_address.another_block %><%= another_address.another_building %></td>
-								<td><%= link_to "編集", edit_user_another_address_path(@user.id, another_address.id)%></td>
-								<td><%= link_to "削除", user_another_address_path(@user.id, another_address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
+								<td><%= address.address_name %></td>
+								<td><%= address.postcode %></td>
+								<td><%= address.prefecture %><%= address.city %><%= address.block %><%= address.building %></td>
+								<td><%= link_to "編集", edit_user_address_path(@user.id, address.id)%></td>
+								<td><%= link_to "削除", user_address_path(@user.id, address.id), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn-sm btn-danger" %></td>
 							</tr>
 						<% end %>
 					</tbody>
 				</table>
-				<%= link_to "新しい住所を登録する", new_user_another_address_path(@user.id), class: "button-right btn btn-default" %>
+				<%= link_to "新しい住所を登録する", new_user_address_path(@user.id), class: "button-right btn btn-default" %>
 			</div>
 		</div>
 		<div class="col-xs-5">
@@ -82,37 +63,46 @@
 				<table class="table">
 					<h3>購入履歴</h3>
 					<thead>
-						<tr>
-							<th><label>購入日時</label></th>
-							<th>購入日時</th>
-						</tr>
-						<tr>
-							<th><label>購入商品</label></th>
-							<th>購入商品</th>
-						</tr>
+							<tr>
+								<th>購入日</th>
+								<th>送付先</th>
+							</tr>
 					</thead>
+					<tbody>
+						<% @orders.each do |order| %>
+							<tr>
+								<td><%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %></td>
+								<td><%= order.address.address_name %></td>
+							</tr>
+						<% end %>
+					</tbody>
 				</table>
-				<%= link_to "もっと見る", "#", class: "button-right btn btn-default" %>
+				<%= link_to "もっと見る", user_orders_path(current_user.id), class: "button-right btn btn-default" %>
 			</div>
 			<div class="clearfix">
 				<table class="table">
 					<h3>いいねした商品</h3>
 					<thead>
+							<tr>
+								<th>CD</th>
+								<th>アーティスト</th>
+							</tr>
+					</thead>
+					<tbody>
 						<% @favorites.each do |favorite| %>
 							<tr>
-								<th><label><%= favorite.item.cd_name %></label></th>
-								<th><%= favorite.item.artist.artist %></th>
+								<td><%= favorite.item.cd_name %></td>
+								<td><%= favorite.item.artist.artist %></td>
 							</tr>
 						<% end %>
-					</thead>
+					</tbody>
 				</table>
 				<%= link_to "もっと見る", user_favorites_path(current_user.id), class: "button-right btn btn-default" %>
 			</div>
 			<div>
 				<% if @user.admin == false && @user.deleted_at == nil %>
 				<!-- @userが論理削除されていない場合 -->
-					<h3>退会する</h3>
-					<%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか?", class: "btn-sm btn-danger" %>
+					<%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか?", class: "btn-sm btn-danger button-right" %>
 				<% elsif @user.admin == false %>
 				<!-- @userが論理削除されている場合 -->
 					<p>＊このユーザーは退会処理済みです。</p>

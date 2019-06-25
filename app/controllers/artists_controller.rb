@@ -2,6 +2,9 @@ class ArtistsController < ApplicationController
 
     def new
         @artist = Artist.new
+        unless user_signed_in? && current_user.admin
+            redirect_to items_path
+        end
     end
 
     def create
@@ -12,6 +15,9 @@ class ArtistsController < ApplicationController
 
     def edit
         @artist = Artist.find(params[:id])
+        unless user_signed_in? && current_user.admin
+            redirect_to items_path
+        end
     end
 
     def update
