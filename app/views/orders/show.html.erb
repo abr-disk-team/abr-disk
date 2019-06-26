@@ -25,7 +25,7 @@
         <tbody>
             <% @order.order_items.each do |order_item| %>
                 <tr>
-                    <td><%= attachment_image_tag order_item.item, :jacket_image, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'%></td>
+                    <td><%= attachment_image_tag order_item.item, :jacket_image, format: 'jpeg', fallback: "/images/no_image.jpg", size:'50x50'%></td>
                     <td><%= order_item.item.genre.genre %></td>
                     <td><%= order_item.item.artist.artist %></td>
                     <td><%= order_item.item.label.label %></td>
