@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-
+    before_action :authenticate_user!
     before_action :current_cart
     before_action :setup_cart_item!, only: [:add_item, :update_item, :delete_item]
 

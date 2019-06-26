@@ -1,6 +1,6 @@
 class LabelsController < ApplicationController
 
-
+    before_action :authenticate_user!
     def new
         @label = Label.new
         unless user_signed_in? && current_user.admin

@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-
+    before_action :authenticate_user!
     def new
         @artist = Artist.new
         unless user_signed_in? && current_user.admin

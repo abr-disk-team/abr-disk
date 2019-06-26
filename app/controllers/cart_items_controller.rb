@@ -1,5 +1,5 @@
 class CartItemsController < ApplicationController
-
+    before_action :authenticate_user!
     before_action :check_address, only: [:form]
     before_action :check_login, only: [:create, :index]
 
@@ -36,9 +36,17 @@ class CartItemsController < ApplicationController
     cart_item = CartItem.new(cart_item_params)
     cart_item.item_id  = params[:item_id]
     cart_item.user_id = current_user.id
-    cart_item.save
-    flash[:notice] = "一件の商品がカートに追加されました。"
-    redirect_to items_path
+    item = Item.find(params[:item_id])
+    if item.stock >= cart_item.quantity
+      cart_item.save
+      flash[:notice] = "一件の商品がカートに追加されました。"
+      redirect_to items_path
+    else
+      @user = current_user
+      total_price(current_user.cart_items)
+      flash[:notice] = "カートに入れる商品の数が、在庫を上回っています。"
+      render :index
+    end
   end
   # カートアイテム編集
   def update

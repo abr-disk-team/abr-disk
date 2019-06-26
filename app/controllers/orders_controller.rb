@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-
+    before_action :authenticate_user!
     def create
         order = Order.new(order_params)
         order.user_id = current_user.id
@@ -33,9 +33,11 @@ class OrdersController < ApplicationController
         params.require(:order).permit(:address_id, :payment, :status)
     end
     def buy(order, cart_items)
-        cart_items.each do |item|
-            OrderItem.create(order_id: order.id, item_id: item.id, order_quantity: item.quantity)
-            cart_item = CartItem.find(item.id)
+        cart_items.each do |cart_item|
+            OrderItem.create(order_id: order.id, item_id: cart_item.id, order_quantity: cart_item.quantity)
+            item = cart_item.item
+            item.stock -= cart_item.quantity
+            item.save
             cart_item.destroy
         end
     end

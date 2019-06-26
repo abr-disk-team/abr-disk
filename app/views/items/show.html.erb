@@ -44,7 +44,9 @@
             <div class="productDetail">
                 <h6><b>価格(税込)</b></h6>
                 <h2 class="text-right">¥<%= (@item.price * 1.08).ceil %></h2>
-                <% if @item.stock > 0 %>
+                <% if user_signed_in? && current_user.admin %>
+                    <h4 class="item">在庫数：<%= @item.stock %></h4>
+                    <% elsif @item.stock > 0 %>
                     <h4 class="item">取扱中</h4>
                     <% else %>
                     <h4 class="item">取扱なし</h4>
